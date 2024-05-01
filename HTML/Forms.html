@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+</head>
+<body>
+  <h1>Form</h1>
+  <form>
+    Name <input name="name" type="text" placeholder="Enter your full name" required autocomplete="off">
+    <br><br>
+    Email <input name="email" type="email" placeholder="Enter your email address" value="disha@gmail.com" required>
+    <br><br>
+    Phone Number <input name="phone" type="text" required maxlength="10">
+    <br><br>
+    Password <input name="password" type="password" required>
+    <br><br>
+    Age <input name="age" type="number" required>
+    <br><br>
+
+    Graduation Date <input name="graduation-date" type="date" required>
+    <br><br>
+    Time of meeting <input name="meeting-time" type="time" required>
+    <br><br>
+    Date & Time <input name="dateTime" type="datetime-local" required>
+    <br><br>
+
+    Select all of your hobbies from the options below: <br>
+    <input type="checkbox" name="hobbies" value="Swimming">Swimming<br>
+    <input type="checkbox" name="hobbies" value="Dancing">Dancing<br>
+    <input type="checkbox" name="hobbies" value="Coding">Coding
+    <br><br>
+
+    Gender
+    <input type="radio" name="gender" value="Male">Male
+    <input type="radio" name="gender" value="Female">Female
+    <input type="radio" name="gender" value="Others">Others
+
+    <br><br>
+    Education
+    <input type="radio" name="education" value="UG">UG
+    <input type="radio" name="education" value="Graduate">Graduate
+    <input type="radio" name="education" value="PG">PG
+    <br><br>
+
+    Favourite Color <input name="dateTime" type="color" required>
+    <br><br>
+
+    Upload your resume <input name="resume" type="file">
+    <br><br>
+
+    Select your birth month <input type="month">
+    <br><br>
+
+    Select your birth week <input type="week">
+    <br><br>
+
+    How much do you rate yourself in HTML <input type="range" name="rating" min="0" max="100" step="10">
+    <br><br>
+
+    Select your birth year
+    <select name="birth-year">
+      <option value="1998">1998</option>
+      <option value="1999">1999</option>
+      <option value="2000">2000</option>
+      <option value="2001">2001</option>
+      <option value="2002">2002</option>
+      <option value="2003">2003</option>
+    </select>
+    <br><br>
+
+    Write an intro about yourself in not more than 100 words<br>
+    <textarea rows="20" cols="100" placeholder="Please descript yourself" maxlength="200"></textarea>
+    <br><br>
+
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
+
+<!--
+  ## Forms: Collect user data
+  - <form></form>
+
+  Tags
+  - <input> (Several types)
+    - type
+      - text
+      - password
+      - email
+      - number
+      - date
+      - checkbox (Multiple selection) (Eg.: Hobbies, Tech languages, etc)
+      - radio (Single selection) (Eg.: Gender, Graduate/UG/ Post-graduate)
+      - file
+  - <button> (button)
+    - type
+      - button
+      - submit
+      - reset
+  - <select> (Dropdown - Single selection)
+    - <option></option> (Single options)
+  - <textarea></textarea> (An textfield to enter multiple lines of text)
+
+  - Atrributes
+    - input
+      - type (required)
+      - name (optional - Uniquely identified input fields)
+      - placeholder (optional)
+      - value (optional - Default value to an input field)
+      - required (optional - Used for validating empty fields)
+      - disabled
+      - autocomplete (optional - Used to control auto-filling fields)
+      - maxlength (optional - Works with type='text', used to specify maximum length)
+
+  # Next class
+  - Forms (label)
+  - Media tags
+
+  # Future (JS)
+  - Validation
+-->

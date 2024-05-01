@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms2</title>
+</head>
+<body>
+  <h1>Sign Up</h1>
+  <form method="" action="">
+    <div>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text">
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email">
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password">
+    </div>
+    <div>
+      <label for="confirm-password">Confirm Password</label>
+      <input id="confirm-password" name="confirm-password" type="password">
+    </div>
+    <br><br>
+    <button type="submit">Sign up</button>
+  </form>
+</body>
+</html>
+
+
+<!--
+  # Label
+    - Give information to the browser about the input field
+    - Can maintain cleaner code
+  # Link label tag to input tag
+    - 'id' value of input tag = 'for' value of label tag
+
+  # Form tag attributes (Link your client forms to the server)
+    - method (HTTP method)
+      - GET (Read) 
+        - Form data is sent through the URL parameters
+        - Should not be used to send large data from client to server
+        - Expose data in the URL
+      - POST (Create)
+        - Should be used to send large data from client to server
+        - Doesn't expose data in the URL
+      - PUT/PATCH (Update)
+      - DELETE (Delete)
+    - action: Address where the form data will be sent (server)
+
+  # HTTP: Hypertext trasnfer protocol (set of instructions)
+    - Client to Server: HTTP Request
+    - Server to Client: HTTP Response
+-->
