@@ -62,12 +62,12 @@ li {
   font-size: 30px;
 }
 
-/* #section-1 {
-  text-align: center;
-} */
+#small-topic-p {
+  text-align: justify;
+}
 
 /* ----------------------------------------- */
 /* UNIVERSAL SELECTOR */
-* {
+/* * {
   text-align: center;
-}
+} */

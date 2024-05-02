@@ -1,0 +1,34 @@
+/* # Descendant selector */
+/* #section-1 p {
+  font-size: 25px;
+  background-color:aliceblue;
+} */
+
+/* Child selector */
+/* #section-1 > p {
+  font-size: 25px;
+  background-color:aliceblue;
+} */
+
+/* # Pseudo-class selector */
+/* #page-heading:hover {
+  background-color: aliceblue;
+  color: darkblue;
+  font-size: 50px;
+  cursor: pointer;
+} */
+
+/* # Pseudo-element selector */
+li:first-of-type {
+  background-color: aliceblue;
+  color: darkblue;
+  cursor: pointer;
+}
+
+/* # Attribute selector */
+/* [target~="_blank"] {
+  background-color: aliceblue;
+  color: darkblue;
+  font-size: 50px;
+  cursor: pointer;
+} */
