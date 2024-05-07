@@ -2,18 +2,21 @@
 <html>
   <head>
     <title>Bharat Singh</title>
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
     <div id="navigation">
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#hobbies">Hobbies</a>
-      <a href="#additional-links">Additional Links</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#additional-links">Additional Links</a></li>
+      </ul>
     </div>
     
     <div id="header">
-      <H1>Bharat Singh</H1>
-      <img src="images/developer.jpg" alt="developer" width="200" height="200">
+      <h1>Bharat Singh</h1>
+      <img src="images/developer.jpg" alt="developer">
     </div>
 
     <div id="about">
@@ -24,16 +27,16 @@
 
     <div id="education">
       <h2>Education</h2>
-      <ul>
-        <li>Graduation</li>
-        <ul>
+      <ul id="education-content">
+        <li class="education-heading">Graduation</li>
+        <ul class="education-ul">
           <li>College: <b>Delhi University</b></li>
           <li>Year: 2024</li>
           <li>Marks: 95%</li>
         </ul>
         <p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non eleifend ex. Proin sed tellus ullamcorper, pretium velit id, tempor enim. Cras convallis ligula risus, non imperdiet nisl sollicitudin nec. Pellentesque cursus lacus vitae erat volutpat imperdiet. Cras facilisis vulputate felis. Aliquam et mattis elit. Suspendisse et malesuada odio. Aliquam tincidunt at nibh a vulputate.</i></p>
-        <li>Pre-University</li>
-        <ul>
+        <li class="education-heading">Pre-University</li>
+        <ul class="education-ul">
           <li>College: <strong>Delhi Public School</strong></li>
           <li>Year: 2020</li>
           <li>Marks: 85%</li>
@@ -41,8 +44,8 @@
         <p><em>
           Donec ullamcorper varius odio, commodo sagittis augue eleifend ac. Mauris pellentesque, eros congue ullamcorper semper, libero nunc fringilla velit, vitae gravida felis enim tempor neque. Curabitur sit amet dapibus tellus. Quisque non turpis magna. Sed tincidunt risus id arcu egestas, nec tincidunt leo accumsan. Sed elementum posuere magna, non molestie elit sollicitudin vel. Ut eu bibendum enim, a pharetra nulla. Donec at magna odio.</em>
         </p>
-        <li>Matriculation</li>
-        <ul>
+        <li class="education-heading">Matriculation</li>
+        <ul class="education-ul">
           <li>School: <b>Delhi Public School</b></li>
           <li>Year: 2018</li>
           <li>Marks: 75%</li>
@@ -53,15 +56,8 @@
       </ul>
     </div>
 
-    <div id="hobbies">
-      <h2>Hobbies</h2>
-      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.<br><br> All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-      </p>
-    </div>
-
     <div id="additional-links">
-      <h2>Additional Links</h2>
-      <a href="https://www.linkedin.com/in/ankitkumarmishra/" target="_blank">LinkedIn Profile</a><br><br>
+      <a href="https://www.linkedin.com/in/ankitkumarmishra/" target="_blank">LinkedIn Profile</a>
       <a href="https://github.com/AnkitKumarMishra5/" target="_blank">Github Profile</a><br><br>
     </div>
   </body>

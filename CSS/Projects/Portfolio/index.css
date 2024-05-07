@@ -1,0 +1,145 @@
+/*
+  Background Color: #EFFAFD
+  Font-color1: #00285B
+  Font-color2: #4A8BDF
+*/
+
+/* --------------------- */
+
+body {
+  background-color: #EFFAFD;
+  margin: 0;
+  font-family: Optima;
+  text-align: center;
+}
+
+/* --------------------- */
+
+#navigation {
+  position: sticky;
+  top: 0;
+  background-color: #EFFAFD;
+  box-shadow: 0px 1px 10px #4A8BDF;
+  z-index: 2;
+}
+
+#navigation ul {
+  margin: 0;
+  padding: 5px 0;
+}
+
+#navigation ul li {
+  display: inline-block;
+  font-size: 25px;
+  padding: 10px 20px;
+}
+
+#navigation ul li:hover {
+  border: 1px solid #4A8BDF;
+  border-radius: 5px;
+}
+
+#navigation ul li a {
+  text-decoration: none;
+  color: #4A8BDF;
+}
+
+/* --------------------- */
+#header {
+  background-color: #00285B;
+  height: 200px;
+  margin-bottom: 200px;
+}
+
+#header h1 {
+  font-size: 75px;
+  margin: 15px 0;
+  color: white;
+  padding-top: 20px;
+  margin-top: 0;
+}
+
+#header img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* --------------------- */
+#about {
+  background-color: #4A8BDF;
+  padding: 10px 20px;
+}
+
+#about h2 {
+  font-size: 35px;
+  color: #EFFAFD;
+}
+
+#about p {
+  font-size: 20px;
+  color: #EFFAFD;
+}
+
+/* --------------------- */
+
+#education {
+  text-align: left;
+  padding: 10px 20px;
+}
+
+#education h2 {
+  font-size: 35px;
+  color: #00285B;
+  text-align: center;
+}
+
+#education-content {
+  font-size: 20px;
+  padding: 0 40px;
+}
+
+#education-content {
+  list-style: none;
+}
+
+.education-heading {
+  font-size: 25px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  background-color: rgb(74, 139, 223, 0.5);
+}
+
+.education-ul li {
+  list-style: none;
+}
+
+#education-content p {
+  padding-left: 40px;
+}
+
+/* --------------------- */
+
+#additional-links {
+  background-color: #4A8BDF;
+  padding: 10px 20px;
+  height: 60px;
+}
+
+#additional-links a {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+  color: #EFFAFD;
+  text-decoration: none;
+}
+
+/* --------------------- */
+/*
+  # New style properties learnt
+  - box-shadow
+  - z-index: Which element will be on top/bottom
+*/
