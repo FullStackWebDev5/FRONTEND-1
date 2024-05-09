@@ -1,0 +1,113 @@
+/* ------------------- */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* ------------------- */
+.text-center {
+  text-align: center;
+}
+
+.horizontal-layout {
+  padding-left: 0;
+}
+
+.horizontal-layout li {
+  display: inline-block;
+}
+
+/* ------------------- */
+#header {
+  height: 65vh;
+  padding-top: 20px;
+  background-image: url('https://ninjasfiles.s3.amazonaws.com/asset_0000000000000020_1549743985_macbook_mouse.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.8;
+}
+
+#header .navbar {
+  margin-top: 0;
+}
+
+#header .navbar li {
+  padding: 0 4px;
+  line-height: 40px;
+}
+
+#header .navbar li a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+
+#header .navbar li a {
+  text-decoration: none;
+}
+
+#header .navbar li a:hover {
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#header-main {
+  margin-top: 20vh;
+}
+
+#header-main h1 {
+  font-size: 48px;
+  color: white;
+}
+
+#header-main .horizontal-layout li a img {
+  width: 20px;
+  height: 20px;
+  padding: 0 20px;
+}
+
+#profile-image {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: 3px solid white;
+  box-shadow: 1px 1px 10px 2px lightgrey;
+  position: relative;
+  top: 150px;
+  /* margin: 150px; */
+}
+
+#about {
+  margin-top: 100px;
+}
+
+#about p {
+  color: #808080;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: justify;
+  width: 75%;
+  margin: auto;
+}
+
+.blue-highlight {
+  color: #2857A4;
+  font-weight: 600;
+}
+
+/* ------------------- */
+
+
+/*
+  # Background Image
+    - backround-image: url()
+    - background-repeat: repeat/no-repeat/repeat-x/repeat-y;
+    - background-size: px/rem/em/%/vw/vh/contain/cover;
+    - background-position
+    - background-attachment: fixed/scroll;
+
+  # Opacity
+    - Control transparency
+*/
