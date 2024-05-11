@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Box</title>
+  <style>
+    #parent {
+      height: 500px;
+      display: flex;
+      flex-direction: row;
+      /* flex-wrap: wrap; */
+      justify-content: center;
+      align-items: center;
+      background-color: aliceblue;
+    }
+
+    .child {
+      font-size: 20px;
+      padding: 20px;
+      /* width: 100px; */
+      height: 100px;
+    }
+
+    #child1{
+      background-color: tomato;
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis: 200px;
+    }
+    #child2{
+      background-color: lightblue;
+      flex-grow: 2;
+      flex-shrink: 1;
+      flex-basis: 200px;
+    }
+    #child3{
+      background-color: lightgreen;
+      flex: 3 1 200px;
+      flex-grow: 3;
+      flex-shrink: 1;
+      flex-basis: 200px;
+    }
+    /* #child4{
+      background-color: lightpink;
+    }
+    #child5{
+      background-color: lightyellow;
+    }
+    #child6{
+      background-color: lightgrey;
+    } */
+  </style>
+</head>
+<body>
+  <div id="parent">
+    <div class="child" id="child1">1</div>
+    <div class="child" id="child2">2</div>
+    <div class="child" id="child3">3</div>
+    <!-- <div class="child" id="child4">4</div>
+    <div class="child" id="child5">5</div>
+    <div class="child" id="child6">6</div> -->
+  </div>
+</body>
+</html>
+
+<!--
+  # Flexbox
+  - Properties
+    - Parent
+      - display: flex;
+      - flex-direction: row/ column/ row-reverse/ col-reverse (Main/Cross axis depends on this property)
+      - flex-wrap: nowrap;
+      - justify-content (Main axis): center/ space-between/ space-around/ space-evenly/ flex-start/ flex-end
+      - align-items (Cross axis): center/ flex-start/ flex-end
+   - Child
+      - flex: [flex-grow] [flex-shrink] [flex-basis]
+      - flex-grow: (Expand)
+      - flex-shrink: (Collapse)
+      - flex-basis: Width of the flex item
+      - order
+
+  - Main axis/Cross axis
+    - flex-direction: row 
+      - Main axis: Horizontal
+      - Cross axis: Vertical
+    - flex-direction: column
+      - Main axis: Vertical
+      - Cross axis: Horizontal
+-->

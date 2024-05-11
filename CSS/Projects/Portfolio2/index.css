@@ -62,10 +62,10 @@ body {
   color: white;
 }
 
-#header-main .horizontal-layout li a img {
-  width: 20px;
-  height: 20px;
+#header-main .horizontal-layout li a i {
+  font-size: 25px;
   padding: 0 20px;
+  color: white;
 }
 
 #profile-image {
