@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grids</title>
+  <style>
+    #container {
+      display: grid;
+      grid-template-areas:
+        "primaryNavbar   primaryNavbar   primaryNavbar"
+        "secondaryNavbar secondaryNavbar secondaryNavbar"
+        "sidebar         main            ads"
+        "footer          footer          footer";
+      grid-template-rows: 50px 50px auto 50px;
+      grid-template-columns: 150px auto 100px;
+      grid-row-gap: 5px;
+      grid-column-gap: 5px;
+      height: 100vh;
+    }
+
+    .items {
+      background: linear-gradient(#E9F1FA, #00ABE4);
+      text-align: center;
+      padding: 20px;
+    }
+
+    #primary-navbar {
+      grid-area: primaryNavbar;
+    }
+
+    #sec-navbar {
+      grid-area: secondaryNavbar;
+    }
+
+    #sidebar {
+      grid-area: sidebar;
+    }
+
+    #main {
+      grid-area: main;
+    }
+
+    #ads {
+      grid-area: ads;
+    }
+
+    #footer {
+      grid-area: footer;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="items" id="primary-navbar">PRIMARY NAVBAR</div>
+    <div class="items" id="sec-navbar">SECONDARY NAVBAR</div>
+    <div class="items" id="sidebar">SIDEBAR</div>
+    <div class="items" id="main">MAIN</div>
+    <div class="items" id="ads">ADS</div>
+    <div class="items" id="footer">FOOTER</div>
+  </div>
+</body>
+</html>
+
+<!--
+  # CSS GRIDS:
+  - Parent
+    - display: grid;
+    - grid-template-columns: 
+      - Specify number of columns
+      - Units: px, auto, fr;
+      - n number of columns: repeat(n, width_of_column)
+    - grid-template-rows: 
+      - Specify number of rows
+      - Units: px, auto, fr;
+       n number of row: repeat(n, width_of_rows)
+    - grid-row-gap: Add gap between cells (rows)
+    - grid-column-gap: Add gap between cells (column)
+    - grid: [grid-row-gap] [grid-column-gap]
+  - Child
+    - grid-area: Define area for a cell
+-->
