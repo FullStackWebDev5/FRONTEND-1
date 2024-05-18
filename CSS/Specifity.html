@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      font-size: 30px;
+    }
+
+    .div1 {
+      width: 500px;
+      height: 500px;
+      background-color: #3D52A0;
+    }
+
+    .div2 {
+      width: 300px;
+      height: 300px;
+      background-color: chocolate;
+      font-size: 50px;
+    }
+
+    .div1 .div2 {
+      font-size: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="div1">
+    DIV1
+    <div class="div2">DIV2</div>
+  </div>
+</body>
+</html>
+
+
+<!--
+  # Specificity (Priority)
+  Universal Selector < Class/ID < Combinator Selector
+-->
