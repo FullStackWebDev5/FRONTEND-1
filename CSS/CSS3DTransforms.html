@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Transforms</title>
+  <style>
+    #div-1 {
+      background-color: #eee;
+      width: 300px;
+      height: 300px;
+      margin: 20% auto;
+      perspective: 1000px;
+    }
+
+    #div-2 {
+      background-color: tomato;
+      width: 300px;
+      height: 300px;
+
+      transition: all 1s;
+      font-size: 2rem;
+      text-align: center;
+      color: white;
+      animation: rotating-door 3s infinite;
+    }
+
+    @keyframes rotating-door {
+      from {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+
+    #div-2:hover {
+      /* transform: rotateX(45deg) */
+      /* transform: rotateY(45deg) */
+      /* transform: rotateZ(45deg) */
+    }
+  </style>
+</head>
+<body>
+  <div id="div-1">
+    <div id="div-2">
+      ANIMATION
+    </div>
+  </div>
+</body>
+</html>
+
+<!--
+  # Transforms
+  - rotateX
+  - rotateY
+  - rotateZ
+-->

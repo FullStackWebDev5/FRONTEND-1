@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animations</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    /* TRANSITION */
+    /* #div-1 {
+      margin: 100px auto;
+      width: 100px;
+      height: 100px;
+      background-color: tomato;
+      transition: all 3s;
+    }
+
+    #div-1:hover {
+      transform: rotate(360deg) scale(2);
+      border-radius: 50%;
+    } */
+
+    /* ANIMATION */
+    /* #div-1 {
+      width: 100px;
+      height: 100px;
+      background-color: tomato;
+      position: relative;
+      left: 100px;
+      top: 100px;
+      animation: convert-to-big-circle 3s ease-in-out 2s infinite forwards;
+    }
+
+    @keyframes convert-to-big-circle {
+      from {
+        transform: scale(1) rotate(0deg);
+        border-radius: 0%;
+        left: 100px;
+        top: 100px;
+      }
+      to {
+        transform: scale(2) rotate(360deg);
+        border-radius: 50%;
+        top: 100px;
+        left: 500px;
+      }
+    } */
+
+    #div-1 {
+      width: 100px;
+      height: 100px;
+      background-color: tomato;
+      position: relative;
+      left: 100px;
+      top: 100px;
+      animation: convert-to-big-circle 3s ease-in-out infinite forwards;
+    }
+
+    @keyframes convert-to-big-circle {
+      0% {
+        transform: rotate(0deg);
+        top: 100px;
+        left: 100px;
+        border-radius: 0%;
+      }
+      33% {
+        transform: rotate(120deg);
+        top: 500px;
+        left: 100px;
+        border-radius: 18%;
+      }
+      66% {
+        transform: rotate(240deg);
+        top: 500px;
+        left: 500px;
+        border-radius: 36%;
+      }
+      100% {
+        transform: rotate(360deg);
+        top: 100px;
+        left: 500px;
+        border-radius: 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="div-1"></div>
+</body>
+</html>
+
+<!--
+  # Animation
+    - animation: name duration timing-function delay iteration-count direction fill-mode
+      - animation-name
+      - animation-duration (3s. 2s, 500ms)
+      - animation-timing-function (ease, ease-in, ease-out)
+      - animation-delay (1s, 2s)
+      - animation-iteration-count (1, 2, ..., infinite)
+      - animation-direction (normal, reverse, alternate)
+      - animation-fill-mode (forwards, backwards)
+      - animation-play-state
+
+    - @keyframes: At each frame, how should animation look
+      - Syntax: 
+      @keyframe [name] {
+        from {
+          property: [initial-value];
+        }
+        to {
+          property: [final-value];
+        }
+      }
+
+      @keyframe [name] {
+        0% {
+          property: [initial-value];
+        }
+        33% {
+          property: [final-value];
+        }
+        66% {
+          property: [final-value];
+        }
+        100% {
+          property: [final-value];
+        }
+      }
+
+  # Transition
+    - Pseudo Class Selector
+  # Animation
+    - Pseudo Class Selector not mandate
+-->
