@@ -18,12 +18,14 @@
   cursor: pointer;
 } */
 
-/* # Pseudo-element selector */
-li:first-of-type {
+/* li:first-of-type {
   background-color: aliceblue;
   color: darkblue;
   cursor: pointer;
-}
+} */
+
+/* # Pseudo-element selector */
+/* ::after, ::before */
 
 /* # Attribute selector */
 /* [target~="_blank"] {
