@@ -12,6 +12,8 @@
       # Operators:
         1. Arithmetic Operators
           - + (Plus)
+            - Numbers: Mathematical Plus Operator
+            - Strings: Concatenation Operator
           - - (Minus)
           - * (Multiply)
           - / (Divide)
@@ -34,14 +36,18 @@
           - **=
 
         3. Comparison Operators (returns Boolean value: true/ false)
-          - == (Equal to)
-          - != (Not equal to)
+          - == (Equal to | Equality Operator)
+            - Compare values without data type
+          - != (Not equal to | Inequality Operator)
+            - - Compare values without data type
           - > (Greater than)
           - < (Less than)
           - >= (Greater than or equal to)
           - <= (Less than or equal to)
-          - === (Equal value and equal type)
-          - !== (	not equal value or not equal type)
+          - === (Equal value and equal type | Identical Operator)
+            - Compare values with data type
+          - !== (	not equal value or not equal type | Unidentical Operator)
+            - Compare values with data type
 
         4. Logical Operators (returns Boolean value: true/ false)
           - && (And: If all conditions are true -> true)
@@ -142,8 +148,23 @@
     */
     /* ---------------------- */
 
-    var x = undefined
-    console.log(typeof x)
+    // var x = undefined
+    // console.log(typeof x)
+
+    /* ---------------------- */
+
+    // var x = 5
+    // var y = '5'
+
+    // console.log(x == y)
+    // console.log(x === y)
+
+    /* ---------------------- */
+    // + with String values: Concatenation Operator
+    // var firstName = 'Sanchay'
+    // var lastName = 'Agarwal'
+
+    // console.log('My full name is ' + firstName + ' ' + lastName + '!')
   </script>
 </body>
 </html>
