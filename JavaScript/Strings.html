@@ -35,10 +35,37 @@
         - Method:
           - toUpperCase(): Return the string in upper case
           - toLowerCase(): Return the string in lower case
-          - concat(): Concatenate two or more strings
           - includes(): Checks if string contains substring (returns boolean value)
+          - concat(): Concatenate two or more strings
+            - Alternative: + operator
           - charAt(index): Return the string at a specific index
-            - index = position - 1/ position = index + 1
+            - Alternative: [] denotion
+          - charCodeAt(index): Return the ASCII code of the character at a specific index
+          - Extract substring:
+            - slice(startIndex, endIndex): 
+              - startIndex, endIndex: startIndex to endIndex-1
+              - startIndex: startIndex to end of the string
+              - No argument: Whole string is returned
+              - Negative values: Index will be considered starying from last character
+            - Alternatives
+              - substring(startIndex, endIndex)
+                - similar to slice, negative index value will be treated as 0
+              - substr(startIndex, substringLength)
+          - replace(substring, replaceValue): replace a substring with another value
+          - replaceAll: replace all occurrences
+
+        - Notes:
+          - Position: 1 -> String length
+            - position = index + 1
+          - Index: 0 -> String length - 1
+            - index = position - 1
+          - Access character at a given index using []:
+            let x = 'HTML'
+            console.log(x[1]) //T
+            - First character of string:
+              - x[0]
+            - Last character of string:
+              - x[x.length - 1]
     */
 
     // let firstName = 'Poornima'
@@ -63,6 +90,17 @@
     // console.log(x.charAt(5))
     // console.log(x.charAt(6))
     // console.log(x.charAt(100)) // Empty string
+
+    let x = 'Javascript '
+    console.log(x.charAt(10))
+    console.log(x.charCodeAt(10))
+    // console.log(x[2])
   </script>
 </body>
 </html>
+
+<!--
+  # Future
+  - Arrays
+    - split()
+-->
