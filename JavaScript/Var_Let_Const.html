@@ -12,12 +12,15 @@
       # var
         - Can be re-declared
         - Can be re-assigned
+        - Not block-scope
       # let
         - Cannot be re-declared
         - Can be re-assigned
+        - Block-scoped
       # const
         - Cannot be re-declared
         - Cannot be re-assigned
+        - Block-scoped
 
     */
 
@@ -35,14 +38,20 @@
 
     // console.log(firstName + ' ' + lastName)
 
-    const firstName = 'Vishnu'
-    const lastName = 'Bharti'
+    // const firstName = 'Vishnu'
+    // const lastName = 'Bharti'
 
-    console.log(firstName + ' ' + lastName)
+    // console.log(firstName + ' ' + lastName)
+
+    // if(true) {
+    //   var x = 10
+    //   console.log(x)
+    // }
+    // console.log(x)
 
     /*
       # Future:
-        - Scopes (After conditions, loops, functions)
+        - Scopes (After functions)
     */
   </script>
 </body>
