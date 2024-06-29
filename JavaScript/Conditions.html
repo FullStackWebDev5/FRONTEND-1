@@ -18,7 +18,7 @@
             } else {
               // Code to execute if condition is false
             }
-          - elseif: More than one condition
+          - else if: More than one condition
           Syntax:
             if(condition1) {
               // Code to execute if condition 1 is true
@@ -228,7 +228,67 @@
     //     console.log("We don't have record of that IPL Team")
     // }
 
-    // Nested If Condition, Ternary Operator
+    /*
+      # Nested If Condition, Nested Ternary Operator
+    */
+
+    /*
+      Example 6:
+      1. Accept user's age
+      2. 
+        a. If user's age >= 18: 
+          - User is an Indian citizen?: You are eligibe to vote!
+          - User not an Indian citizen?: You are not eligibe to vote!
+        b. If user's age < 18: 
+          - User is a Female: You are eligibe for savings scheme
+          - User is a Male: You are not eligibe for savings scheme
+    */
+
+    // let userAge = 20
+    // let isUserIndianCitizen = false
+    // let userGender = 'Male'
+
+    // if(userAge >= 18) {
+    //   if(isUserIndianCitizen) {
+    //     console.log('You are eligible to vote!')
+    //   } else {
+    //     console.log('You are not eligible to vote')
+    //   }
+    // } else {
+    //   if(userGender == 'Female') {
+    //     console.log('You are eligible for savings scheme')
+    //   } else {
+    //     console.log('You are not eligible for savings scheme')
+    //   }
+    // }
+
+    // if(userAge >= 18 && isUserIndianCitizen) {
+    //   console.log('You are eligible to vote!')
+    // } else if(userAge >= 18 && !isUserIndianCitizen) {
+    //   console.log('You are not eligible to vote')
+    // } else if(userAge < 18 && userGender == 'Female') {
+    //   console.log('You are eligible for savings scheme')
+    // } else if(userAge < 18 && userGender == 'Male') {
+    //   console.log('You are not eligible for savings scheme')
+    // }
+
+    // console.log(userAge >= 18 ? (isUserIndianCitizen ? 'You are eligibe to vote!' : 'You are not eligibe to vote!') : (userGender == 'Female' ? 'You are eligibe for savings scheme' : 'You are not eligibe for savings scheme'))
+    
+    /*
+      # Truthy/ Falsy
+    */
+
+    // if(20) {
+    //   console.log('Yes')
+    // } else {
+    //   console.log('No')
+    // }
+
+    // if(undefined) {
+    //   console.log('Yes')
+    // } else {
+    //   console.log('No')
+    // }
   </script>
 </body>
 </html>

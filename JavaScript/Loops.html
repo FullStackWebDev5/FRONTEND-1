@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loops</title>
+</head>
+<body>
+  <script>
+    /*
+      #Loops: 
+        - Execute a code multiple times
+        - Need a condition
+
+        - Parts in the syntax:
+          - Initialization
+          - Condition
+          - Increment/Decrement
+
+        1. while
+        2. do while
+        3. for
+
+        - Infinite loop: Whenever the condition never becomes false
+    */
+
+    /* 
+      # 1. while
+        - Syntax:
+          while(condition) {
+            // Code to be executed in a loop
+          }
+    */
+   
+    // Eg. 1: Log "Coding Ninjas" 5 times
+
+    // let i = 1 // Initialization
+
+    // while(i <= 5) { // Condition // 1 -> 5
+    //   console.log('Coding Ninjas')
+    //   i++ // Increment
+    // }
+
+    // let i = 0
+    // while(i < 5) { // 0 -> 4
+    //   console.log('Coding Ninjas')
+    //   i++;
+    // }
+
+    // let i = 5
+    // while(i >= 1) { // 5 -> 1
+    //   console.log('Coding Ninjas')
+    //   i--;
+    // }
+
+    // let i = 5
+    // while(i > 0) { // 5 -> 1
+    //   console.log('Coding Ninjas')
+    //   i--;
+    // }
+
+    // Eg. 2: Print number 1 to 5
+
+    // let i = 1
+    // while(i <= 5) {
+    //   console.log(i)
+    //   i++
+    // }
+
+    // let i = 0
+    // while(i < 5) {
+    //   console.log(i + 1)
+    //   i++
+    // }
+
+    // Eg. 3: Factorial of a number
+    // let n = 3
+    // let result = 1
+    // while(n >= 1) {
+    //   result = result * n
+    //   n--
+    // }
+
+    // console.log(result)
+
+    // Eg. 4: Factors of a number
+    // let number = 12
+    // let n = number
+    // while(n >= 1) {
+    //   if(number % n == 0) {
+    //     console.log(n)
+    //   }
+    //   n--
+    // }
+
+    /* 
+      # 2. do while
+        - Syntax:
+          do {
+            // Code to be executed in a loop
+          } while(condition)
+
+        - do while will execute atleast once even if the condition is false
+    */
+
+    // let i = 1 // Initialization
+
+    // do {
+    //   console.log(i)
+    //   i++ // Increment
+    // } while(i <= 5) // Condition
+
+    // while(false) {
+    //   console.log('Hi')
+    // }
+
+    // do {
+    //   console.log('Hi')
+    // } while(false)
+
+    /* 
+      # 3. for
+        - Syntax:
+          for(initialization; condition; increment/decrement) {
+            // code to be executed in a loop
+          }
+    */
+
+    // for(let i = 1; i <= 5; i++) {
+    //   console.log(i)
+    // }
+
+    // let number = 10
+    // for(let i = number; i >= 1; i--) {
+    //   if(number % i === 0) {
+    //     console.log(i)
+    //   }
+    // }
+
+    // break: Terminate the loop
+  </script>
+</body>
+</html>
