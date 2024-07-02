@@ -38,11 +38,11 @@
           - includes(): Checks if string contains substring (returns boolean value)
           - concat(): Concatenate two or more strings
             - Alternative: + operator
-          - charAt(index): Return the string at a specific index
+          - charAt(index): Return the character at a specific index
             - Alternative: [] denotion
           - charCodeAt(index): Return the ASCII code of the character at a specific index
           - Extract substring:
-            - slice(startIndex, endIndex): 
+            - slice(startIndex, endIndex): (Ensure endIndex > startIndex)
               - startIndex, endIndex: startIndex to endIndex-1
               - startIndex: startIndex to end of the string
               - No argument: Whole string is returned
@@ -53,6 +53,8 @@
               - substr(startIndex, substringLength)
           - replace(substring, replaceValue): replace a substring with another value
           - replaceAll: replace all occurrences
+          - indexOf: Returns the index of the first-occurence of character/substring in the given string
+            -lastIndexOf: last-ocurrence
 
         - Notes:
           - Position: 1 -> String length
@@ -91,16 +93,10 @@
     // console.log(x.charAt(6))
     // console.log(x.charAt(100)) // Empty string
 
-    let x = 'Javascript '
-    console.log(x.charAt(10))
-    console.log(x.charCodeAt(10))
+    // let x = 'Javascript '
+    // console.log(x.charAt(10))
+    // console.log(x.charCodeAt(10))
     // console.log(x[2])
   </script>
 </body>
 </html>
-
-<!--
-  # Future
-  - Arrays
-    - split()
--->
