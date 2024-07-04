@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      Input: let marks = [92, 87, 89, 67, 89]
+
+      >= 91: A+
+      81-90: A
+      71-80: B+
+      61-70: B
+      51-60: C
+      36-50: D
+      <= 35: F
+
+      Log an output array with grade obtained in each subject
+      Expected O/P: [A+, A, A, B, A]
+    */
+
+    // Way 1
+    // function assignGrades(marks) {
+    //   let grades = []
+    //   for(let i = 0; i < marks.length; i++) { // 1
+    //     if(marks[i] > 90) {
+    //       grades[i] = 'A+'
+    //     } else if (marks[i] > 80) {
+    //       grades[i] = 'A'
+    //     } else if (marks[i] > 70) {
+    //       grades[i] = 'B+'
+    //     } else if (marks[i] > 60) {
+    //       grades[i] = 'B'
+    //     } else if (marks[i] > 50) {
+    //       grades[i] = 'C'
+    //     } else if (marks[i] > 35) {
+    //       grades[i] = 'D'
+    //     } else {
+    //       grades[i] = 'F'
+    //     }
+    //   }
+    //   console.log(grades)
+    // }
+
+    // Way 2
+    // let marks = [92, 87, 89, 67, 89]
+    // function assignGrades(marks) {
+    //   let grades = [] // ['A+', 'A', 'A', 'B', 'A']
+    //   for(let i = 0; i < marks.length; i++) { // 5
+    //     if(marks[i] > 90) {
+    //       grades.push('A+')
+    //     } else if (marks[i] > 80) {
+    //       grades.push('A')
+    //     } else if (marks[i] > 70) {
+    //       grades.push('B+')
+    //     } else if (marks[i] > 60) {
+    //       grades.push('B')
+    //     } else if (marks[i] > 50) {
+    //       grades.push('C')
+    //     } else if (marks[i] > 35) {
+    //       grades.push('D')
+    //     } else {
+    //       grades.push('F')
+    //     }
+    //   }
+    //   console.log(grades) // ['A+', 'A', 'A', 'B', 'A']
+    // }
+
+    // assignGrades([92, 87, 89, 67, 89])
+
+    /*----------------------------------*/
+    // function add(num1, num2) {
+    //   let answer;
+    //   answer = num1 + num2
+    //   return answer;
+    // }
+
+    // console.log(add(3, 4))
+  
+    // function subtract(num1, num2) {
+    //   let answer;
+    //   answer = num1 - num2
+    //   return answer;
+    // }
+
+    // console.log(subtract(3, 4))
+
+    // function multiply(num1, num2) {
+    //   let answer;
+    //   answer = num1 * num2
+    //   return answer;
+    // }
+
+    // console.log(multiply(3, 4))
+
+    // function divide(num1, num2) {
+    //   let answer;
+    //   answer = num1 / num2
+    //   return answer;
+    // }
+    // console.log(divide(3, 4))
+
+    /* ------------------------------ */
+    // function AreaOfTriangle(base, height){
+    //   let answer = 0.5 * base * height
+    //   return answer;
+    // }
+
+    // console.log(AreaOfTriangle(4, 8))
+
+    /* ------------------------------ */
+    // function checkEligibility(age) {
+    //     let answer;
+    //     if(age >= 18) {
+    //       answer = 'granted'
+    //     } else {
+    //       answer = 'denied'
+    //     }
+
+    //     return answer;
+    // }
+
+    // console.log(checkEligibility(17))
+
+    function checkEligibility(age) {
+      if (age>=18){
+        answer='Granted'
+      }
+      else{
+        answer='denied'
+      }
+      return answer;
+    }
+    console.log(checkEligibility(17))
+  </script>
+</body>
+</html>

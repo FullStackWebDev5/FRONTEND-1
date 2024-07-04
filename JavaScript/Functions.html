@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Functions</title>
+</head>
+<body>
+  <script>
+    /*
+      # Functions: A set/block of code which needs to be used repeatedly
+        - DRY (Don't repeat yourself) Principle
+          Avoid Redundancy (Avoid Repeated code)
+        - Modular/ Clean code
+
+      - Syntax:
+        - Standard Function:
+          - Declarartion
+            function name() {
+              // code
+            }
+          - Invokation (Calling the function)
+            name()
+        - Anonymous Function: (Used as a function expression)
+          - Declarartion
+            const name = function () {
+              // code
+            }
+          - Invokation (Calling the function)
+            name()
+    */
+
+    /* EXAMPLE 1 */
+    // Declaring a function
+    // function sayHi() {
+    //   console.log('Hi')
+    // }
+
+    // Invoking/Calling a function
+    // sayHi()
+
+    /* EXAMPLE 2 */
+    // Recipe for making a Pizza
+    // function makePizza() {
+    //   console.log('Step 1: Prepare the pizza base')
+    //   console.log('Step 2: Add pizza sauce')
+    //   console.log('Step 3: Add toppings')
+    //   console.log('Step 4: Add grated cheese')
+    //   console.log('Step 5: Bake the pizza')
+    // }
+
+    // makePizza()
+
+    // let num1 = 100
+    // let num2 = 200
+    // console.log(num1 + num2)
+
+    // makePizza()
+
+    // for(let i = 2; i <= 10; i++) {
+    //   if(i % 2 ==0 ) {
+    //     console.log(i)
+    //   }
+    // }
+
+    // makePizza()
+
+    /* EXAMPLE 3 */
+    // function calculateAverage() {
+    //   let marks1 = 100, marks2 = 200, marks3 = 300
+    //   let average = (marks1 + marks2 + marks3) / 3
+    //   console.log(average)
+    // }
+
+    // calculateAverage()
+
+    /* -------------- */
+    // function sayHi() {
+    //   console.log('Hi')
+    // }
+
+    // let sayHi = function () {
+    //   console.log('Hi')
+    // }
+
+    // sayHi()
+    /* -------------- */
+
+    /*
+      # Functions Parameters & Arguments
+        - Parameters: Variables of the functions
+
+        Syntax:
+          function name(paramater1, parameter2, ...) {
+            // code
+          }
+
+          name(argument1, argument2, ...)
+    */
+
+    /* EXAMPLE 1 */
+    // function add (num1, num2) {
+    //   console.log(num1 +  num2)
+    // }
+
+    // add(100, 200)
+    // add(500, 800)
+    // add(92849024, 2784090)
+
+    /* EXAMPLE 2 */
+    // function calculateAverage(marks1, marks2, marks3) {
+    //   let average = (marks1 + marks2 + marks3) / 3
+    //   console.log(average)
+    // }
+
+    // Average Pankaj's marks
+    // calculateAverage(95, 87, 92)
+
+    // Average Suraj's marks
+    // calculateAverage(85, 77.5, 72)
+
+    /* EXAMPLE 3 */
+    // function listStudentHobbies(hobbies) {
+    //   console.log('Hobbies: ', hobbies.join(' '))
+    // }
+
+    // listStudentHobbies(['Swimming', 'Dancing', 'Singing', 'Coding'])
+
+    // listStudentHobbies(['Dancing', 'Playing Cricket', 'Coding'])
+
+    /* 
+      # Scenario: When equal number of arguments are not passed
+    */
+    // function add (num1, num2) {
+    //   console.log(num1 +  num2)
+    // }
+
+    // add()
+    // add(10)
+    // add(10, 20, 30) // Last argument will be skipped
+
+    /* 
+      # Default Parameters: Default value of parameters
+    */
+
+    // function add (num1 = 0, num2 = 0) {
+    //   console.log(num1 +  num2)
+    // }
+
+    // add()
+    // add(10)
+    // add(10, 20)
+
+    /* 
+      # return keyword
+        - terminate the function logic
+        - return a value from the function
+    */
+
+    /* EXAMPLE 1 */
+    // function add(num1, num2) {
+    //  return num1 +  num2
+    // }
+
+    // let sum = add(100, 200)
+    // console.log(sum)
+
+    /* EXAMPLE 2 */
+    // function abc() {
+    //   console.log('Hi')
+    //   return
+    //   console.log('Nice to meet you :)')
+    //   console.log('Bye')
+    // }
+
+    // abc()
+
+    /* EXAMPLE 3 */
+    // Return factorial of number
+    // function getFactorial(num) {
+    //   let factorial = 1
+    //   for(let i = num; i >= 1; i--) {
+    //     factorial = factorial * i
+    //   }
+    //   return factorial
+    // }
+
+    // console.log(getFactorial(4))
+
+    // function sumOfFactorial(num1, num2) {
+    //   let factorial1 = 1
+    //   for(let i = num1; i >= 1; i--) {
+    //     factorial1 = factorial1 * i
+    //   }
+      
+    //   let factorial2 = 1
+    //   for(let i = num2; i >= 1; i--) {
+    //     factorial2 = factorial2 * i
+    //   }
+
+    //   return factorial1 + factorial2
+    // }
+
+    // console.log(sumOfFactorial(4, 5))
+  </script>
+</body>
+</html>
+
+<!--
+  # Future
+  - Arrow Function
+-->
