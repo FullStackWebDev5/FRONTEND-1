@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    /*
+      # Objects: Collections of key-value pairs
+        - keys are string
+        - values can be any data type
+        - Syntax:
+          let obj1 = {
+            key1: value1,
+            key2: value2,
+            key3: value3,
+            ...
+          }
+        - Access values using keys
+          - obj1.key1
+          - obj1['key1']
+
+        - Add/Update values using keys:
+          - obj1.key1 = value1
+          - obj1['key1'] = value1
+
+        - Properties and Methods
+          - Keys holding any value other than functions: Properties
+          - Keys holding functions: Methods
+
+      # Arrays are special type of objects: Arrays have numberical keys (0 -> array.length - 1)
+    */
+
+    // EXAMPLE 1:
+    // let rohiniDetails = {
+    //   name: 'Rohini',
+    //   age: 24,
+    //   hobbies: ['Swimming', 'Dancing'],
+    //   isGraduated: true
+    // }
+
+    // console.log('Name: ', rohiniDetails.name)
+    // console.log('Age: ', rohiniDetails.age)
+    // console.log('Hobbies: ', rohiniDetails.hobbies)
+    // console.log('Graduated: ', rohiniDetails.isGraduated)
+
+    // console.log('Name: ', rohiniDetails['name'])
+    // console.log('Age: ', rohiniDetails['age'])
+    // console.log('Hobbies: ', rohiniDetails['hobbies'])
+    // console.log('Graduated: ', rohiniDetails['isGraduated'])
+
+    // EXAMPLE 2:
+    // let rohiniDetails = {
+    //   name: 'Rohini',
+    //   age: 24,
+    //   hobbies: ['Swimming', 'Dancing'],
+    //   isGraduated: true,
+    //   sayHi: function() {
+    //     console.log('Hi')
+    //   }
+    // }
+
+    // console.log(rohiniDetails.name)
+    // rohiniDetails.sayHi()
+
+    // EXAMPLE 3:
+    // let rohiniDetails = {
+    //   name: 'Rohini',
+    //   age: 24,
+    //   hobbies: ['Swimming', 'Dancing'],
+    //   isGraduated: true,
+    //   sayHi: function() {
+    //     console.log('Hi')
+    //   }
+    // }
+
+    // rohiniDetails.age = 25
+    // rohiniDetails.hobbies.push('Singing')
+    // rohiniDetails.country = 'India'
+
+    // console.log(rohiniDetails)
+
+    // EXAMPLE 4:
+    // let rohiniDetails = {
+    //   name: 'Rohini',
+    //   age: 24,
+    //   hobbies: ['Swimming', 'Dancing'],
+    //   isGraduated: true,
+    //   address: {
+    //     houseNo: 5,
+    //     roadNo: 10,
+    //     locality: 'XYZ Township',
+    //     city: 'Mumbai',
+    //     state: 'Maharashtra',
+    //     country: 'India'
+    //   },
+    //   sayHi: function() {
+    //     console.log('Hi')
+    //   }
+    // }
+
+    // console.log(rohiniDetails)
+    // console.log(rohiniDetails.address.city)
+  </script>
+</body>
+</html>
+
+<!--
+  # Explore:
+    - for in/ for of
+    - Math
+    - Date
+
+  # Future:
+    - Spread and REST operators
+-->
