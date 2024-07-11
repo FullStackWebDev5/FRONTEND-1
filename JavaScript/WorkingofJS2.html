@@ -1,0 +1,126 @@
+<!-- Part 1 in JSExecutionContext.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    'use strict'
+
+    /*
+      # Hoisting
+        - Temporal Dead Zone (let, const): The time period between declaration and initialization of the variables created using let and const
+    */
+
+    // console.log(x)
+    // var x = 10
+
+    // console.log(x) // ReferenceError: Cannot access 'x' before initialization
+    // const x = 10
+
+    /*
+      # 'this' keyword: Refers to it's immediate parent object
+    */
+
+    // Example 1: 'this' keyword refers to declared object
+    // let rohiniDetails = {
+    //   firstName: 'Rohini',
+    //   lastName: 'Bhosale',
+    //   age: 24,
+    //   hobbies: ['Swimming', 'Dancing', 'Coding'],
+    //   isGraduated: true,
+    //   sayHi: function() {
+    //     console.log('Hi')
+    //   },
+    //   getFullName: function() {
+    //     console.log(this.firstName + ' ' + this.lastName) // Current object
+    //   },
+    //   getHobbies: function() {
+    //     console.log(this.hobbies.join(' '))
+    //   }
+    // }
+
+    // rohiniDetails.getFullName()
+    // rohiniDetails.getHobbies()
+
+    // Example 2: 'this' keyword refers to window object
+    // console.log(this) // Window object
+
+    // function abc() {
+    //   console.log(this)  // Window object
+    // }
+    // abc()
+
+    /*
+      # 'use strict': Impose strict rule in your JS code
+    */
+
+    // Example 1: Undeclared varaible access
+    // x = 5
+    // console.log(x) // Reference Error
+
+    // Example 2: Duplicate parameters
+    // function sum(num1, num1, num3) {
+    //   console.log(num1, num3)
+    // }
+    // sum(5, 10, 15)
+
+    // Example 3:
+    // function abc() {
+    //   console.log(this)  // undefined
+    // }
+    // abc()
+
+    /*
+      # Memory in JS:
+        - Stack: Stores variables, primitive values, and function calls
+          - Primitive values
+        - Heap: Stores Non-Primitive values (objects, arrays and functions)
+
+      # Data Structures:
+        - Stack: LIFO (Last in first out)
+        - Heap: Values are dumped
+
+      Referece Image: https://media.geeksforgeeks.org/wp-content/uploads/20230306152333/memory-management-in-js.png
+    */
+
+    // let x = 5
+    // let y = x
+    // x = 10
+    // console.log(x, y)
+
+    // Non primitive value assigment
+    // let obj1 = { 
+    //   a: 5, 
+    //   b: 10 
+    // }
+    // let obj2 = obj1
+    // obj1.a = 20
+    // console.log(obj1, obj2)
+
+    /* 
+      # Spread Operator(...):
+        - introducted in ES6
+    */
+
+    // let arr1 = [3, 5, 7]
+    // let arr2 = [...arr1]
+    // arr1[1] = 10
+    // console.log(arr1, arr2)
+
+    // let obj1 = { a: 5, b: 10 }
+    // let obj2 = { ...obj1 }
+    // obj1.a = 20
+    // console.log(obj1, obj2)
+
+  </script>
+</body>
+</html>
+
+<!--
+  # Future:
+    - BOM, DOM
+-->
