@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* 
+      # Q1. Calculate the sum of the array elements
+        Expected Input
+        [1,6,8,3,5,20,10]
+        Expected Output
+        53
+    */
+
+    // function sumOfArray(array) {
+    //   let sum = 0
+    //   for(let i = 0; i < array.length; i++) {
+    //     sum = sum + array[i]
+    //   }
+    //   return sum
+    // }
+
+    // console.log(sumOfArray([1,6,8,3,5,20,10]))
+
+    /* 
+      # Q2. Calculate the sum of the array elements, but if there is any element which is divisible by 5, don't include those elements in the sum
+        Expected Input
+        [1,6,8,3,5,20,10]
+        Expected Output
+        18
+    */
+
+    // WAY 1
+    // function sumOfArray(array) {
+    //   let sum = 0
+    //   for(let i = 0; i < array.length; i++) {
+    //     if(array[i] % 5 != 0) {
+    //       sum = sum + array[i]
+    //     }
+    //   }
+    //   return sum
+    // }
+
+    // WAY 2
+    // function sumOfArray(array) {
+    //   let sum = 0
+    //   for(let i = 0; i < array.length; i++) {
+    //     if(array[i] % 5 == 0) {
+    //       continue
+    //     }
+    //     sum = sum + array[i]
+    //   }
+    //   return sum
+    // }
+
+    // console.log(sumOfArray([1,6,8,3,5,20,10]))
+
+    /* 
+      # Q3. Calculate the sum of the array elements, but if there is any element which is divisible by 5 or 3, don't include those elements in the sum
+        Expected Input
+        [1,6,8,3,5,20,10]
+        Expected Output
+        9
+    */
+
+    // WAY 1
+    // function sumOfArray(array) {
+    //   let sum = 0
+    //   for(let i = 0; i < array.length; i++) {
+    //     if(array[i] % 5 == 0 || array[i] % 3 == 0) {
+    //       continue
+    //     }
+    //     sum = sum + array[i]
+    //   }
+    //   return sum
+    // }
+
+    // WAY 2
+    // function sumOfArray(array) {
+    //   let sum = 0
+    //   for(let i = 0; i < array.length; i++) {
+    //     if(array[i] % 5 != 0 && array[i] % 3 != 0) {
+    //       sum = sum + array[i]
+    //     }
+    //   }
+    //   return sum
+    // }
+
+    // console.log(sumOfArray([1,6,8,3,5,20,10]))
+
+    /* 
+      # Q4. You are given two arrays, merge both arrays to form one array where elements of first array are followed by elements of second array
+        Expected Input
+        arr1 = [2, 10, 99, 5]
+        arr2 = [19, 12, 78, 8]
+        Expected Output
+        result = [2, 10, 99, 5, 19, 12, 78, 8]
+    */
+
+    // Way 1
+    // function mergeArrays(arr1, arr2) {
+    //   let result = arr1.concat(arr2)
+    //   return result
+    // }
+
+    // Way 2
+    // function mergeArrays(arr1, arr2) {
+    //   let result = [...arr1, ...arr2]
+    //   return result
+    // }
+
+    // let mergedArray = mergeArrays([2, 10, 99, 5], [19, 12, 78, 8])
+    // console.log(mergedArray)
+
+    /* 
+      # Q5. You are given 2 numbers num1, num2. Return the sum of squares of the two numbers
+        Expected Input
+        num1 = 5, num2 = 10
+        Expected Output
+        result = 5^2 + 10^2 = 125
+    */
+
+    // function sumOfSquares(num1, num2) {
+    //   // Way 1
+    //   // return num1 * num1 + num2 * num2;
+
+    //   // Way 2
+    //   // return num1 ** 2 + num2 ** 2;
+
+    //   // Way 3
+    //   // return Math.pow(num1, 2) + Math.pow(num2, 2)
+    // }
+
+    // let a = 5, b = 10
+    // console.log(sumOfSquares(a, b))
+
+    /* 
+      # Q6. You are given 2 numbers num1, num2. 
+        Return:
+        - Yes: If the number of digits are same
+        - No: If the number of digits are different
+
+        Expected Input
+        num1 = 78574
+        num2 = 78392
+        Expected Output
+        Yes
+
+        Expected Input
+        num1 = 74847
+        num2 = 781
+        Expected Output
+        No
+    */
+
+    // Way 1
+    // function checkSameDigits(num1, num2) {
+    //   let str1 = num1.toString()
+    //   let str2 = num2.toString()
+    //   if(str1.length == str2.length) {
+    //     return 'Yes'
+    //   } else {
+    //     return 'No'
+    //   }
+    // }
+
+    // console.log(checkSameDigits(78574, 781))
+
+    // Way 2 (Expert level)
+    // function checkSameDigits(num1, num2) {
+    //   return num1.toString().length == num2.toString().length ? 'Yes' : 'No'
+    // }
+
+    // console.log(checkSameDigits(78574, 78654))
+
+    /* 
+      # Q7. You are given with an array with atmost 1 duplicate element. Return the duplicate element. If no duplicate element is found, return 'N/A'
+
+      Expected Input
+      arr = [2, 5, 10, 12, 2, 18, 20]
+      Expected Output
+      2
+
+      Expected Input
+      arr = [9, 11, 12, 17, 19]
+      Expected Output
+      N/A
+    */
+
+    // function checkDuplicate(arr) {
+    //   for(let i = 0; i < arr.length; i++) {
+    //     if(arr.indexOf(arr[i]) != arr.lastIndexOf(arr[i])) {
+    //       return arr[i]
+    //     }
+    //   }
+    //   return 'N/A'
+    // }
+
+    // const duplicateElement = checkDuplicate([5, 10, 12, 2, 18, 20])
+    // console.log(duplicateElement)
+
+    
+    /* 
+      # Q8. You are given with an array with duplicate elements. Return an array with all duplicate elements. If no duplicate element is found, return empty array
+
+      Expected Input
+      arr = [2, 5, 10, 12, 2, 18, 20, 12]
+      Expected Output
+      [2, 12]
+
+      Expected Input
+      arr = [9, 11, 12, 17, 19]
+      Expected Output
+      []
+    */
+
+    // function checkDuplicates(arr) {
+    //   let result = []
+    //   for(let i = 0; i < arr.length; i++) {
+    //     if(arr.indexOf(arr[i]) != arr.lastIndexOf(arr[i])) {
+    //       if(!result.includes(arr[i])) {
+    //         result.push(arr[i])
+    //       }
+    //     }
+    //   }
+    //   return result
+    // }
+
+    // const duplicateElements = checkDuplicates([5, 10, 12, 2, 18, 20, 5, 12, 18])
+    // console.log(duplicateElements)
+
+    /*
+      # Recursion: Function will call itself
+    */
+
+    // function getFactorial(num) {
+    //   let factorial = 1
+    //   for(let i = num; i >= 1; i--) {
+    //     factorial = factorial * i
+    //   }
+    //   return factorial
+    // }
+
+    // Using recursion
+    // function getFactorial(num) {
+    //   if(num == 0 || num == 1) {
+    //     return 1
+    //   }
+    //   return num * getFactorial(num - 1)
+    // }
+
+    // console.log(getFactorial(5))
+  </script>
+</body>
+</html>
