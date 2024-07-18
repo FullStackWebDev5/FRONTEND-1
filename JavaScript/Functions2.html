@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions</title>
+</head>
+<body>
+  <script>
+    /*
+      # Functions:
+        - Standard Functions
+          function abc() {
+            console.log('abc')
+          }
+            - Hoisted
+
+        - Anonymous Functions (Used as a function expression)
+          const abc = function () {
+            console.log('abc')
+          }
+            - Not Hoisted
+
+        - Arrow Functions (=>)
+          const abc = () => {
+            console.log('abc')
+          }
+          
+          - Introduced in ES6
+          - Syntactic Sugar
+          - Not Hoisted
+    */
+
+    // const abc = () => {
+    //   console.log('abc')
+    // }
+    // abc()
+
+    // Eg.1: Add two numbers
+    // const sum = (num1, num2) => {
+    //   return num1 + num2
+    // }
+    // console.log(sum(5, 10))
+
+    // Eg.2: Return factorial of a number
+    // const getFactorial = (num) => {
+    //   let factorial = 1
+    //   for(let i = num; i >= 1; i--) {
+    //     factorial = factorial * i
+    //   }
+    //   return factorial
+    // }
+    // console.log(getFactorial(5))
+
+    /*
+      # Single line arrow functions:
+        - Executing one expression
+          - Skip {} from the syntax
+        - Returning one expression (Implicit return)
+          - Skip {} and return keyword from the syntax
+    */
+
+    // const add = (num1, num2) => console.log(num1 + num2)
+    // const subtract = (num1, num2) => console.log(num1 - num2)
+    // const multiply = (num1, num2) => console.log(num1 * num2)
+    // const divide = (num1, num2) => console.log(num1 / num2)
+
+    // const add = (num1, num2) => num1 + num2
+    // const subtract = (num1, num2) => num1 - num2
+    // const multiply = (num1, num2) => num1 * num2
+    // const divide = (num1, num2) => num1 / num2
+
+    // Eg.3: Single line arrow function which takes firstName and lastName as arguments, return fullName of the person
+
+    // const getFullName = (firstName, lastName) => firstName + ' ' + lastName
+    // console.log(getFullName('Bharat', 'Singh'))
+
+    
+    /*
+      # Self invoking function: 
+        - also known as 'IIFE (Immediately Invoked Function Expression)'
+        - Function which gets invoked/called during declaration itself
+        - Advantages:
+          - Stop adding variable to the global scope
+          - Code modular
+        - Syntax:
+          (function() {
+            console.log('abc')
+          })()
+    */
+    // (function() {
+    //   console.log('abc')
+    // })()
+    
+    // (function(num1, num2) {
+    //   console.log(num1 + num2)
+    // })(5, 10)
+
+    // (function() {
+    //   var num1 = 10
+    //   var num2 = 20
+    //   var result = num1 + num2
+    //   console.log(result)
+    // })()
+    // console.log(this)
+
+    /*
+      # Pure functions vs Impure functions
+        - Pure functions: Same set of inputs, returns same set of outputs
+        - Impure functions: Same set of inputs, returns different set of outputs
+    */
+
+    // Pure function
+    // const add = (num1, num2) => {
+    //   return num1 + num2
+    // }
+
+    // console.log(add(5, 10))
+    // console.log(add(12, 28))
+    // console.log(add(30, 25))
+    // console.log(add(5, 10))
+    // console.log(add(12, 28))
+
+    // Impure function
+    // let count = 0
+    // function increment(num) {
+    //   count = count + num
+    //   return count
+    // }
+
+    // console.log(increment(1))
+    // console.log(increment(5))
+    // console.log(increment(7))
+    // console.log(increment(1))
+  </script>
+</body>
+</html>
