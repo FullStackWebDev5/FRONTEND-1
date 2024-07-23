@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let users = [
+      {
+        id: 7,
+        email: "michael.lawson@reqres.in",
+        first_name: "Michael",
+        last_name: "Lawson",
+        avatar: "https://reqres.in/img/faces/7-image.jpg"
+      },
+      {
+        id: 8,
+        email: "lindsay.ferguson@reqres.in",
+        first_name: "Lindsay",
+        last_name: "Ferguson",
+        avatar: "https://reqres.in/img/faces/8-image.jpg"
+      },
+      {
+        id: 9,
+        email: "tobias.funke@reqres.in",
+        first_name: "Tobias",
+        last_name: "Funke",
+        avatar: "https://reqres.in/img/faces/9-image.jpg"
+      },
+      {
+        id: 10,
+        email: "byron.fields@reqres.in",
+        first_name: "Byron",
+        last_name: "Fields",
+        avatar: "https://reqres.in/img/faces/10-image.jpg"
+      },
+      {
+        id: 11,
+        email: "george.edwards@reqres.in",
+        first_name: "George",
+        last_name: "Edwards",
+        avatar: "https://reqres.in/img/faces/11-image.jpg"
+      },
+      {
+        id: 12,
+        email: "rachel.howell@reqres.in",
+        first_name: "Rachel",
+        last_name: "Howell",
+        avatar: "https://reqres.in/img/faces/12-image.jpg"
+      }
+    ]
+    // Create another array which containers firstName of all the users in the above users array
+    // Expected O/P: ['Michael', 'Lindsay', 'Tobias', ...]
+
+    // Way 1
+    // const userNames = []
+    // for(let i = 0; i < users.length; i++) {
+    //   userNames.push(users[i].first_name)
+    // }
+    // console.log(userNames)
+
+    // Way 2
+    // const userNames = []
+    // users.forEach((user, index) => {
+    //   userNames.push(user.first_name)
+    // })
+    // console.log(userNames)
+
+    // Way 3
+    // const userNames = users.map((user, index) => {
+    //   return user.first_name
+    // })
+    // console.log(userNames)
+
+    // console.log(users.map((user) => user.first_name))
+  </script>
+</body>
+</html>

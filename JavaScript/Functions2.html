@@ -132,6 +132,78 @@
     // console.log(increment(5))
     // console.log(increment(7))
     // console.log(increment(1))
+
+    /*
+      # Arrow functions vs Standard functions:
+        - this keyword: Arrow functions inherit 'this' keyword from the lexical environment
+        - arguments: Arrow functions don't have access to arguments objects
+
+      # arguments: Reserved object which stores argument values of a functions
+    */
+
+    // let rohiniDetails = {
+    //   firstName: 'Rohini',
+    //   lastName: 'Bhosale',
+    //   age: 24,
+    //   hobbies: ['Swimming', 'Dancing', 'Coding'],
+    //   isGraduated: true,
+    //   getFullName: function() {
+    //     console.log(this.firstName + ' ' + this.lastName)
+    //   },
+    //   getFullName2: () => {
+    //     console.log(this) // Window object
+    //   }
+    // }
+
+    // rohiniDetails.getFullName()
+    // rohiniDetails.getFullName2()
+
+    // function sum(num1, num2) {
+    //   console.log(arguments[0] + arguments[1])
+    // }
+    // sum(10, 20)
+
+    // const sum = (num1, num2) => {
+    //   console.log(arguments[0] + arguments[1]) // Error
+    // }
+    // sum(10, 20)
+
+    /*
+      # Higher-order functions: A  function that can accept other functions as arguments or return a function as its result.
+      Examples: Callbacks, Closures
+
+        - Advantages
+          - Modular
+          - Improved code readability
+          - Reduces code redundancy/ duplicacy
+    */
+
+    // function calculcations() {
+    //   const add = function(num1, num2) {
+    //     return num1 + num2
+    //   }
+    //   const subtract = function(num1, num2) {
+    //     return num1 - num2
+    //   }
+    //   const multiply = function(num1, num2) {
+    //     return num1 * num2
+    //   }
+    //   const divide = function(num1, num2) {
+    //     return num1 / num2
+    //   }
+    //   return {
+    //     add,
+    //     subtract,
+    //     multiply,
+    //     divide
+    //   }
+    // }
+
+    // const result = calculcations().add(10, 5)
+    // console.log(result)
+
+    // const result = calculcations().subtract(10, 5)
+    // console.log(result)
   </script>
 </body>
 </html>
