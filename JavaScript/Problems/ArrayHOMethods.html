@@ -51,6 +51,7 @@
     //     avatar: "https://reqres.in/img/faces/12-image.jpg"
     //   }
     // ]
+
     // Create another array which containers firstName of all the users in the above users array
     // Expected O/P: ['Michael', 'Lindsay', 'Tobias', ...]
 
@@ -180,6 +181,19 @@
         avatar: "https://reqres.in/img/faces/12-image.jpg"
       }
     ]
+
+    // Way 1
+    // const userNames = users.map((user, index) => {
+    //   return user.first_name
+    // })
+    // const filteredNames = userNames.filter((username, index) => {
+    //   return username.length > 6
+    // })
+    // console.log(filteredNames)
+
+    // Modified Way 1
+    const filName = users.map(user => user.first_name).filter(username => username.length > 6)
+    console.log(filName)
   </script>
 </body>
 </html>
