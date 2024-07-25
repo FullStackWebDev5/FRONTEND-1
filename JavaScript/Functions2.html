@@ -204,6 +204,34 @@
 
     // const result = calculcations().subtract(10, 5)
     // console.log(result)
+
+    /*
+      # Currying: is a technique that involves transforming a function with multiple arguments into a sequence of functions, each taking a single argument.
+    */
+
+    // const getVolume = function(length, breadth, height) {
+    //   return length * breadth * height
+    // }
+    // console.log(getVolume(20, 10, 5))
+    // console.log(getVolume(20, 12, 4))
+    // console.log(getVolume(20, 11, 3))
+    // console.log(getVolume(20, 15, 2))
+
+    // const getVolume = function(length) {
+    //   return function(breadth) {
+    //     return function(height) {
+    //       return length * breadth * height
+    //     }
+    //   }
+    // }
+
+    // console.log(getVolume(20)(10)(5))
+
+    // const getVolumeWithLength20 = getVolume(20)
+    // console.log(getVolumeWithLength20(10)(5))
+    // console.log(getVolumeWithLength20(12)(4))
+    // console.log(getVolumeWithLength20(11)(3))
+    // console.log(getVolumeWithLength20(15)(2))
   </script>
 </body>
 </html>
