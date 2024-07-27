@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES6 Syntaxes/Concepts</title>
+</head>
+<body>
+  <script>
+    /*
+      # ES6 Syntaxes/Concepts
+        1. let and const (Block scope)
+        2. Arrow Functions (() => {})
+        3. Spread Operator (...)
+        4. Template Literals/ Strings (` `)
+        5. Destructuring
+        6. Object Property assignment
+    */
+    
+    /*
+      # Template Strings
+          - To use variable/ expression value: ${test}
+          - Can use to log multi-line string
+    */
+    // let rohiniDetails = {
+    //   firstName: 'Rohini',
+    //   lastName: 'Bhosale',
+    //   age: 24,
+    //   hobbies: ['Swimming', 'Dancing', 'Coding'],
+    //   isGraduated: true,
+    //   getSummary: function() {
+    //     console.log("My name is " + this.firstName + " " + this.lastName + ". I'm " + this.age + " years old. My hobbies are " + this.hobbies.join(', ') + ".")
+    //   },
+    //   getSummary2: function() {
+    //     // Template Strings
+    //     console.log(`My name is ${this.firstName} ${this.lastName}. I'm ${this.age} years old. My hobbies are ${this.hobbies.join(', ')}.`)
+    //   },
+    // }
+
+    // rohiniDetails.getSummary()
+    // rohiniDetails.getSummary2()
+
+    // console.log("Johny, Johny.\nYes, Papa?\nEating sugar?\nNo, Papa.\nTelling lies?\nNo, Papa.\nOpen your mouth.\nHa-ha-ha!")
+
+    // console.log(`
+    //   Johny, Johny.
+    //   Yes, Papa?
+    //   Eating sugar?
+    //   No, Papa.
+    //   Telling lies?
+    //   No, Papa.
+    //   Open your mouth.
+    //   Ha-ha-ha!
+    // `)
+
+    /*
+      # Destructuring
+        - Syntax:
+          let obj1 = {
+            a: 5,
+            b: 10
+          }
+
+          let {
+            a,
+            b
+          } = obj1
+    */
+
+    // Example 1: Objects
+    // let rohiniDetails = {
+    //   firstName: 'Rohini',
+    //   lastName: 'Bhosale',
+    //   age: 24,
+    //   hobbies: ['Swimming', 'Dancing', 'Coding'],
+    //   isGraduated: true,
+    // }
+    // const getSummary = function() {
+    //   const firstName = rohiniDetails.firstName
+    //   const lastName = rohiniDetails.lastName
+    //   const age = rohiniDetails.age
+    //   const hobbies = rohiniDetails.hobbies
+
+    //   console.log(`My name is ${firstName} ${lastName}. I'm ${age} years old. My hobbies are ${hobbies.join(', ')}.`)
+    // }
+
+    // let {
+    //   firstName,
+    //   lastName,
+    //   age,
+    //   hobbies,
+    //   fathersName
+    // } = rohiniDetails
+
+    // console.log(`My name is ${firstName} ${lastName}. I'm ${age} years old. My hobbies are ${hobbies.join(', ')}.`)
+
+    // console.log(fathersName)
+
+    // Example 2: Objects
+    // const obj1 = {
+    //   a: 5,
+    //   b: 10,
+    //   c: 15,
+    //   d: 20
+    // }
+
+    // const { a, c } = obj1
+    // console.log(a, c)
+
+    // Example 3A: Arrays
+    // const array = [2, 4, 6, 8, 10]
+
+    // console.log(array[0])
+    // console.log(array[1])
+    // console.log(array[2])
+    // console.log(array[3])
+    // console.log(array[4])
+
+    // const [a, b, c, d, e] = array
+    // console.log(a)
+    // console.log(b)
+    // console.log(c)
+    // console.log(d)
+    // console.log(e)
+
+    // Example 3B: Arrays (Ignore elements)
+
+    // const array = [2, 4, 6, 8, 10]
+
+    // const [a, , c, , e] = array
+    // console.log(a)
+    // console.log(c)
+    // console.log(e)
+
+    // Example 3C: Arrays (Default values)
+    // const array = [2]
+    // const [a, b = 10] = array
+    // console.log(a)
+    // console.log(b)
+
+    // Example 3D: Arrays (Rest syntax - ...)
+    
+    // const array = [2, 4, 6, 8, 10]
+    // const [a, b, c, ...rest] = array
+    // console.log(a)
+    // console.log(b)
+    // console.log(c)
+    // console.log(rest)
+
+    // Example 4: Objects (renaming variables)
+    // let {
+    //   firstName: fN,
+    //   lastName: lN,
+    //   age: A,
+    //   hobbies: hB,
+    // } = rohiniDetails
+
+    // console.log(`My name is ${fN} ${lN}. I'm ${A} years old. My hobbies are ${hB.join(', ')}.`)
+
+    // Example 5: Objects (Default values)
+    // let {
+    //   firstName,
+    //   lastName,
+    //   age,
+    //   hobbies,
+    //   fathersName = 'Gandhi Ji'
+    // } = rohiniDetails
+
+    // console.log(`My name is ${firstName} ${lastName}. I'm ${age} years old. My hobbies are ${hobbies.join(', ')}.`)
+
+    // console.log(fathersName)
+
+    /*
+      # Object Property assignment
+    */
+
+    // const firstName = 'Rohini'
+    // const lastName = 'Bhosale'
+    // const age = 24
+    // const hobbies = ['Swimming', 'Dancing', 'Coding']
+    // const isGraduated = true
+
+    // let rohiniDetails = {
+    //   firstName: firstName,
+    //   lastName: lastName,
+    //   age: age,
+    //   hobbies: hobbies,
+    //   isGraduated: isGraduated,
+    // }
+
+    // let rohiniDetails = {
+    //   firstName,
+    //   lastName,
+    //   age,
+    //   hobbies,
+    //   isGraduated,
+    // }
+
+    // console.log(rohiniDetails)
+  </script>
+</body>
+</html>
