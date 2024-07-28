@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      # Question 1:
+        Return an array which contains firstName of all the users in the above users array
+        Expected O/P: ['Michael', 'Lindsay', 'Tobias', ...]
+    */
+
+    // let users = [
+    //   {
+    //     id: 7,
+    //     email: "michael.lawson@reqres.in",
+    //     first_name: "Michael",
+    //     last_name: "Lawson",
+    //     avatar: "https://reqres.in/img/faces/7-image.jpg"
+    //   },
+    //   {
+    //     id: 8,
+    //     email: "lindsay.ferguson@reqres.in",
+    //     first_name: "Lindsay",
+    //     last_name: "Ferguson",
+    //     avatar: "https://reqres.in/img/faces/8-image.jpg"
+    //   },
+    //   {
+    //     id: 9,
+    //     email: "tobias.funke@reqres.in",
+    //     first_name: "Tobias",
+    //     last_name: "Funke",
+    //     avatar: "https://reqres.in/img/faces/9-image.jpg"
+    //   },
+    //   {
+    //     id: 10,
+    //     email: "byron.fields@reqres.in",
+    //     first_name: "Byron",
+    //     last_name: "Fields",
+    //     avatar: "https://reqres.in/img/faces/10-image.jpg"
+    //   },
+    //   {
+    //     id: 11,
+    //     email: "george.edwards@reqres.in",
+    //     first_name: "George",
+    //     last_name: "Edwards",
+    //     avatar: "https://reqres.in/img/faces/11-image.jpg"
+    //   },
+    //   {
+    //     id: 12,
+    //     email: "rachel.howell@reqres.in",
+    //     first_name: "Rachel",
+    //     last_name: "Howell",
+    //     avatar: "https://reqres.in/img/faces/12-image.jpg"
+    //   }
+    // ]
+
+    // Way 1
+    // const userNames = []
+    // for(let i = 0; i < users.length; i++) {
+    //   userNames.push(users[i].first_name)
+    // }
+    // console.log(userNames)
+
+    // Way 2
+    // const userNames = []
+    // users.forEach((user, index) => {
+    //   userNames.push(user.first_name)
+    // })
+    // console.log(userNames)
+
+    // Way 3
+    // const userNames = users.map((user, index) => {
+    //   return user.first_name
+    // })
+    // console.log(userNames)
+
+    // Modified Way 3
+    // console.log(users.map((user) => user.first_name))
+
+    /* --------------------------------------------- */
+    /*
+      # Question 2: 
+        Modily the existing array with the following rules:
+          - Salaries for employees in the "sales" department should be increased by 10%.
+          - Salaries for employees in the "engineering" department should be increased by 15%.
+          - Salaries for employees in all other departments should be increased by 5%.
+        Expected O/P:
+        [
+          { id: 1, name: "Alice", department: "sales", salary: 44000 },
+          { id: 2, name: "Bob", department: "engineering", salary: 57500 },
+          { id: 3, name: "Charlie", department: "marketing", salary: 47250 },
+          { id: 4, name: "David", department: "sales", salary: 38500 },
+          { id: 5, name: "Emily", department: "engineering", salary: 63250 }
+        ];
+    */
+    // const employees = [
+    //   { id: 1, name: "Alice", department: "sales", salary: 40000 },
+    //   { id: 2, name: "Bob", department: "engineering", salary: 50000 },
+    //   { id: 3, name: "Charlie", department: "marketing", salary: 45000 },
+    //   { id: 4, name: "David", department: "sales", salary: 35000 },
+    //   { id: 5, name: "Emily", department: "engineering", salary: 55000 }
+    // ];
+
+    // Way 1
+    // let employeesWithNewSalary = []
+    // for(let i = 0; i < employees.length; i++) {
+    //   const updatedEmployee = { ...employees[i] }
+    //   if(employees[i].department == 'sales') {
+    //     updatedEmployee.salary = Math.round(employees[i].salary * 1.10)
+    //   } else if (employees[i].department == 'engineering') {
+    //     updatedEmployee.salary = Math.round(employees[i].salary * 1.15)
+    //   } else {
+    //     updatedEmployee.salary = Math.round(employees[i].salary * 1.05)
+    //   }
+    //   employeesWithNewSalary.push(updatedEmployee);
+    // }
+    // console.log(employeesWithNewSalary)
+
+    // Way 2
+    // const empWNewSal = employees.map(employee => {
+    //   const updatedEmployee = { ...employee }
+    //   if(employee.department == 'sales') {
+    //     updatedEmployee.salary = Math.round(employee.salary * 1.10)
+    //   } else if (employee.department == 'engineering') {
+    //     updatedEmployee.salary = Math.round(employee.salary * 1.15)
+    //   } else {
+    //     updatedEmployee.salary = Math.round(employee.salary * 1.05)
+    //   }
+    //   return updatedEmployee
+    // })
+
+    // console.log(empWNewSal)
+
+    /* ----------------------------------------------- */
+    /*
+      # Question 3:
+        Create another array which containers firstName of only those users who have more than 6 letters in their firstName
+        Expected O/P: ['Michael', 'Lindsay']
+    */
+    // let users = [
+    //   {
+    //     id: 7,
+    //     email: "michael.lawson@reqres.in",
+    //     first_name: "Michael",
+    //     last_name: "Lawson",
+    //     avatar: "https://reqres.in/img/faces/7-image.jpg"
+    //   },
+    //   {
+    //     id: 8,
+    //     email: "lindsay.ferguson@reqres.in",
+    //     first_name: "Lindsay",
+    //     last_name: "Ferguson",
+    //     avatar: "https://reqres.in/img/faces/8-image.jpg"
+    //   },
+    //   {
+    //     id: 9,
+    //     email: "tobias.funke@reqres.in",
+    //     first_name: "Tobias",
+    //     last_name: "Funke",
+    //     avatar: "https://reqres.in/img/faces/9-image.jpg"
+    //   },
+    //   {
+    //     id: 10,
+    //     email: "byron.fields@reqres.in",
+    //     first_name: "Byron",
+    //     last_name: "Fields",
+    //     avatar: "https://reqres.in/img/faces/10-image.jpg"
+    //   },
+    //   {
+    //     id: 11,
+    //     email: "george.edwards@reqres.in",
+    //     first_name: "George",
+    //     last_name: "Edwards",
+    //     avatar: "https://reqres.in/img/faces/11-image.jpg"
+    //   },
+    //   {
+    //     id: 12,
+    //     email: "rachel.howell@reqres.in",
+    //     first_name: "Rachel",
+    //     last_name: "Howell",
+    //     avatar: "https://reqres.in/img/faces/12-image.jpg"
+    //   }
+    // ]
+
+    // Way 1
+    // const userNames = users.map((user, index) => {
+    //   return user.first_name
+    // })
+    // const filteredNames = userNames.filter((username, index) => {
+    //   return username.length > 6
+    // })
+    // console.log(filteredNames)
+
+    // Modified Way 1
+    // const filName = users.map(user => user.first_name).filter(username => username.length > 6)
+    // console.log(filName)
+
+
+    /* ------------------------------------------------*/
+    /*
+      # Question 4:
+        Return a new array which containers firstName of only those users who have an even 'id' value
+        Expected O/P: ['Lindsay', 'Byron', 'Rachel']
+    */
+
+    // let users = [
+    //   {
+    //     id: 7,
+    //     email: "michael.lawson@reqres.in",
+    //     first_name: "Michael",
+    //     last_name: "Lawson",
+    //     avatar: "https://reqres.in/img/faces/7-image.jpg"
+    //   },
+    //   {
+    //     id: 8,
+    //     email: "lindsay.ferguson@reqres.in",
+    //     first_name: "Lindsay",
+    //     last_name: "Ferguson",
+    //     avatar: "https://reqres.in/img/faces/8-image.jpg"
+    //   },
+    //   {
+    //     id: 9,
+    //     email: "tobias.funke@reqres.in",
+    //     first_name: "Tobias",
+    //     last_name: "Funke",
+    //     avatar: "https://reqres.in/img/faces/9-image.jpg"
+    //   },
+    //   {
+    //     id: 10,
+    //     email: "byron.fields@reqres.in",
+    //     first_name: "Byron",
+    //     last_name: "Fields",
+    //     avatar: "https://reqres.in/img/faces/10-image.jpg"
+    //   },
+    //   {
+    //     id: 11,
+    //     email: "george.edwards@reqres.in",
+    //     first_name: "George",
+    //     last_name: "Edwards",
+    //     avatar: "https://reqres.in/img/faces/11-image.jpg"
+    //   },
+    //   {
+    //     id: 12,
+    //     email: "rachel.howell@reqres.in",
+    //     first_name: "Rachel",
+    //     last_name: "Howell",
+    //     avatar: "https://reqres.in/img/faces/12-image.jpg"
+    //   }
+    // ]
+    
+    // Way 1:
+    // const evenIdUsers = users.filter(user => {
+    //   return user.id % 2 == 0
+    // })
+
+    // const evenIdUserNames = evenIdUsers.map(user => {
+    //   return user.first_name
+    // })
+
+    // console.log(evenIdUserNames)
+
+    // Modified Way 1:
+    // const evenIdUserNames = users.filter(user => user.id % 2 == 0).map(user => user.first_name)
+
+    // console.log(evenIdUserNames)
+
+    /* ------------------------------------------------- */
+    /*
+      # Question 5:
+        Return a new array which containers new object format for each user:
+          - id
+          - email
+          - fullName
+          - avatar
+        You need to evaluate value of fullName using first_name and last_name
+        Expected O/P: 
+        [
+          {
+              "id": 7,
+              "email": "michael.lawson@reqres.in",
+              "fullName": "Michael Lawson",
+              "avatar": "https://reqres.in/img/faces/7-image.jpg"
+          },
+          {
+              "id": 8,
+              "email": "lindsay.ferguson@reqres.in",
+              "fullName": "Lindsay Ferguson",
+              "avatar": "https://reqres.in/img/faces/8-image.jpg"
+          },
+          {
+              "id": 9,
+              "email": "tobias.funke@reqres.in",
+              "fullName": "Tobias Funke",
+              "avatar": "https://reqres.in/img/faces/9-image.jpg"
+          },
+          {
+              "id": 10,
+              "email": "byron.fields@reqres.in",
+              "fullName": "Byron Fields",
+              "avatar": "https://reqres.in/img/faces/10-image.jpg"
+          },
+          {
+              "id": 11,
+              "email": "george.edwards@reqres.in",
+              "fullName": "George Edwards",
+              "avatar": "https://reqres.in/img/faces/11-image.jpg"
+          },
+          {
+              "id": 12,
+              "email": "rachel.howell@reqres.in",
+              "fullName": "Rachel Howell",
+              "avatar": "https://reqres.in/img/faces/12-image.jpg"
+          }
+        ]
+    */
+
+    let users = [
+      {
+        id: 7,
+        email: "michael.lawson@reqres.in",
+        first_name: "Michael",
+        last_name: "Lawson",
+        avatar: "https://reqres.in/img/faces/7-image.jpg"
+      },
+      {
+        id: 8,
+        email: "lindsay.ferguson@reqres.in",
+        first_name: "Lindsay",
+        last_name: "Ferguson",
+        avatar: "https://reqres.in/img/faces/8-image.jpg"
+      },
+      {
+        id: 9,
+        email: "tobias.funke@reqres.in",
+        first_name: "Tobias",
+        last_name: "Funke",
+        avatar: "https://reqres.in/img/faces/9-image.jpg"
+      },
+      {
+        id: 10,
+        email: "byron.fields@reqres.in",
+        first_name: "Byron",
+        last_name: "Fields",
+        avatar: "https://reqres.in/img/faces/10-image.jpg"
+      },
+      {
+        id: 11,
+        email: "george.edwards@reqres.in",
+        first_name: "George",
+        last_name: "Edwards",
+        avatar: "https://reqres.in/img/faces/11-image.jpg"
+      },
+      {
+        id: 12,
+        email: "rachel.howell@reqres.in",
+        first_name: "Rachel",
+        last_name: "Howell",
+        avatar: "https://reqres.in/img/faces/12-image.jpg"
+      }
+    ]
+
+    // Way 1
+    // const result = users.map(user => {
+    //   return {
+    //     id: user.id,
+    //     email: user.email,
+    //     fullName: user.first_name + ' ' + user.last_name,
+    //     avatar: user.avatar
+    //   }
+    // })
+
+    // console.log(result)
+
+    // Modified Way 1:
+    // const result = users.map(user => ({
+    //   id: user.id,
+    //   email: user.email,
+    //   fullName: `${user.first_name} ${user.last_name}`,
+    //   avatar: user.avatar
+    // }))
+
+    // console.log(result)
+  </script>
+</body>
+</html>
