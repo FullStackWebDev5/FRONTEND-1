@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototype</title>
+</head>
+<body>
+  <script>
+    /*
+      # Prototypes: 
+        - A reference to another object that serves as a blueprint for properties and methods
+        - An entity from where all objects inherit additional properties and methods
+
+      # Access prototype of an object
+        - __proto__
+        - Object.getPrototypeOf()
+        
+      # Access protoype of a constructor
+        - prototype
+
+      # Prototype Chain: The way in which prototypes are interconnected in objects
+    */
+
+    // const pankajDetails = {
+    //   name: 'Pankaj',
+    //   age: 25,
+    // }
+
+    // console.log(pankajDetails)
+    // console.log(pankajDetails.__proto__)
+    // console.log(pankajDetails.__proto__.__proto__)
+
+    // Prototype Chain: pankajDetails -> Object -> null
+
+    // const arr = [1, 2, 3, 4, 5]
+    // console.log(arr)
+    // console.log(arr.__proto__) // Array
+    // console.log(arr.__proto__.__proto__) // Object
+    // console.log(arr.__proto__.__proto__.__proto__) // null
+
+    // Prototype Chain: arr -> Array -> Object -> null
+
+    /*
+      #Prototype Chain:
+        - obj -> Object -> null
+        - arr -> Array -> Object -> null
+        - func -> Function -> Object -> null
+        - num -> Number -> Object -> null
+        - str -> String -> Object -> null
+        - bool -> Boolean -> Object -> null
+    */
+
+    function Student(firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+    }
+
+    const student1 = new Student('Rohini', 'Bhosale')
+
+    console.log(student1)
+    console.log(student1.__proto__)
+    console.log(student1.__proto__.__proto__)
+    console.log(student1.__proto__.__proto__.__proto__)
+    console.log(Student.prototype)
+
+    // Prototype Chain: student1 -> Student -> Object -> null
+  </script>
+</body>
+</html>
+
+<!--
+  # Real-world example:
+    orange.__proto__ == Fruits.prototype 
+    orange.__proto__.proto == PlantBasedFood.prototype 
+
+    orange -> Fruits -> PlantBasedFood -> Food -> null
+    egg -> Egg -> NonVegFood -> Food -> null
+-->
