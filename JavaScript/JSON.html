@@ -33,26 +33,26 @@
         - Using JSON.stringify and JSON.parse
     */ 
 
-    const rohiniDetails = {
-      firstName: 'Rohini',
-      lastName: 'Bhosale',
-      address: {
-        street: '123 Main St',
-        city: 'New York',
-        state: 'NY',
-        zipCode: '10001',
-      },
-    }
+    // const rohiniDetails = {
+    //   firstName: 'Rohini',
+    //   lastName: 'Bhosale',
+    //   address: {
+    //     street: '123 Main St',
+    //     city: 'New York',
+    //     state: 'NY',
+    //     zipCode: '10001',
+    //   },
+    // }
 
     // Shallow Copy: Doesn't take into account nested objects and arrays
     // const obj = { ...rohiniDetails }
     // rohiniDetails.address.city = 'California'
     // console.log(obj)
 
-    const str = JSON.stringify(rohiniDetails)
-    const obj = JSON.parse(str)
-    rohiniDetails.address.city = 'California'
-    console.log(obj)
+    // const str = JSON.stringify(rohiniDetails)
+    // const obj = JSON.parse(str)
+    // rohiniDetails.address.city = 'California'
+    // console.log(obj)
   </script>
 </body>
 </html>
