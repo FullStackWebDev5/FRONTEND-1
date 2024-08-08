@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES6 Classes Part-2</title>
+</head>
+<body>
+  <script>
+    /*
+      # Class Inheritance: Creating a class using an existing class so that objects created using subclass have access to properties and methods of superclass
+        - extends: Inheritance
+          - Syntax: SubClass extends SuperClass
+        - super(): Invoke the SuperClass constructor
+          - Integral part in the inheritance logic
+    */
+
+    class Animal {
+      static count = 0
+
+      constructor(breed, legs, tail) {
+        this.breed = breed
+        this.legs = legs
+        this.tail = tail
+
+        Animal.count++
+      }
+
+      eat () {
+        console.log(`${this.breed} started eating`)
+      }
+
+      move () {
+        console.log(`${this.breed} started moving`)
+      }
+
+      sleep () {
+        console.log(`${this.breed} started sleeping`)
+      }
+    }
+
+    class Dog extends Animal {
+      constructor(breed, legs, tail, isDomestic) {
+        super(breed, legs, tail)
+        this.isDomestic = isDomestic
+      }
+
+      // Function Overriding
+      eat () {
+        console.log(`${this.breed} eating, "Chop chop ..."`)
+      }
+
+      bark () {
+        console.log('Bow Bow!')
+      }
+    }
+
+    // const lion = new Animal('White Lion', 4, true)
+    // console.log(lion.breed, lion.legs, lion.tail)
+    // lion.eat()
+    // lion.move()
+    // lion.sleep()
+
+    const germanShepherd = new Dog('German Shepherd', 4, true, true)
+    console.log(germanShepherd)
+    germanShepherd.bark()
+    germanShepherd.eat()
+    germanShepherd.move()
+    germanShepherd.sleep()
+
+    console.log(Animal.count) // 2
+    console.log(Dog.count) // 2
+
+    /*
+      # Function overring: The ability of a subclass to provide a different implementation for a method that is already defined in its superclass.
+    */
+  </script>
+</body>
+</html>
+
+<!--
+  # Inbuilt objects
+    - Date
+    - JSON
+      - shallow copy vs deep copy
+-->

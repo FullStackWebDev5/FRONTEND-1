@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON</title>
+</head>
+<body>
+  <script>
+    /*
+      # JSON: JavaScript Object Notation
+        - Syntax:
+          {
+            firstName: 'Sanchay',
+            lastName: 'Agarwal'
+          }
+        - Methods:
+          - stringify(): Convert JSON object to string
+          - parse(): Convert JSON string to object
+    */
+
+    // let rohiniDetails = {
+    //   firstName: 'Rohini',
+    //   lastName: 'Bhosale',
+    // }
+    // console.log(JSON.stringify(rohiniDetails))
+
+    // const str = '{"firstName":"Rohini","lastName":"Bhosale"}'
+    // console.log(JSON.parse(str))
+
+    /*
+      # Deep Copy:
+        - Using JSON.stringify and JSON.parse
+    */ 
+
+    const rohiniDetails = {
+      firstName: 'Rohini',
+      lastName: 'Bhosale',
+      address: {
+        street: '123 Main St',
+        city: 'New York',
+        state: 'NY',
+        zipCode: '10001',
+      },
+    }
+
+    // Shallow Copy: Doesn't take into account nested objects and arrays
+    // const obj = { ...rohiniDetails }
+    // rohiniDetails.address.city = 'California'
+    // console.log(obj)
+
+    const str = JSON.stringify(rohiniDetails)
+    const obj = JSON.parse(str)
+    rohiniDetails.address.city = 'California'
+    console.log(obj)
+  </script>
+</body>
+</html>

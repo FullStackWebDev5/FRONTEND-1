@@ -210,50 +210,40 @@
         - Access: ClassName.propertyName or ClassName.methodName() (Applicable outside the class as well)
     */
 
-    class Student {
-      // Static property
-      static school = 'XYZ Public School'
-      static regNo = 1
+    // class Student {
+    //   // Static property
+    //   static school = 'XYZ Public School'
+    //   static studentCount = 1
 
-      // Static method
-      static getSection() {
-        return Student.regNo % 2
-      }
+    //   // Static method
+    //   static getSection() {
+    //     return Student.regNo % 2
+    //   }
 
-      constructor(firstName, lastName) {
-        this.firstName = firstName
-        this.lastName = lastName
-        this.regNo = Student.regNo
-        this.section = Student.getSection() ? 'A' : 'B'
+    //   constructor(firstName, lastName) {
+    //     this.firstName = firstName
+    //     this.lastName = lastName
+    //     this.regNo = Student.studentCount
+    //     this.section = Student.getSection() ? 'A' : 'B'
 
-        Student.regNo++
-      }
+    //     Student.studentCount++
+    //   }
 
-      getFullName () {
-        return this.firstName + ' ' + this.lastName
-      }
-    }
+    //   getFullName () {
+    //     return this.firstName + ' ' + this.lastName
+    //   }
+    // }
 
-    const student1 = new Student('Sanchay', 'Agarwal')
-    console.log(student1)
+    // const student1 = new Student('Sanchay', 'Agarwal')
+    // console.log(student1)
 
-    const student2 = new Student('Poornima', 'Shukla')
-    console.log(student2)
+    // const student2 = new Student('Poornima', 'Shukla')
+    // console.log(student2)
 
-    const student3 = new Student('Suraj', 'Nishad')
-    console.log(student3)
+    // const student3 = new Student('Suraj', 'Nishad')
+    // console.log(student3)
 
-    console.log(Student.school)
+    // console.log(Student.school)
   </script>
 </body>
 </html>
-
-<!--
-  # Class Inheritance
-    - super, extends
-    - Function Overriding
-  # Inbuilt objects
-    - Date
-    - JSON
-      - shallow copy vs deep copy
--->
