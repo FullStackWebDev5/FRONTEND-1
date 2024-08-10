@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <h1>Document Object Model</h1>
+
+  <!-- <h2>getElementById</h2>
+  <ul>
+    <li id="list1">Item 1</li>
+    <li id="list2">Item 2</li>
+    <li id="list3">Item 3</li>
+  </ul>
+
+  <h2>getElementsByClassName</h2>
+  <ul>
+    <li id="list1" class="item">Item 1</li>
+    <li id="list2" class="item">Item 2</li>
+    <li id="list3" class="item">Item 3</li>
+  </ul> -->
+
+  <h2>innerText</h2>
+  <p id="test">This place is reserved for some special text</p>
+
+  <script>
+    /*
+      # DOM: Document Object Model
+        - Reserved Object: document
+        - Document: HTML Document
+        - Document Tree: JavaScript views the entire HTML document as a tree with multiple nodes
+          - Reference Images:
+            - https://info340.github.io/img/html/dom-tree.jpg
+            - https://www.researchgate.net/figure/Dom-Tree-of-An-Example-Web-Page_fig2_221417012
+
+        - Nodes: Represents HTML elements
+
+      # BOM: Browser Object Model
+        - Reserved Object: window
+        - document object is a property of window object
+    */
+
+  //  console.log(document) // DOM
+
+   /*
+      # DOM properties:
+        - .body: Returns the body of the HTML document
+        - .head: Returns the head of the HTML document
+        - .firstElementChild: Return the first child element of the node
+        - .lastElementChild: Return the last child element of the node
+        - .children: Return an array of children nodes
+   */
+
+  // console.log(document.body)
+  // console.log(document.head)
+
+  // console.log(document.firstElementChild)
+  // console.log(document.body.firstElementChild)
+  // console.log(document.head.firstElementChild)
+
+  // console.log(document.lastElementChild)
+  // console.log(document.body.lastElementChild)
+  // console.log(document.head.lastElementChild)
+
+  // console.log(document.children)
+  // console.log(document.body.children)
+  // console.log(document.head.children)
+
+  /*
+     # DOM methods (Selectors):
+      - .getElementById('id'): Returns the node (element) with the specified ID value
+      - .getElementsByClassName('class'): Returns an array of nodes (elements) with the specified class value
+      - .getElementsByTagName('tagName'): Returns an array of nodes (elements) which have the specified tag
+
+      - Alternatives:
+        - .querySelector(selector): Returns the node (element) which matches the CSS selector
+        - .querySelectorAll(selector): Returns an array of nodes (elements) which matches the CSS selector
+  */
+
+  // const li1 = document.getElementById('list1')
+  // console.log(li1)
+
+  // const items = document.getElementsByClassName('item')
+  // console.log(items)
+
+  // const liTags = document.getElementsByTagName('li')
+  // console.log(liTags)
+
+  // const li1 = document.querySelector('#list1') 
+  // console.log(li1)
+
+  // const item = document.querySelector('.item') 
+  // console.log(item)
+
+  // const liTag = document.querySelector('li') 
+  // console.log(liTag)
+
+  // const items = document.querySelectorAll('.item') 
+  // console.log(items)
+
+  // const liTags = document.querySelectorAll('li') 
+  // console.log(liTags)
+
+  /*
+    Properties to access/update inner content:
+      - innerText: Refers to the inner text content
+      - innerHTML: Refers to the inner HTML content
+  */
+
+  // const content = document.getElementById('test').innerText
+  // console.log(content)
+
+  document.getElementById('test').innerHTML = 'Here is the <b>MAGIC</b> :)'
+  </script>
+</body>
+</html>
+
+<!--
+  # Future:
+    - Web APIs
+-->
