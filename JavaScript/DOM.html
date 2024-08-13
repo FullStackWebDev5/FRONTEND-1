@@ -22,8 +22,8 @@
     <li id="list3" class="item">Item 3</li>
   </ul> -->
 
-  <!-- <h2>innerText</h2>
-  <p id="test">This place is reserved for some special text</p> -->
+  <h2>innerText</h2>
+  <p id="test">This place is reserved for some special text</p>
 
   <script>
     /*
@@ -51,6 +51,8 @@
         - .firstElementChild: Return the first child element of the node
         - .lastElementChild: Return the last child element of the node
         - .children: Return an array of children nodes
+        - .nextElementSibling: Return the next sibling element of the node
+        
    */
 
   // console.log(document.body)
@@ -75,7 +77,7 @@
       - .getElementsByTagName('tagName'): Returns an array of nodes (elements) which have the specified tag
 
       - Alternatives:
-        - .querySelector(selector): Returns the node (element) which matches the CSS selector
+        - .querySelector(selector): Returns the first node (element) which matches the CSS selector
         - .querySelectorAll(selector): Returns an array of nodes (elements) which matches the CSS selector
   */
 
@@ -104,12 +106,15 @@
   // console.log(liTags)
 
   /*
-    Properties to access/update inner content:
-      - innerText: Refers to the inner text content
-      - innerHTML: Refers to the inner HTML content
+    # DOM Manipulation
+      - Properties to access/update inner content:
+       - innerText: Refers to the inner text content
+        - Alternative: textContent
+       - innerHTML: Refers to the inner HTML content
+       - value: Refers to the value in form related fields
   */
 
-  // const content = document.getElementById('test').innerText
+  // const content = document.getElementById('test').textContent
   // console.log(content)
 
   // document.getElementById('test').innerHTML = 'Here is the <b>MAGIC</b> :)'
