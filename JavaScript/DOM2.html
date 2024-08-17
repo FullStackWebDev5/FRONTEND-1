@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+</head>
+<body>
+  <h1 id="main-title">Web Development</h1>
+
+  <div id="html-section" class="technology language">
+    <h2>HTML</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptatibus mollitia culpa! Excepturi, fuga rem?</p>
+  </div>
+
+  <!-- <button onclick="deleteHTMLSection()">Delete HTML Section</button> -->
+
+  <button onclick="addCSSSection()">Add CSS Section</button>
+
+  <script>
+    /*
+      # DOM Manipulation Methods:
+        - createElement(tagName) **: Create HTML elements
+
+        - appendChild(element):
+          - Append an element to the end of the parent element
+          - Cannot pass a string as value
+        - append(element1, element2, ...) **: 
+          - Append multiple child elements to the parent element
+          - Pass a string as value
+
+        - removeChild(elementToBeRemoved):
+          - Remove a child element from the parent element
+        - remove() **:
+          - Remove the specific element from the DOM
+
+        - classList **: 
+          - Access/Update the array of class names assigned to the element
+          - Further has methods:
+            - add('new-class')
+            - remove('existing-class')
+    */
+
+    /* ----------------------- */
+
+    // const div = document.createElement('div')
+    // div.id = 'css-section'
+    // document.body.appendChild(div)
+
+    // const h2 = document.createElement('h2')
+    // h2.innerText = 'CSS'
+
+    // const p = document.createElement('p')
+    // p.innerText = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptatibus mollitia culpa! Excepturi, fuga rem?'
+
+    // div.append(h2, p)
+    // p.append('Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptatibus mollitia culpa! Excepturi, fuga rem?')
+
+    /* ----------------------- */
+    // function deleteHTMLSection() {
+    //   // removeChild()
+    //   // const parent = document.body
+    //   // const child = document.getElementById('html-section')
+    //   // parent.removeChild(child)
+
+    //   // remove()
+    //   const htmlSection = document.getElementById('html-section')
+    //   htmlSection.remove()
+    // }
+
+    /* ----------------------- */
+    // const div = document.createElement('div')
+    // div.id = 'js-section'
+    // div.classList.add('technology')
+    // div.classList.add('language')
+    // div.classList.add('test')
+    // document.body.appendChild(div)
+
+    // const h2 = document.createElement('h2')
+    // h2.innerText = 'JavaScript'
+
+    // const p = document.createElement('p')
+    // p.innerText = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptatibus mollitia culpa! Excepturi, fuga rem?'
+
+    // div.append(h2, p)
+
+    /* ----------------------- */
+    // document.getElementById("html-section").classList.remove('technology')
+
+    /* ----------------------- */
+    // function addCSSSection() {
+    //   const div = document.createElement('div')
+    //   div.id = 'css-section'
+    //   document.body.appendChild(div)
+
+    //   const h2 = document.createElement('h2')
+    //   h2.innerText = 'CSS'
+
+    //   const p = document.createElement('p')
+    //   p.innerText = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptatibus mollitia culpa! Excepturi, fuga rem?'
+
+    //   div.append(h2, p)
+    // }
+  </script>
+</body>
+</html>
