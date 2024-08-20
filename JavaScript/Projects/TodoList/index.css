@@ -1,0 +1,19 @@
+#task-manager {
+  width: max-content;
+  margin: 10px auto;
+  text-align: center;
+  background-color: aliceblue;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#shopping-list {
+  list-style: none;
+  padding: 0;
+}
+
+#shopping-list li {
+  padding: 5px 0;
+  border-bottom: 1px solid black;
+}
