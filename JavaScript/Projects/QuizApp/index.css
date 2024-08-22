@@ -1,0 +1,38 @@
+body {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  text-align: center;
+}
+
+#question {
+  width: 80%;
+  margin: 10px auto ;
+  font-size: 1.5em;
+}
+
+#options-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.options {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #d79b00;
+  font-size: 1.2em;
+}
+
+.options:hover {
+  cursor: pointer;
+}
