@@ -36,3 +36,20 @@ body {
 .options:hover {
   cursor: pointer;
 }
+
+#next-btn-container {
+  text-align: right;
+}
+
+#next-btn {
+  padding: 10px;
+  background-color: #212529;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  visibility: hidden;
+}
+
+#next-btn:hover {
+  cursor: pointer;
+}

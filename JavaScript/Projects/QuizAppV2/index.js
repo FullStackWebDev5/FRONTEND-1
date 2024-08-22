@@ -16,25 +16,26 @@ const questions = [
   }
 ]
 
-const startQuiz = () => {
-  const firstQuestion = questions[0]
+let index = 0
+const optionsContainer = document.getElementById('options-container')
+
+const showQuizQuestion = () => {
+  const currentQuestion = questions[index]
 
   const questionArea = document.getElementById('question')
-  questionArea.innerText = firstQuestion.question
+  questionArea.innerText = currentQuestion.question
 
-  const optionsContainer = document.getElementById('options-container')
-
-  firstQuestion.options.forEach((option) => {
+  currentQuestion.options.forEach((option) => {
     const div = document.createElement('div')
     div.classList.add('options')
     div.innerText = option
 
-    if(option == firstQuestion.answer) {
+    if(option == currentQuestion.answer) {
       div.id="correct-answer"
     }
 
     div.addEventListener('click', function () {
-      if(option == firstQuestion.answer) {
+      if(option == currentQuestion.answer) {
         div.style.backgroundColor = '#198754'
         alert(`Hooray! That's correct!`)
       } else {
@@ -42,10 +43,30 @@ const startQuiz = () => {
         alert(`Unfortunately, that's incorrect!`)
         document.getElementById('correct-answer').style.backgroundColor = '#198754'
       }
+
+      if(index < questions.length - 1) {
+        document.getElementById('next-btn').style.visibility = 'visible'
+      }
     })
 
     optionsContainer.append(div)
   })
 }
 
-startQuiz()
+showQuizQuestion()
+
+const nextBtn = document.getElementById('next-btn')
+nextBtn.addEventListener('click', () => {
+  optionsContainer.innerHTML = ''
+
+  index = index + 1
+  showQuizQuestion()
+
+  document.getElementById('next-btn').style.visibility = 'hidden'
+})
+
+
+/*
+  # Explore:
+    Pass arguments to callback function
+*/
