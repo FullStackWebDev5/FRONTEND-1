@@ -1,0 +1,19 @@
+form {
+  width: max-content;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.form-element {
+  margin: 10px auto
+}
+
+#submit-btn {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+#submit-btn:hover {
+  cursor: pointer;
+}

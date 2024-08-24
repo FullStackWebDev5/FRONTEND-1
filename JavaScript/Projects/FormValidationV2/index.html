@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <form id="sign-up-form">
+    <h1 id="title">Registration Form</h1>
+    <div class="form-element">
+      <input type="text" id="firstname" placeholder="First name" autocomplete="off">
+    </div>
+    <div class="form-element">
+      <input type="text" id="lastname" placeholder="Last name" autocomplete="off">
+    </div>
+    <div class="form-element">
+      <input type="text" id="email" placeholder="Email" autocomplete="off">
+    </div>
+    <div class="form-element">
+      <input type="text" id="mobile" placeholder="Mobile Number" autocomplete="off">
+    </div>
+    <div class="form-element">
+      <input type="password" id="password" placeholder="Password" autocomplete="off">
+    </div>
+    <div class="form-element">
+      <input type="password" id="confirm-password" placeholder="Confirm Password" autocomplete="off">
+    </div>
+    <div class="form-element">
+      Gender: 
+      <input type="radio" name="gender" value="Male" id="gender-1">Male
+      <input type="radio" name="gender" value="Female" id="gender-2">Female
+      <input type="radio" name="gender" value="Others" id="gender-3">Others
+    </div>
+    <div class="form-element">
+      Hobby: 
+      <input type="checkbox" name="hobby" value="Swimming" id="hobby-1">Swimming
+      <input type="checkbox" name="hobby" value="Dancing" id="hobby-2">Dancing
+      <input type="checkbox" name="hobby" value="Singing" id="hobby-3">Singing
+    </div>
+    <button type="button" id="submit-btn" onclick="validate()">Register</button>
+  </form>
+  <script src="index.js"></script>
+</body>
+</html>
