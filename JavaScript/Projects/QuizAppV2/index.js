@@ -114,9 +114,3 @@ const quizCompleted = () => {
   document.getElementById('quiz-completed').style.display = 'block'
   document.getElementById('final-score').innerText = `${score}/${totalScore}`
 }
-
-
-/*
-  # Explore:
-    Pass arguments to callback function
-*/
