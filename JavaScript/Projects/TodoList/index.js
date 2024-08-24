@@ -33,24 +33,9 @@ function addTask() {
   deleteButton.innerText = '❌'
   deleteButton.classList.add('delete-btn')
 
-  markAsCompletedBtn.addEventListener('click', () => {
-    leftPart.classList.add('completed')
-    markAsCompletedBtn.style.display = 'none'
-  })
-
-  editBtn.addEventListener('click', () => {
-    let updatedTodo = prompt('Update todo text', todo)
-    updatedTodo = updatedTodo.trim()
-    if(updatedTodo) {
-      leftPart.innerText = updatedTodo
-    } else {
-      alert('Invalid input. Todo text cannot be empty.')
-    }
-  })
-
-  deleteButton.addEventListener('click', () => {
-    li.remove()
-  })
+  markAsCompletedBtn.addEventListener('click', () => markAsCompleted(leftPart, markAsCompletedBtn))
+  editBtn.addEventListener('click', () => editTask(leftPart, todo))
+  deleteButton.addEventListener('click', () => deleteTask(li))
 
   rightPart.append(markAsCompletedBtn, editBtn, deleteButton)
 
@@ -60,8 +45,21 @@ function addTask() {
   document.getElementById('new-task').value = ''
 }
 
-/*
-  Editing:
-    - Delete the old todo
-    - Create a new todo with new data
-*/
+function markAsCompleted(leftPart, markAsCompletedBtn) {
+  leftPart.classList.add('completed')
+  markAsCompletedBtn.style.display = 'none'
+}
+
+function editTask(leftPart, todo) {
+  let updatedTodo = prompt('Update todo text', todo)
+  updatedTodo = updatedTodo.trim()
+  if(updatedTodo) {
+    leftPart.innerText = updatedTodo
+  } else {
+    alert('Invalid input. Todo text cannot be empty.')
+  }
+}
+
+function deleteTask(li) {
+  li.remove()
+}
