@@ -9,10 +9,19 @@
 </head>
 <body>
   <div id="container">
-    <p id="question"></p>
-    <div id="options-container"></div>
-    <div id='next-btn-container'>
-      <button id="next-btn">Next question ➡️</button>
+    <div id="quiz-container">
+      <p id="question"></p>
+      <div id="options-container"></div>
+      <div id='next-btn-container'>
+        <button id="next-btn">Next question ➡️</button>
+      </div>
+    </div>
+    <button id="start-btn" onclick="startQuiz()">START QUIZ</button>
+    <div id="quiz-completed">
+      <img src="https://i.pinimg.com/originals/ab/fe/ab/abfeab76f814ff17ff411cc653a9e33e.gif">
+      <p>Thank you for attempting the quiz 🎉</p>
+      <p>Your final score:</p>
+      <p id="final-score"></p>
     </div>
   </div>
   <script src="index.js"></script>
