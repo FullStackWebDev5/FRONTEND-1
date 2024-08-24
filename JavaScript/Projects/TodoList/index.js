@@ -25,6 +25,10 @@ function addTask() {
   markAsCompletedBtn.innerText = '✅'
   markAsCompletedBtn.classList.add('mark-btn')
 
+  const editBtn = document.createElement('button')
+  editBtn.innerText = '✍️'
+  editBtn.classList.add('edit-btn')
+
   const deleteButton = document.createElement('button')
   deleteButton.innerText = '❌'
   deleteButton.classList.add('delete-btn')
@@ -34,11 +38,21 @@ function addTask() {
     markAsCompletedBtn.style.display = 'none'
   })
 
+  editBtn.addEventListener('click', () => {
+    let updatedTodo = prompt('Update todo text', todo)
+    updatedTodo = updatedTodo.trim()
+    if(updatedTodo) {
+      leftPart.innerText = updatedTodo
+    } else {
+      alert('Invalid input. Todo text cannot be empty.')
+    }
+  })
+
   deleteButton.addEventListener('click', () => {
     li.remove()
   })
 
-  rightPart.append(markAsCompletedBtn, editButton, deleteButton)
+  rightPart.append(markAsCompletedBtn, editBtn, deleteButton)
 
   li.append(leftPart, rightPart)
   shoppingList.append(li)
