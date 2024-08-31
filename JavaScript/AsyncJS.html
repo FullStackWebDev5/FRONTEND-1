@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asynchronous JavaScript</title>
+  <style>
+    #display {
+      font-size: 15em;
+      margin: auto;
+      width: max-content;
+    }
+
+    #clock {
+      border: 1px solid black;
+      margin: auto;
+      width: max-content;
+      padding: 10px;
+      font-size: 10em;
+      border-radius: 10px;
+    }
+
+    #rocket-launch-message {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- <p id="display"></p> -->
+  <!-- <button onclick="startTimerBomb()">Start Timer Bomb</button>
+  <button onclick="defuseTimerBomb()">Defuse Timer Bomb</button> -->
+
+  <!-- <div id="clock">
+    <span id="hours">00</span>:
+    <span id="minutes">00</span>:
+    <span id="seconds">00</span>
+  </div> -->
+
+  <p id="rocket-launch-message">Rocket Launching ...</p>
+  <p id="display"></p>
+  <button onclick="startLaunch()">Start Rocket Launch</button>
+  <button onclick="abortLaunch()">Abort Rocket Launch</button>
+  <script>
+    /*
+      # Asynchronous JavaScript
+        - Synchronous Code: Executed one line at a time
+        - Asynchronous Code: Executed as an independent code (Executed parallelly)
+
+        - JavaScript is a single threaded language
+          - There is only one thread (main thread) which executes the complete JS code one expression at a time 
+          - Still, it can execute asynchronous code (using event loop)
+
+        - Timer methods (part of Web APIs)
+          - setTimeout(): Execute an exepression after a specified time
+            - Syntax:
+              const timerId = setTimeout(callback, time)
+                - time should be mentioned in milliseconds
+                - returns a timerId
+            - clearTimeout(timerId): Clear the timeout created by setTimeout method
+          - setInterval(): Execute an expression repeatedly at specified intervals
+           - Syntax:
+              const timerId = setInterval(callback, time)
+                - time should be mentioned in milliseconds
+                - returns a timerId
+          - clearInterval(timerId): Clear the interval created by setInterval method
+    */
+
+    /* ---------------------------------- */
+    // console.log(1)
+    // console.log(2)
+    // console.log(3)
+    // console.log(4)
+    // console.log(5)
+
+    // setTimeout(() => {
+    //   console.log('JavaScript is interesting!')
+    // }, 5000)
+
+    // console.log(1)
+    // console.log(2)
+    // setTimeout(() => {
+    //   console.log(3)
+    // }, 3000)
+    // setTimeout(() => {
+    //   console.log(4)
+    // }, 2000)
+    // console.log(5)
+
+    /* ---------------------------------- */
+    // let timerId
+
+    // function startTimerBomb() {
+    //   timerId = setTimeout(() => {
+    //     document.getElementById('display').innerText = 'BOOM 🔥'
+    //   }, 3000)
+    // }
+
+    // function defuseTimerBomb() {
+    //   clearTimeout(timerId)
+    // }
+    
+    /* ---------------------------------- */
+    // setInterval(() => {
+    //   console.log('Hi')
+    // }, 3000)
+
+    // let count = 0
+    // setInterval(() => {
+    //   count = count + 1
+    //   console.log(count)
+    // }, 1000)
+
+    /* ---------------------------------- */
+    // DIGITAL CLOCK
+
+    // setInterval(() => {
+    //   const now = new Date()
+
+    //   let currentHour = now.getHours()
+    //   let currentMinute = now.getMinutes()
+    //   let currentSecond = now.getSeconds()
+
+    //   currentHour = currentHour < 10 ? `0${currentHour}` : currentHour
+    //   currentMinute = currentMinute < 10? `0${currentMinute}` : currentMinute
+    //   currentSecond = currentSecond < 10? `0${currentSecond}` : currentSecond
+
+    //   document.getElementById("hours").innerHTML = currentHour
+    //   document.getElementById("minutes").innerHTML = currentMinute
+    //   document.getElementById("seconds").innerHTML = currentSecond
+    // }, 1000)
+
+    /* ---------------------------------- */
+    let timerId
+    function startLaunch() {
+      document.getElementById('rocket-launch-message').style.display = 'block'
+      let count = 10
+      document.getElementById('display').innerText = count
+      timerId = setInterval(() => {
+        count--
+        document.getElementById('display').innerText = count
+        if(count == 0) {
+          document.getElementById('display').innerText = '🚀'
+          clearInterval(timerId)
+        }
+      }, 1000)
+    }
+
+    function abortLaunch() {
+      clearInterval(timerId)
+      document.getElementById('rocket-launch-message').innerText = 'Rocker Lauch Aborted ⚠️'
+    }
+  </script>
+</body>
+</html>
+
+<!--
+  # Future:
+    - Event Loop
+    - Callbacks
+    - Promises
+    - Async/Await
+-->
