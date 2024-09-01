@@ -23,6 +23,12 @@
     #rocket-launch-message {
       display: none;
     }
+
+    #line {
+      border: 1px solid black;
+      width: 200px;
+      margin: 5em;
+    }
   </style>
 </head>
 <body>
@@ -36,10 +42,12 @@
     <span id="seconds">00</span>
   </div> -->
 
-  <p id="rocket-launch-message">Rocket Launching ...</p>
+  <!-- <p id="rocket-launch-message">Rocket Launching ...</p>
   <p id="display"></p>
   <button onclick="startLaunch()">Start Rocket Launch</button>
-  <button onclick="abortLaunch()">Abort Rocket Launch</button>
+  <button onclick="abortLaunch()">Abort Rocket Launch</button> -->
+
+  <!-- <div id="line"></div> -->
   <script>
     /*
       # Asynchronous JavaScript
@@ -130,25 +138,32 @@
     // }, 1000)
 
     /* ---------------------------------- */
-    let timerId
-    function startLaunch() {
-      document.getElementById('rocket-launch-message').style.display = 'block'
-      let count = 10
-      document.getElementById('display').innerText = count
-      timerId = setInterval(() => {
-        count--
-        document.getElementById('display').innerText = count
-        if(count == 0) {
-          document.getElementById('display').innerText = '🚀'
-          clearInterval(timerId)
-        }
-      }, 1000)
-    }
+    // let timerId
+    // function startLaunch() {
+    //   document.getElementById('rocket-launch-message').style.display = 'block'
+    //   let count = 10
+    //   document.getElementById('display').innerText = count
+    //   timerId = setInterval(() => {
+    //     count--
+    //     document.getElementById('display').innerText = count
+    //     if(count == 0) {
+    //       document.getElementById('display').innerText = '🚀'
+    //       clearInterval(timerId)
+    //     }
+    //   }, 1000)
+    // }
 
-    function abortLaunch() {
-      clearInterval(timerId)
-      document.getElementById('rocket-launch-message').innerText = 'Rocker Lauch Aborted ⚠️'
-    }
+    // function abortLaunch() {
+    //   clearInterval(timerId)
+    //   document.getElementById('rocket-launch-message').innerText = 'Rocker Lauch Aborted ⚠️'
+    // }
+
+    /* ---------------------------------- */
+    // let degrees = 0
+    // setInterval(() => {
+    //   degrees++
+    //   document.getElementById('line').style.transform = `rotate(${degrees}deg)`
+    // }, 1000)
   </script>
 </body>
 </html>
