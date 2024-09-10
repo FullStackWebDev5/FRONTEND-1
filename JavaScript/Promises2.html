@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promise methods</title>
+</head>
+<body>
+  <script>
+    /*
+      # Promise Methods
+        - all **
+        - any
+        - race
+        - resolve
+        - reject
+    */
+
+    /*
+      # Promise.all()
+        - Resolves when all the promises are resolved
+        - Rejects when any one promise is rejected
+
+        - Syntax:
+          Promise.all([promise1, promise2, ... promiseN])
+            .then(() => {})
+            .catch(() => {})
+
+        - Additional pointers
+          - Total time taken to resolve = Time taken by the promise which takes the most time to resolve
+          - Total time taken to reject = Time taken by the promise which takes the least time to reject
+          - Resolved result = Array of results of all resolved promises
+          - Rejected result = Result of first rejected promise
+    */
+
+    // const friendPromise1 = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve('Friend 1 reached!')
+    //   }, 10000)
+    // })
+
+    // const friendPromise2 = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve('Friend 2 reached!')
+    //   }, 5000)
+    // })
+
+    // const friendPromise3 = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve('Friend 3 reached!')
+    //   }, 8000)
+    // })
+
+    // Promise.all([friendPromise1, friendPromise2, friendPromise3])
+    //   .then(() => console.log('GOA IS ON!'))
+    //   .catch(() => console.log('TRIP CANCELLED!'))
+
+    /*
+      # Promise.any()
+        - Resolves when any one promise is resolved
+        - Rejects when all the promises are rejected
+
+        - Syntax:
+          Promise.any([promise1, promise2, ... promiseN])
+            .then(() => {})
+            .catch(() => {})
+
+        - Additional pointers
+          - Total time taken to resolve = Time taken by the promise which takes the least time to resolve
+          - Total time taken to reject = Time taken by the promise which takes the most time to reject
+          - Resolved result = result of first resolved promise
+          - Rejected result = "AggregateError: All promises were rejected"
+    */
+
+    // const candidatePromise1 = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve('Candidate 1 completed the project!')
+    //   }, 7500)
+    // })
+
+    // const candidatePromise2 = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve('Candidate 2 completed the project!')
+    //   }, 6000)
+    // })
+
+    // const candidatePromise3 = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve('Candidate 3 completed the project!')
+    //   }, 8500)
+    // })
+
+    // Promise.any([candidatePromise1, candidatePromise2, candidatePromise3])
+    //   .then((resolvedResult) => console.log(resolvedResult))
+    //   .catch(() => console.log('None of the candidates were hired!'))
+
+    /*
+      # Promise.race()
+        - Settle as soon as the first promise settles
+          - Settled (Resolved/ Rejected)
+
+        - Syntax:
+          Promise.race([promise1, promise2, ... promiseN])
+            .then(() => {})
+            .catch(() => {})
+
+        - Additional pointers
+          - Total time taken to settle = Time taken by the promise which takes the least time to settle
+          - Settled Result = First settled promise result
+    */
+
+    // const promise1 = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve('Promise 1 rejected!')
+    //   }, 2000)
+    // })
+
+    // const promise2 = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     reject('Promise 2 rejected!')
+    //   }, 3000)
+    // })
+
+    // const promise3 = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve('Promise 3 resolved!')
+    //   }, 10000)
+    // })
+
+    // Promise.race([promise1, promise2, promise3])
+    //   .then((resolvedResult) => console.log('THEN', resolvedResult))
+    //   .catch((rejectedResult) => console.log('CATCH', rejectedResult))
+
+  </script>
+</body>
+</html>
