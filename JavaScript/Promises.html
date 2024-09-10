@@ -6,6 +6,7 @@
   <title>Promises</title>
 </head>
 <body>
+  <button onclick="placeOrder()">PLACE ORDER</button>
   <script>
     /*
       # Promises: Objects that represent the eventual completion or failure of an asynchronous operation.
@@ -196,12 +197,88 @@
         - After 12s -> Order has reached its destination 📍
         - After 4s -> Order has been delivered 😋
     */
+
+    // const orderBeingPrepared = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order is being prepared 🍲')
+    //       resolve()
+    //     }, 2000)
+    //   })
+    // }
+
+    // const orderPrepared = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order is prepared 🎉')
+    //       resolve()
+    //     }, 10000)
+    //   })
+    // }
+
+    // const orderHandedToDelivery = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order handed over to the delivery person 📦')
+    //       resolve()
+    //     }, 5000)
+    //   })
+    // }
+
+    // const orderOnTheWay = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order is on the way 🏍️')
+    //       resolve()
+    //     }, 3000)
+    //   })
+    // }
+
+    // const orderReachedDestination = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order has reached its destination 📍')
+    //       resolve()
+    //     }, 12000)
+    //   })
+    // }
+
+    // const orderDelivered = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order has been delivered 😋')
+    //       resolve()
+    //     }, 4000)
+    //   })
+    // }
+
+    // const placeOrder = () => {
+    //   console.log('Order confirmed ✅')
+      
+    //   orderBeingPrepared()
+    //     .then(orderPrepared)
+    //     .then(orderHandedToDelivery)
+    //     .then(orderOnTheWay)
+    //     .then(orderReachedDestination)
+    //     .then(orderDelivered)
+    //     .then(() => console.log('ORDER TRACKING ENDED!'))
+    //     .catch(() => console.log('ORDER CANNOT BE TRACKED RIGHT NOW!') )
+    // }
+
+    // Alternate syntax
+    // orderBeingPrepared()
+    //   .then(() => orderPrepared())
+    //   .then(() => orderHandedToDelivery())
+    //   .then(() => orderOnTheWay())
+    //   .then(() => orderReachedDestination())
+    //   .then(() => orderDelivered())
+    //   .then(() => console.log('ORDER TRACKING ENDED!'))
+    //   .catch(() => console.log('ORDER CANNOT BE TRACKED RIGHT NOW!') )
   </script>
 </body>
 </html>
 
 <!--
   # Future
-    - Order tracking example
     - Promise.all, Promise.any, Promise.race
 -->
