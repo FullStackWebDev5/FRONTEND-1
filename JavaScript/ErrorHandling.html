@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error Handling</title>
+</head>
+<body>
+  <script>
+    /*
+      # Error Handling:
+        - Errors in the JS code usually terminates the execution and the rest of the code is not executed
+        - Handle errors in a way so that the JS execution doesn't terminate
+        - Syntax
+          try {
+            // Code which is probable to throw an error
+          } catch (error) {
+            // If error is thrown, handle it here
+          }
+        - finally {} - Executes all the time regardless of error
+        - throw keyword: Create custom errors
+          - Syntax: throw new Error('Error message')
+
+        - Additional points:
+          - If no errors: START -> try -> END
+          - If errors: START -> try -> catch -> END
+    */
+
+    const str = 'Poornima+Shukla'
+    console.log('START')
+    try {
+      console.log(eval(str))
+    } catch (error) {
+      console.log(error)
+    }
+    console.log('END')
+
+    // console.log('START')
+    // let userName = prompt('Enter your name')
+    // try {
+    //   if(userName.length != 5) {
+    //     throw new Error('Your name does not have 5 characters')
+    //   }
+    // } catch (error) {
+    //   console.log(error)
+    // }
+    // console.log('END')
+  </script>
+</body>
+</html>
