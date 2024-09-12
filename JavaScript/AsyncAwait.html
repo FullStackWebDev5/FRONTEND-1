@@ -132,6 +132,100 @@
     //   }
     // }
     // handlePromise()
+
+    /*
+      # Example: Order tracking status for Pizza orders
+        - Order confirmed ✅
+        - After 2s -> Order is being prepared 🍲
+        - After 10s -> Order is prepared 🎉
+        - After 5s -> Order handed over to the delivery person 📦
+        - After 3s -> Order is on the way 🏍️
+        - After 12s -> Order has reached its destination 📍
+        - After 4s -> Order has been delivered 😋
+    */
+
+    // const orderBeingPrepared = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order is being prepared 🍲')
+    //       resolve()
+    //     }, 2000)
+    //   })
+    // }
+
+    // const orderPrepared = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order is prepared 🎉')
+    //       resolve()
+    //     }, 10000)
+    //   })
+    // }
+
+    // const orderHandedToDelivery = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order handed over to the delivery person 📦')
+    //       resolve()
+    //     }, 5000)
+    //   })
+    // }
+
+    // const orderOnTheWay = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order is on the way 🏍️')
+    //       resolve()
+    //     }, 3000)
+    //   })
+    // }
+
+    // const orderReachedDestination = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order has reached its destination 📍')
+    //       resolve()
+    //     }, 12000)
+    //   })
+    // }
+
+    // const orderDelivered = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order has been delivered 😋')
+    //       resolve()
+    //     }, 4000)
+    //   })
+    // }
+
+    // const placeOrder = () => {
+    //   console.log('Order confirmed ✅')
+      
+    //   orderBeingPrepared()
+    //     .then(orderPrepared)
+    //     .then(orderHandedToDelivery)
+    //     .then(orderOnTheWay)
+    //     .then(orderReachedDestination)
+    //     .then(orderDelivered)
+    //     .then(() => console.log('ORDER TRACKING ENDED!'))
+    //     .catch(() => console.log('ORDER CANNOT BE TRACKED RIGHT NOW!') )
+    // }
+
+    // const placeOrder = async () => {
+    //   try {
+    //     console.log('Order confirmed ✅')
+    //     await orderBeingPrepared()
+    //     await orderPrepared()
+    //     await orderHandedToDelivery()
+    //     await orderOnTheWay()
+    //     await orderReachedDestination()
+    //     await orderDelivered()
+    //     console.log('ORDER TRACKING ENDED!')
+    //   } catch (error) { 
+    //     console.log('ORDER CANNOT BE TRACKED RIGHT NOW!')
+    //   }
+    // }
+    // placeOrder()
   </script>
 </body>
 </html>

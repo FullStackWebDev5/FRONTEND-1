@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch API</title>
+</head>
+<body>
+  <script>
+    /*
+      # Fetch API: Can be used to make third-party API requests to get external data
+        - Works on the promise principle
+        - Syntax:
+          fetch('api_url')
+            .then((res) => {
+              return  res.json()
+            })
+            .then((data) => {
+              console.log(data)
+            })
+            .catch((error) => {
+              console.log(error)
+            })
+    */
+
+    let users = []
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then((res) => {
+        return res.json()
+      })
+      .then((data) => {
+        users = data
+        console.log(users)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  </script>
+</body>
+</html>
+
+<!--
+  # Free APIs
+    - https://jsonplaceholder.typicode.com/
+    - https://reqres.in/
+    - https://newsapi.org/
+-->
