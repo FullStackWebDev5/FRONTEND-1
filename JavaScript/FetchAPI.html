@@ -4,37 +4,124 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fetch API</title>
+  <style>
+    body {
+      background-color: #eee;
+    }
+    #container {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+    .user-container {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 5px;
+      background-color: white;
+      padding: 10px;
+      width: 200px;
+      text-align: center;
+      margin: 10px 0;
+    }
+    img {
+      border-radius: 50%;
+    }
+    button {
+      background-color: #17A9FD;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 2px;;
+    }
+    button:hover {
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
+  <h1 style="text-align: center;">Social Media App</h1>
+  <div id="container">
+  </div>
   <script>
     /*
-      # Fetch API: Can be used to make third-party API requests to get external data
+      # Fetch API: Can be used to make third-party network requests to get external data
         - Works on the promise principle
         - Syntax:
-          fetch('api_url')
+          fetch('API_URL')
             .then((res) => {
-              return  res.json()
-            })
-            .then((data) => {
-              console.log(data)
-            })
-            .catch((error) => {
-              console.log(error)
-            })
+              return res.json()
+            }).then((jsonRes) => {
+              console.log(jsonRes)
+            }).catch((err) => {
+              console.log(err)
+            })    
+
+      # HTTP response properties
+        - status: Status of the response
+          - 200: Success response
+          - 404: Not found
+          - 500: Server error
+        - body: Body of the response (ReadableStream)
     */
 
+    // Example 1
+    // fetch('https://jsonplaceholder.typicode.com/users')
+    //   .then((res) => {
+    //     return res.json()
+    //   }).then((res) => {
+    //     console.log(res)
+    //   }).catch((err) => {
+    //     console.log(err)
+    //   })  
+
+    // Example 2
+    // fetch('https://jsonplaceholder.typicode.com/posts')
+    //   .then((res) => {
+    //     return res.json()
+    //   }).then((res) => {
+    //     console.log(res)
+    //   }).catch((err) => {
+    //     console.log(err)
+    //   })  
+
+    // Example 3
+    // fetch('https://reqres.in/api/users')
+    //   .then((res) => {
+    //     return res.json()
+    //   }).then((res) => {
+    //     console.log(res.data)
+    //   }).catch((err) => {
+    //     console.log(err)
+    //   })  
+
     let users = []
-    fetch('https://jsonplaceholder.typicode.com/users')
+    fetch('https://reqres.in/api/users')
       .then((res) => {
         return res.json()
+      }).then((res) => {
+        users = res.data
+        displayContent()
+      }).catch((err) => {
+        console.log(err)
       })
-      .then((data) => {
-        users = data
-        console.log(users)
+
+    function displayContent() {
+      const container = document.getElementById('container')
+      users.forEach((user) => {
+        const div = document.createElement('div')
+        div.classList.add('user-container')
+        const img = document.createElement('img')
+        img.src = user.avatar
+        const h1 = document.createElement('h1')
+        h1.innerText = `${user.first_name} ${user.last_name}`
+        const p = document.createElement('p')
+        p.innerHTML = user.email
+        const button = document.createElement('button')
+        button.innerText = 'Follow'
+  
+        div.append(img, h1, p, button)
+        container.append(div)
       })
-      .catch((error) => {
-        console.log(error)
-      })
+    }
   </script>
 </body>
 </html>
@@ -42,6 +129,7 @@
 <!--
   # Free APIs
     - https://jsonplaceholder.typicode.com/
+      - Users: https://jsonplaceholder.typicode.com/users
     - https://reqres.in/
     - https://newsapi.org/
 -->
