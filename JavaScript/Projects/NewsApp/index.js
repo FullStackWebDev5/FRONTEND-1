@@ -49,6 +49,7 @@ function displayNews() {
   })
 
   /*
+    # HTML structure reference
     <div class="news-container">
       <img src="https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2024/09/apple-watch-10-vs-ultra-2.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1">
       <h1>Apple Watch 10 vs Ultra 2: What's different? - 9to5Mac</h1>
