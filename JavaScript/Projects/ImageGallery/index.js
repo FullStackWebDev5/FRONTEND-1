@@ -55,7 +55,7 @@ function resetSelection() {
 
 
 
-
+// Syntax to handle fetch promise using .then() and .catch() methods
 // fetch('https://reqres.in/api/users?per_page=10')
 //   .then((res) => res.json())
 //   .then((res) => console.log(res.data))
