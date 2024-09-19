@@ -1,3 +1,11 @@
+// Combined export
+// import add from './calculate3.js' // Importing default export
+// import { multiply } from './calculate3.js' // Import named export
+// import add, { multiply } from './calculate3.js'
+
+// console.log(add(5, 7))
+// console.log(multiply(10, 5))
+
 // Importing named export (Renamed while export)
 // import { addTwoNumbers, divideTwoNumbers } from './calculate.js'
 
@@ -91,8 +99,4 @@
       - Syntax:
         Export: export { add as addTwoNumbers }
         Import: import { add as addTwoNumbers } from './relative-path.js'
-`
-    # Future
-      - Combined exports
-      - Simple project while uses modules
 */
