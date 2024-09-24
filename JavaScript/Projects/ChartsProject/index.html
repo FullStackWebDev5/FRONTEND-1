@@ -44,11 +44,21 @@
         data: {
           labels: updatedLabels,
           datasets: [{
-            label: '1 month analyis of AAPL',
+            label: 'AAPL',
             data: data.value,
             borderWidth: 1
           }]
         },
+        options: {
+          // scales: {
+          //   y: {
+          //     display: false,
+          //   },
+          //   x: {
+          //     display: false
+          //   },
+          // }
+        }
       });
     }
 
