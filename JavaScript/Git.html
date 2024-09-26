@@ -1,0 +1,65 @@
+<!--
+  # Git: Version Control
+  
+    - Keywords
+      - repository: Project Folder
+      - commit: Save changes
+      - push: Upload
+      - pull: Download
+      - local repository: Local Project
+      - remote repository: Project on Github
+      - stage: Files ready to commit
+
+    - Installation Steps:
+      - Download Git: https://git-scm.com/downloads
+      - Install Git (Check in terminal: git -v)
+      
+    - Steps to upload a project on Github:
+      - Create an account on Github: https://github.com
+      - Create a new repository on Github
+        - name: project-name-1
+        - description(optional): My first project
+        - private/public: Set it as open source or closed source
+        - Readme.md: Repository description
+      - Commands
+        - First time
+          - git init: Initialize the git repository
+          - git status: Current status of the git repository
+          - git add .: Stage all the files
+            - git add file1.html: Staging file1.html
+          - git remote add origin <link of remote origin>
+          - git config user.email "<github-email>"
+          - git config user.name "<github-username>"
+          - git commit -m "Version 1: Added heading and styles"
+          - git push -u origin master
+        - Second time and onwards
+          - git add .: Stage all the files
+            - git add file1.html: Staging file1.html
+          - git commit -m "Version 1: Added heading and styles"
+          - git push
+
+    - Additional points
+      - Alternatives of Github:
+        - Gitlab
+        - Bitbucket
+      - Branches: Parallely develop code of the same project in different branches
+        - Default: master/ main
+
+  # Resouces:
+    - https://docs.github.com/en/get-started/start-your-journey/git-and-github-learning-resources
+
+  # In easy words:
+    - First time
+      1. Create changes
+      2. Stage changes
+      3. First time setup
+        - Establish a connection with remote repository
+        - Setup name and email
+      4. Commit changes
+      5. Push changes
+    - Second time and onwards
+      1. Create changes
+      2. Stage changes
+      3. Commit changes
+      4. Push changes
+-->
