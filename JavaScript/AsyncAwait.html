@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async Await</title>
+</head>
+<body>
+  <script>
+    /*
+      # Async Await
+        - Syntactic Sugar/ Alternative for promise handling
+        - Syntax:
+          async function handlePromise() {
+            try {
+              const resolveResult = await promise1
+              console.log(resolveResult)
+            } catch(rejectResult) {
+              console.log(rejectResult)
+            }
+          }
+          - async keyword: To make a function asynchronous
+          - await keyword: 
+            - To pause the execution of async function until the promise is resolved
+            - Returns the resolved result of the promise, when the promise is resolved
+            - Throws an error if the promise is rejected
+
+          - Different types of asynchronous function
+            - async function abc() {}
+            - const abc = async function () {}
+            - const abc = async () => {}
+    */
+
+    // const promise1 = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     reject('Bye')
+    //   }, 5000)
+    // })
+
+    // Promise handling using .then() and .catch()
+    // promise1.then((resolveResult) => {
+    //   console.log('Promise 1 resolved :)', resolveResult)
+    // }).catch((rejectResult) => {
+    //   console.log('Promise 1 rejected :(', rejectResult)
+    // })
+
+    // Promise handling using async await
+    // async function handlePromise() {
+    //   try {
+    //     const resolveResult = await promise1
+    //     console.log('Promise 1 resolved :)', resolveResult)
+    //   } catch(rejectResult) {
+    //     console.log('Promise 1 rejected :(', rejectResult)
+    //   }
+    // }
+    // handlePromise()
+
+    // Example1
+    // const friendPromise1 = () => {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       resolve('Friend 1 has reached the station')
+    //     }, 3000)
+    //   })
+    // }
+
+    // const handlePromise = async () => {
+    //   try {
+    //     const result = await friendPromise1()
+    //     console.log(result)
+    //   } catch(error) {
+    //     console.log('Error:', error)
+    //   } 
+    // }
+    // handlePromise()
+
+    // Example2
+    // const fetchUsers = () => {
+    //   console.log('Fetching users data ...')
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       resolve()
+    //     }, 5000)
+    //   })
+    // }
+
+    // const processUsersData = () => {
+    //   console.log('Processing users data ...')
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       resolve()
+    //     }, 3000)
+    //   })
+    // }
+
+    // const handleUsersData = async () => {
+    //   try {
+    //     await fetchUsers()
+    //     console.log('Users data fetched successfully ✅')
+    //     await processUsersData()
+    //     console.log('Users data processed successfully ✅')
+    //   } catch (error) {
+    //     console.log('Could not handle users data!')
+    //   }
+    // }
+    // handleUsersData()
+
+    /*
+      Example 3
+      - 1
+      - After 2 seconds: 2
+      - After 3 seconds: 3
+    */
+
+    // const delay = (duration) => {
+    //   return new Promise((resolve) => {
+    //     setTimeout(() => {
+    //       resolve()
+    //     }, duration)
+    //   })
+    // }
+
+    // const handlePromise = async () => {
+    //   try {
+    //     console.log(1)
+    //     await delay(2000)
+    //     console.log(2)
+    //     await delay(3000)
+    //     console.log(3)
+    //   } catch (error) {
+    //     console.log('Error:', error)
+    //   }
+    // }
+    // handlePromise()
+
+    /*
+      # Example: Order tracking status for Pizza orders
+        - Order confirmed ✅
+        - After 2s -> Order is being prepared 🍲
+        - After 10s -> Order is prepared 🎉
+        - After 5s -> Order handed over to the delivery person 📦
+        - After 3s -> Order is on the way 🏍️
+        - After 12s -> Order has reached its destination 📍
+        - After 4s -> Order has been delivered 😋
+    */
+
+    // const orderBeingPrepared = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order is being prepared 🍲')
+    //       resolve()
+    //     }, 2000)
+    //   })
+    // }
+
+    // const orderPrepared = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order is prepared 🎉')
+    //       resolve()
+    //     }, 10000)
+    //   })
+    // }
+
+    // const orderHandedToDelivery = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order handed over to the delivery person 📦')
+    //       resolve()
+    //     }, 5000)
+    //   })
+    // }
+
+    // const orderOnTheWay = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order is on the way 🏍️')
+    //       resolve()
+    //     }, 3000)
+    //   })
+    // }
+
+    // const orderReachedDestination = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order has reached its destination 📍')
+    //       resolve()
+    //     }, 12000)
+    //   })
+    // }
+
+    // const orderDelivered = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order has been delivered 😋')
+    //       resolve()
+    //     }, 4000)
+    //   })
+    // }
+
+    // const placeOrder = async () => {
+    //   try {
+    //     console.log('Order confirmed ✅')
+    //     await orderBeingPrepared()
+    //     await orderPrepared()
+    //     await orderHandedToDelivery()
+    //     await orderOnTheWay()
+    //     await orderReachedDestination()
+    //     await orderDelivered()
+    //     console.log('ORDER TRACKING ENDED!')
+    //   } catch (error) { 
+    //     console.log('ORDER CANNOT BE TRACKED RIGHT NOW!')
+    //   }
+    // }
+    // placeOrder()
+  </script>
+</body>
+</html>

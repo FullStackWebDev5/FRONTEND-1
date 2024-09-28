@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model</title>
+  <style>
+    /* #div-1 {
+      width: max-content;
+      background-color:aliceblue;
+      border: 10px solid black;
+      padding: 30px;
+      margin: 30px;
+    } */
+
+    #box-1 {
+      width: 200px;
+      height: 200px;
+      padding: 20px;
+      margin: 10px;
+      border: 2px solid black;
+      background-color: lightyellow;
+      box-sizing: content-box;
+    }
+
+    #box-2 {
+      width: 200px;
+      height: 200px;
+      padding: 40px;
+      margin: 10px;
+      border: 5px solid black;
+      background-color: aliceblue;
+      box-sizing: border-box;
+    }
+
+    #example-1 {
+      width: 200px;
+      background-color: lightgray;
+      
+      /* padding-left: 40px;
+      padding-right: 20px;
+      padding-top: 100px;
+      padding-bottom: 25px; */
+
+      /* padding: 100px 20px 25px 40px;
+      margin: 20px 50px 100px 30px; */
+
+      /* padding: 100px 20px;
+      margin: 20px 50px; */
+
+      /* margin-top: 20px;
+      margin-right: 50px;
+      margin-bottom: 100px;
+      margin-left: 30px; */
+    }
+  </style>
+</head>
+<body>
+  <!-- <div id="div-1">
+    Hello World
+  </div> -->
+  <div id="box-1">
+    Plants
+  </div>
+  <div id="box-2">
+    Animals
+  </div>
+  <div id="example-1">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam iste non ipsam eius molestiae porro vel culpa harum ipsum assumenda!
+  </div>
+</body>
+</html>
+
+
+<!--
+  # Padding vs Margin
+  - Padding: Adds space around the content, inside the border
+  - Margin: Adds space around the content, outside the border
+
+  # Format for different padding/margin for different directions
+    - 4 values: [top right bottom left] (Clockwise direction)
+    - 2 values: [top&bottom right&left]
+
+  # Box Model
+    - Components 
+      - Margin: Space outside the border (brown)
+      - Border: Border width (black)
+      - Padding: Space inside the border (green)
+      - Content: The content of the element (blue)
+    - box-sizing
+      - content-box (default)
+        - Width, Height (Will include content)
+        - When padding, border-width is increased, content dimensions are unchanged, overall dimesnions increase
+      - border-box
+        - Width, Height (Will include content, padding, border)
+        - When padding, border-width is increased, content dimensions are adjusted (reduced) accordingly, overall dimensions are fixed
+-->

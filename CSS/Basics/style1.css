@@ -1,0 +1,73 @@
+/* CSS ELEMENT SELECTOR */
+div {
+  background-color: aliceblue;
+}
+
+h1 {
+  font-size: 60px; 
+}
+
+h2 {
+  font-size: 40px; 
+}
+
+p {
+  font-size: 30px
+}
+
+li {
+  font-size: 20px;
+  list-style: none;
+}
+/* ----------------------------------------- */
+/* CLASS SELECTOR */
+.unique-style {
+  background-color: darkolivegreen;
+  color: white;
+  font-weight: 100;
+  font-family: cursive;
+}
+
+.box-look {
+  color: black;
+  background-color: lightgray; 
+  border: 2px solid darkgray;
+}
+
+.dark-green-color {
+  color: darkgreen
+}
+
+.light-green-background {
+  background-color: lightgreen
+}
+
+/* ----------------------------------------- */
+/* ID SELECTOR */
+#developer-img-1, #developer-img-2 {
+  border-radius: 200px;
+}
+
+#developer-img-1 {
+  width: 300px;
+  height: 300px;
+}
+
+#developer-img-2 {
+  width: 100px;
+  height: 100px;
+}
+
+#unique-id {
+  font-size: 30px;
+}
+
+#small-topic-p {
+  text-align: justify;
+}
+
+/* ----------------------------------------- */
+/* UNIVERSAL SELECTOR */
+/* * {
+  text-align: center;
+} */

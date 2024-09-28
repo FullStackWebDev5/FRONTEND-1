@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FriendsApp</title>
+  <link rel="icon" href="images/social-media-app.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    @media only screen and (max-width: 767px) {
+      #header-section {
+        min-height: 95vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #eee;
+      }
+      #main-heading {
+        font-size: 4em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!--------------------- NAVBAR --------------------->
+  <nav class="navbar navbar-expand-lg navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="images/social-media-app.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+        FriendsApp
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Sign In</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container text-center">
+    <!--------------------- HEADER --------------------->
+    <div class="py-lg-3 px-1 px-lg-0" id="header-section">
+      <h1 class="display-2 pb-5 pb-lg-0" id="main-heading">Welcome to FriendApp😎</h1>
+      <p class="lead d-none d-lg-block">It's easy to connect with like-minded people here :)</p>
+    </div>
+
+    <!--------------------- USERS --------------------->
+    <div class="row">
+      <div class="col-md-6 col-lg-4 col-xxl-3 mb-3 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            @george_bluth
+          </div>
+          <img src="https://reqres.in/img/faces/1-image.jpg" class="card-img-top" alt="boat-headphone">
+          <div class="card-body">
+            <h5 class="card-title">George Bluth</h5>
+            <p class="card-text">
+              Mumbai, Maharshtra
+            </p>
+            <a href="#" class="btn btn-primary">Follow</a>
+            <a href="#" class="btn btn-danger">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xxl-3 mb-3 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            @george_bluth
+          </div>
+          <img src="https://reqres.in/img/faces/2-image.jpg" class="card-img-top" alt="boat-headphone">
+          <div class="card-body">
+            <h5 class="card-title">George Bluth</h5>
+            <p class="card-text">
+              Mumbai, Maharshtra
+            </p>
+            <a href="#" class="btn btn-primary">Follow</a>
+            <a href="#" class="btn btn-danger">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xxl-3 mb-3 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            @george_bluth
+          </div>
+          <img src="https://reqres.in/img/faces/3-image.jpg" class="card-img-top" alt="boat-headphone">
+          <div class="card-body">
+            <h5 class="card-title">George Bluth</h5>
+            <p class="card-text">
+              Mumbai, Maharshtra
+            </p>
+            <a href="#" class="btn btn-primary">Follow</a>
+            <a href="#" class="btn btn-danger">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xxl-3 mb-3 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            @george_bluth
+          </div>
+          <img src="https://reqres.in/img/faces/4-image.jpg" class="card-img-top" alt="boat-headphone">
+          <div class="card-body">
+            <h5 class="card-title">George Bluth</h5>
+            <p class="card-text">
+              Mumbai, Maharshtra
+            </p>
+            <a href="#" class="btn btn-primary">Follow</a>
+            <a href="#" class="btn btn-danger">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xxl-3 mb-3 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            @george_bluth
+          </div>
+          <img src="https://reqres.in/img/faces/1-image.jpg" class="card-img-top" alt="boat-headphone">
+          <div class="card-body">
+            <h5 class="card-title">George Bluth</h5>
+            <p class="card-text">
+              Mumbai, Maharshtra
+            </p>
+            <a href="#" class="btn btn-primary">Follow</a>
+            <a href="#" class="btn btn-danger">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xxl-3 mb-3 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            @george_bluth
+          </div>
+          <img src="https://reqres.in/img/faces/2-image.jpg" class="card-img-top" alt="boat-headphone">
+          <div class="card-body">
+            <h5 class="card-title">George Bluth</h5>
+            <p class="card-text">
+              Mumbai, Maharshtra
+            </p>
+            <a href="#" class="btn btn-primary">Follow</a>
+            <a href="#" class="btn btn-danger">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xxl-3 mb-3 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            @george_bluth
+          </div>
+          <img src="https://reqres.in/img/faces/3-image.jpg" class="card-img-top" alt="boat-headphone">
+          <div class="card-body">
+            <h5 class="card-title">George Bluth</h5>
+            <p class="card-text">
+              Mumbai, Maharshtra
+            </p>
+            <a href="#" class="btn btn-primary">Follow</a>
+            <a href="#" class="btn btn-danger">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xxl-3 mb-3 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            @george_bluth
+          </div>
+          <img src="https://reqres.in/img/faces/1-image.jpg" class="card-img-top" alt="boat-headphone">
+          <div class="card-body">
+            <h5 class="card-title">George Bluth</h5>
+            <p class="card-text">
+              Mumbai, Maharshtra
+            </p>
+            <a href="#" class="btn btn-primary">Follow</a>
+            <a href="#" class="btn btn-danger">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xxl-3 mb-3 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            @george_bluth
+          </div>
+          <img src="https://reqres.in/img/faces/2-image.jpg" class="card-img-top" alt="boat-headphone">
+          <div class="card-body">
+            <h5 class="card-title">George Bluth</h5>
+            <p class="card-text">
+              Mumbai, Maharshtra
+            </p>
+            <a href="#" class="btn btn-primary">Follow</a>
+            <a href="#" class="btn btn-danger">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xxl-3 mb-3 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            @george_bluth
+          </div>
+          <img src="https://reqres.in/img/faces/3-image.jpg" class="card-img-top" alt="boat-headphone">
+          <div class="card-body">
+            <h5 class="card-title">George Bluth</h5>
+            <p class="card-text">
+              Mumbai, Maharshtra
+            </p>
+            <a href="#" class="btn btn-primary">Follow</a>
+            <a href="#" class="btn btn-danger">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xxl-3 mb-3 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            @george_bluth
+          </div>
+          <img src="https://reqres.in/img/faces/4-image.jpg" class="card-img-top" alt="boat-headphone">
+          <div class="card-body">
+            <h5 class="card-title">George Bluth</h5>
+            <p class="card-text">
+              Mumbai, Maharshtra
+            </p>
+            <a href="#" class="btn btn-primary">Follow</a>
+            <a href="#" class="btn btn-danger">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xxl-3 mb-3 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            @george_bluth
+          </div>
+          <img src="https://reqres.in/img/faces/1-image.jpg" class="card-img-top" alt="boat-headphone">
+          <div class="card-body">
+            <h5 class="card-title">George Bluth</h5>
+            <p class="card-text">
+              Mumbai, Maharshtra
+            </p>
+            <a href="#" class="btn btn-primary">Follow</a>
+            <a href="#" class="btn btn-danger">Cancel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Add new post</button>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">New post</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Title</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Description</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Add Post</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- BUTTONS -->
+  <!-- <p>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-outline-success">Success</button>
+    <button type="button" class="btn btn-success btn-lg">Success</button>
+    <button type="button" class="btn btn-success disabled">Success</button>
+  </p> -->
+  
+  <!-- <div>
+    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-group me-2" role="group" aria-label="First group">
+        <button type="button" class="btn btn-danger">1</button>
+        <button type="button" class="btn btn-danger">2</button>
+        <button type="button" class="btn btn-warning">3</button>
+        <button type="button" class="btn btn-warning">4</button>
+        <button type="button" class="btn btn-warning">5</button>
+        <button type="button" class="btn btn-warning">6</button>
+        <button type="button" class="btn btn-success">7</button>
+        <button type="button" class="btn btn-success">8</button>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <p>
+    <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
+      <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+      <label class="btn btn-outline-danger" for="vbtn-radio1">Radio 1</label>
+      <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+      <label class="btn btn-outline-danger" for="vbtn-radio2">Radio 2</label>
+      <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+      <label class="btn btn-outline-danger" for="vbtn-radio3">Radio 3</label>
+    </div>
+  </p> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+<!--
+  # Frameworks
+    # Bootstrap
+      - Components
+        - Button: (btn)
+          - btn-primary: blue
+          - btn-success: green
+          - btn-warning: yellow
+          - btn-danger: red
+          - btn-dark: black
+          - btn-link: Look like anchor tag
+          - btn-lg: Large
+          - btn-sm: Small
+          - disabled: Disable button
+        - Navbar
+          - 'active' with 'nav-link': Highlight
+      - Content
+        - Typography:
+          - h1: displya-1 to display-6
+          - p: lead
+      - Layouts
+        - text-center: text-align: center
+        - row, col: Grid Layout (1 row = 12 columns)
+          - col: Equally width for each column
+          - col-3: Each column will take 3 units
+        - d-flex: Flex
+          - justify-content-center
+      - Spacing
+        - mb-2, mt-2, me-2, ms-2, m-2, mx-2, my-2: Margin
+        - pb-2, pt-2, pe-2, ps-2, p-2, px-2, py-2: Padding
+      - Other
+        - d-none: display: none
+        - d-block: display: block
+
+-->

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Methods</title>
+  <script>
+    /*
+      # 1. forEach()
+        - Syntax:
+          arr.forEach((element, index) => {
+            // Logic
+          })
+        - Iterate through an array 
+        - Execute the callback for each element
+        - Callback parameters:
+          - 1st parameter: Element
+          - 2nd parameter: Index
+        - Returns: undefined
+    */
+
+    // Example 1
+    // const arr = [2, 4, 6, 8, 10]
+    // arr.forEach((element, index) => {
+    //   console.log(element, index)
+    // })
+
+    // Example 2
+    // const arr = ['Sanchay', 'Vishnu', 'Pankaj', 'Suraj', "Debasmita"]
+    // arr.forEach((element, index) => {
+    //   console.log(index, element)
+    // })
+
+    // Example 3: Calculate sum of elements in an array
+    // const arr = [2, 4, 6, 8, 10]
+    // let sum = 0
+    // arr.forEach((element, index) => {
+    //   sum = sum + element
+    // })
+    // console.log(sum)
+
+    // Example 4: Calculate sum of even numbers in an array
+    // const arr = [3, 4, 7, 9, 10, 12, 15]
+    // let sumOfEven = 0
+    // arr.forEach((element, index) => {
+    //   if(element % 2 == 0) {
+    //     sumOfEven = sumOfEven + element
+    //   }
+    // })
+    // console.log(sumOfEven)
+
+    // Example 5: Create a new array with all odd numbers present in the below array
+    // Expected O/P: [3, 7, 9, 15]
+
+    // const arr = [3, 4, 7, 9, 10, 12, 15]
+    // const newArr = []
+    // arr.forEach((element, index) => {
+    //   if(element % 2 != 0) {
+    //     newArr.push(element)
+    //   }
+    // })
+    // console.log(newArr)
+
+    // Example 6: Create a new array which contains 2* each element present in the below array
+    // Provided I/P: [3, 4, 7, 9, 10, 12, 15]
+    // Expected O/P: [6, 8, 14, 18, 20, 24, 30]
+
+    // let arr = [3, 4, 7, 9, 10, 12, 15]
+    // let newArray = []
+    // arr.forEach((element, index) => {
+    //   newArray.push(element * 2)
+    // })
+    // console.log(newArray)
+
+    /*
+      # 2. filter()
+        - Syntax:
+          arr.filter((element, index) => {
+            return condition
+          })
+        - Iterate through an array 
+        - Execute the callback for each element
+        - Callback parameters:
+          - 1st parameter: Element
+          - 2nd parameter: Index
+        - Returns: A new array with elements which satisfy the provided condition
+
+        Additional Pointers:
+        - filteredArray.length <= originalArray.length
+    */
+
+    // Example 1: Create a new array with all odd numbers present in the below array
+    // Provided I/P: [3, 4, 7, 9, 10, 12, 15]
+    // Expected O/P: [3, 7, 9, 15]
+
+    // const arr = [3, 4, 7, 9, 10, 12, 15]
+    // const newArr = arr.filter((element, index) => {
+    //   return element % 2 != 0
+    // })
+    // console.log(newArr)
+
+    // Example 2: Create a new array with all even numbers present in the below array
+    // Provided I/P: [3, 4, 7, 9, 10, 12, 15]
+    // Expected O/P: [4, 10, 12]
+
+    // const arr = [3, 4, 7, 9, 10, 12, 15]
+    // const newArray = arr.filter((element, index) => {
+    //   return element % 2 == 0
+    // })
+    // console.log(newArray)
+
+    // Example 3: Filter all students whose name starts with 'S'
+    // Provided I/P: ['Omkar', 'Suraj', 'Debasmita', 'Sanchay', 'Somay']
+    // Expected O/P: ['Suraj', 'Sanchay', 'Somay']
+
+    // const arr = ['Omkar', 'Suraj', 'Debasmita', 'Sanchay', 'Somay']
+    // const newArray = arr.filter((element, index) => {
+    //   return element[0] == 'S'
+    // })
+    // console.log(newArray)
+
+    /*
+      # 3. map()
+        - Syntax:
+          arr.map((element, index) => {
+            return newElement
+          })
+        - Iterate through an array 
+        - Execute the callback for each element
+        - Callback parameters:
+          - 1st parameter: Element
+          - 2nd parameter: Index
+        - Returns: A new array with new elements that were returned
+
+        Additional Pointers:
+        - mappedArray.length = originalArray.length
+    */
+
+    // Example 1: Create a new array which contains 2* each element present in the below array
+    // Provided I/P: [3, 4, 7, 9, 10, 12, 15]
+    // Expected O/P: [6, 8, 14, 18, 20, 24, 30]
+
+    // const arr = [3, 4, 7, 9, 10, 12, 15]
+    // const newArray = arr.map((element, index) => {
+    //   return element * 2
+    // })
+    // console.log(newArray)
+
+    
+    // Example 2: Create a new array which contains area of square for the given side length in the below array
+    // Provided I/P: [3, 5, 12]
+    // Expected O/P: [9, 25, 144]
+
+    // const arr = [3, 5, 12]
+    // const newArray = arr.map((element, index) => {
+    //   return element * element
+    // })
+    // console.log(newArray)
+
+    // Example 3: Create a new array which returns the number of letters in the student's name
+    // Provided I/P: ['Omkar', 'Suraj', 'Debasmita', 'Sanchay', 'Somay']
+    // Expected O/P: [5, 5, 9, 7, 5]
+
+    // const arr = ['Omkar', 'Suraj', 'Debasmita', 'Sanchay', 'Somay']
+    // const newArray = arr.map((element, index) => {
+    //   return element.length
+    // })
+    // console.log(newArray)
+
+     /*
+      # 4. reduce()
+        - Syntax:
+          arr.reduce((accumulator, element) => {
+            return newValueOfAccumulator
+          })
+        - Iterate through an array 
+        - Execute the callback for each element
+        - 2 parameters
+          - Callback
+          - Default value of accumulator
+        - Callback parameters:
+          - 1st parameter: Accumulator
+          - 2nd parameter: Element
+        - Returns: The value of the accumulator after callbacks for all elements are executed
+    */
+
+    // const array = [1, 5, 10, 20]
+    // let sum = array.reduce((total, num) => total + num)
+    // console.log(sum)
+
+    // const array = [1, 5, 10, 20]
+    // let product = array.reduce((total, num) => total * num)
+    // console.log(product)
+
+    // const array = [1, 5, 10, 20]
+    // let sum = array.reduce((total, num) => {
+    //   console.log(total, num)
+    //   return total + num
+    // }, 10)
+    // console.log(sum)
+
+    /*
+      # 5. some()
+      - Syntax:
+        arr.some((element, index) => {
+          return condition
+        })
+      - Iterate through an array
+      - Execute the callback for each element
+      - Callback parameters:
+        - 1st parameter: Element
+        - 2nd parameter: Index
+      - Returns: Boolean
+        - true if any element satisfies the provided condition
+        - false if none of the elements satisfy the condition
+    */
+
+    // let arr = [5, 9, 11, 15, 21, 25]
+    // let result = arr.some((element, index) => {
+    //   return element % 2 == 0
+    // })
+    // console.log(result)
+
+    /*
+      # 6. every()
+      - Syntax:
+        arr.every((element, index) => {
+          return condition
+        })
+      - Iterate through an array
+      - Execute the callback for each element
+      - Callback parameters:
+        - 1st parameter: Element
+        - 2nd parameter: Index
+      - Returns: Boolean
+        - true if all elements satisfies the provided condition
+        - false if any one of the elements does not satisfy the condition
+    */
+
+    // let arr = [5, 9, 12, 15, 21, 25]
+    // let result = arr.every((element, index) => {
+    //   return element % 2 != 0
+    // })
+    // console.log(result)
+
+    /*
+      # 7. find()
+      - Syntax:
+        arr.find((element, index) => {
+          return condition
+        })
+      - Iterate through an array
+      - Execute the callback for each element
+      - Callback parameters:
+        - 1st parameter: Element
+        - 2nd parameter: Index
+      - Returns: The first element that satisfies the provided condition, else it will return undefined
+
+        - findLast()
+          - Similar to find() but returns the last element that satisfies the provided condition, else it will return undefined
+    */
+
+    // const arr = [2, 4, 8, 6, 10, 12, 14]
+    // const result = arr.find((element, index) => {
+    //   return element % 2 != 0
+    // })
+    // console.log(result)
+
+    // const arr = [2, 4, 7, 6, 10, 11, 14]
+    // const result = arr.findLast((element, index) => {
+    //   return element % 2 != 0
+    // })
+    // console.log(result)
+
+    /*
+      # 8. findIndex()
+      - Syntax:
+        arr.findIndex((element, index) => {
+          return condition
+        })
+      - Iterate through an array
+      - Execute the callback for each element
+      - Callback parameters:
+        - 1st parameter: Element
+        - 2nd parameter: Index
+      - Returns: The first element index that satisfies the provided condition, else it will return -1
+
+        - findLastIndex()
+          - Similar to findIndex() but returns the last element index that satisfies the provided condition, else it will return -1
+    */
+
+    // const arr = [2, 4, 8, 6, 11, 15]
+    // const result = arr.findIndex((element, index) => {
+    //   return element % 2 != 0
+    // })
+    // console.log(result)
+
+    // const arr = [2, 4, 8, 6]
+    // const result = arr.findLastIndex((element, index) => {
+    //   return element % 2 != 0
+    // })
+    // console.log(result)
+
+    /*
+      .fill(): 
+        - Syntax:
+          arr.fill(value, startIndex, endIndex)
+        - Replace values from startingIndex to endingIndex - 1 with a specified value
+        - Parameters:
+          - value: The value to fill the array with
+          - startIndex: The starting index
+          - endIndex: The ending index will be excluded
+
+    */
+  //  const arr = [5, 10, 15, 20, 25, 30]
+  //  let newArr = arr.fill(100, 1, 4)
+  //  console.log(newArr)
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
+
+<!--
+  # Explore:
+    - .some()
+    - .every()
+-->

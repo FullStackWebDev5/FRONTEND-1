@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Handling</title>
+</head>
+<!-- <body onload="abc()"> -->
+<body>
+  <h1>Event Handling</h1>
+  <form>
+    <!-- <input type="text" placeholder="Enter your name" onclick="abc()"> -->
+    <!-- <input type="text" placeholder="Enter your name" ondblclick="abc()"> -->
+    <!-- <input type="text" placeholder="Enter your name" onmouseover="abc()"> -->
+    <!-- <input type="text" placeholder="Enter your name" onmouseout="abc()"> -->
+    <!-- <input type="text" placeholder="Enter your name" onmousemove="abc()"> -->
+    <!-- <input type="text" placeholder="Enter your name" oninput="abc()"> -->
+    <!-- <input type="text" placeholder="Enter your name" onkeydown="abc()"> -->
+    <!-- <input type="text" placeholder="Enter your name" onfocus="abc()"> -->
+    <!-- <input type="text" placeholder="Enter your name" onblur="abc()"> -->
+  </form>
+  <br>
+
+  <!-- <button onclick="updateContent()">Click Me</button> -->
+  <!-- <button onclick="updateAttribute()">Mark as done</button> -->
+  <button onclick="updateStyles()">Update Styles</button>
+  
+  <!-- <p id="web-dev">HTML, CSS, JavaScript</p> -->
+  <!-- <div>
+    <img src="https://i.gifer.com/ZKZg.gif" width="100" height="100" id="img-1">
+  </div> -->
+  <p id="web-dev">HTML, CSS, JavaScript</p>
+
+  <script>
+    /*
+      # Events: 
+        - Occurence / Activity
+        - Occurence in the browser/ any activity performed by the user on the browser
+
+      # Event Handlings:
+        - 2 types
+          - Inline Event Handlers
+          - Event Listeners (addEventListener)
+        - Inline Event Handlers:
+          - Attributes inside HTML tags
+          - Examples:
+            - onclick: Click event **
+            - ondblclick: Double click event
+            - onmouseover: Mouse over event *
+            - onmouseout: Mouse out event
+            - onmousemove: Mouse move event
+            - oninput: Input event **
+            - onkeydown: Key down event
+            - onkeypress: Key press event
+            - onkeyup: Key up event
+            - onfocus: Focus event *
+            - onblur: Blur event *
+            - onload: Load event *
+    */
+
+    // function abc() {
+    //   console.log('abc')
+    // }
+
+    // # Update Content or HTML within a node
+    // function updateContent() {
+    //   const element = document.getElementById('web-dev')
+    //   element.innerHTML = '<b>Frontend</b> Web Development'
+    // }
+
+    // # Update attribute of an HTML tag
+    // function updateAttribute() {
+    //   const element = document.getElementById('img-1')
+    //   element.src = 'https://media.tenor.com/Hw7f-4l0zgEAAAAM/check-green.gif'
+    //   // element.setAttribute('src', 'https://media.tenor.com/Hw7f-4l0zgEAAAAM/check-green.gif')
+    // }
+
+    /*
+      # Update styles of a node
+        - Name of the style properties should be in camelCase
+
+        - 2 ways using style:
+          - individual property names
+          - cssText property
+    */
+
+    function updateStyles() {
+      const element = document.getElementById('web-dev')
+
+      // element.style.color = 'darkblue'
+      // element.style.backgroundColor = 'lightblue'
+      // element.style.padding = '10px'
+      // element.style.margin = 'auto'
+      // element.style.textAlign = 'center'
+      // element.style.width = 'max-content'
+
+      // element.style.cssText = 'color: darkblue; background-color: lightblue; padding: 10px; margin: auto; text-align: center; width: max-content;'
+    }
+  </script>
+</body>
+</html>
+
+<!--
+  # Future:
+    - Event Listeners (addEventListener)
+-->

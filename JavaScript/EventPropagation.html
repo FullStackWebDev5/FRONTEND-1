@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Propagation</title>
+  <style>
+    div {
+      padding: 10px;
+      margin: 10px;
+    }
+
+    #grandparent {
+      background-color:cadetblue;
+      width: 300px;
+      height: 300px;
+    }
+
+    #parent {
+      background-color:coral;
+      width: 200px;
+      height: 200px;
+    }
+
+    #child {
+      background-color:darkslategray;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div id="grandparent">
+    GRAND PARENT DIV
+    <div id="parent">
+      PARENT DIV
+      <div id="child">
+        CHILD DIV
+      </div>
+    </div>
+  </div>
+  <script>
+    /*
+      # Event Propagation: Process by which events are handled and propagated through the DOM tree. (Mostly applicable for nested elements)
+        - Happen in 2 phases:
+          - Event Capturing: Event is propagated from parent node to child node and so on till the target element
+          - Event Bubbling *: Event is propagated from child node to the parent node and so on the last node
+
+        - Stop the event propagation *
+          - .stopPropagation()
+
+        - addEventListener
+          - optional 3rd parameter: useCapture
+            - false (default): Bubbling Phase
+            - true: Capturing Phase
+    */
+
+    // Bubbling Phase
+    // const grandparent = document.getElementById('grandparent')
+    // grandparent.addEventListener('click', (event) => {
+    //   console.log('Grandparent clicked')
+    // })
+
+    // const parent = document.getElementById('parent')
+    // parent.addEventListener('click', (event) => {
+    //   console.log('Parent clicked')
+    // })
+
+    // const child = document.getElementById('child')
+    // child.addEventListener('click', (event) => {
+    //   console.log('Child clicked')
+    //   event.stopPropagation() // Stop the event propagation
+    // })
+
+    // Capturing Phase
+    // const grandparent = document.getElementById('grandparent')
+    // grandparent.addEventListener('click', (event) => {
+    //   console.log('Grandparent clicked')
+    // }, true)
+
+    // const parent = document.getElementById('parent')
+    // parent.addEventListener('click', (event) => {
+    //   console.log('Parent clicked')
+    // }, true)
+
+    // const child = document.getElementById('child')
+    // child.addEventListener('click', (event) => {
+    //   console.log('Child clicked')
+    // }, true)
+  </script>
+</body>
+</html>

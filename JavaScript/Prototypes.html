@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototype</title>
+</head>
+<body>
+  <script>
+    /*
+      # Prototypes: 
+        - A reference to another object that serves as a blueprint for properties and methods
+        - An entity from where all objects inherit additional properties and methods
+
+      # Access prototype of an object
+        - __proto__
+        - Object.getPrototypeOf()
+        
+      # Access prototype of a constructor
+        - prototype
+
+      # Prototype Chain: Refers to the chain in which an object is connected to it's prototype in sequence
+    */
+
+    // const pankajDetails = {
+    //   name: 'Pankaj',
+    //   age: 25,
+    // }
+
+    // console.log(pankajDetails)
+    // console.log(pankajDetails.__proto__)
+    // console.log(pankajDetails.__proto__.__proto__)
+
+    // Prototype Chain: pankajDetails -> Object -> null
+
+    // const arr = [1, 2, 3, 4, 5]
+    // console.log(arr)
+    // console.log(arr.__proto__) // Array
+    // console.log(arr.__proto__.__proto__) // Object
+    // console.log(arr.__proto__.__proto__.__proto__) // null
+
+    // Prototype Chain: arr -> Array -> Object -> null
+
+    /*
+      #Prototype Chain:
+        - obj -> Object -> null
+        - arr -> Array -> Object -> null
+        - func -> Function -> Object -> null
+        - num -> Number -> Object -> null
+        - str -> String -> Object -> null
+        - bool -> Boolean -> Object -> null
+    */
+
+    // function Student(firstName, lastName) {
+    //   this.firstName = firstName;
+    //   this.lastName = lastName;
+    // }
+
+    // const student1 = new Student('Rohini', 'Bhosale')
+
+    // console.log(student1)
+    // console.log(student1.__proto__)
+    // console.log(student1.__proto__.__proto__)
+    // console.log(student1.__proto__.__proto__.__proto__)
+    // console.log(Student.prototype)
+
+    // Prototype Chain: student1 -> Student -> Object -> null
+
+
+    /* ------------------------- */
+    /*
+      # Add properties/ methods to Constructor protototype
+        - using 'prototype' field
+    */
+
+    // function Student(firstName, lastName) {
+    //   this.firstName = firstName;
+    //   this.lastName = lastName;
+    // }
+
+    // Student.prototype.country = 'India'
+    // Student.prototype.getFullName = function() {
+    //   return this.firstName + ' ' + this.lastName
+    // }
+
+    // const student1 = new Student('Rohini', 'Bhosale')
+    // console.log(student1)
+    
+    // const student2 = new Student('Suraj', 'Nishad')
+    // console.log(student2)
+
+    /* ------------------------- */
+    /*
+      # Prototypal Inheritance
+        - Using Object.create(): Makes specific object the prototype of another object
+    */
+
+    // let grandFather = {
+    //   firstName: 'Rohit',
+    //   lastName: 'Sharma',
+    //   dNA: 'DNA',
+    //   getFullName: function() {
+    //     return this.firstName + ' ' + this.lastName
+    //   }
+    // }
+
+    // console.log(grandFather.getFullName())
+
+    // let father = Object.create(grandFather)
+
+    // father.firstName = 'Mohit'
+    // father.isGraduated = true
+
+    // console.log(father)
+    // console.log(father.firstName)
+    // console.log(father.lastName)
+    // console.log(father.isGraduated)
+    // console.log(father.getFullName())
+
+    // Prototype Chain: father -> grandFather -> Object -> null
+
+    /* ------------------------- */
+    /*
+      # Prototypal Inheritance
+        - Using Constructors
+    */
+
+    // function Animal() {}
+    // Animal.prototype.move = function() {
+    //   console.log('Animal started moving')
+    // }
+
+    // const animal1 = new Animal()
+    // animal1.move()
+
+    // Prototype Chain: animal1 -> Animal -> Object -> null
+
+    // function Dog () {}
+    // Dog.prototype.bark = function() {
+    //   console.log('Bow Bow!')
+    // }
+
+    // Dog.prototype.__proto__ = Animal.prototype
+
+    // const pitbull = new Dog()
+    // pitbull.bark()
+    // pitbull.move()
+
+    // Prototype Chain: pitbull -> Dog -> Animal -> Object -> null
+
+    // function Lion () {}
+    // Lion.prototype.roar = function() {
+    //   console.log('Grrrrr')
+    // }
+
+    // Lion.prototype.__proto__ = Animal.prototype
+
+    // const lion1 = new Lion()
+    // lion1.roar()
+    // lion1.move()
+
+    // Prototype Chain: lion1 -> Lion -> Animal -> Object -> null
+
+  </script>
+</body>
+</html>
+
+<!--
+  # Test examples:
+    let orange = new Fruits()
+    orange.__proto__ == Fruits.prototype 
+    orange.__proto__.proto == PlantBasedFood.prototype 
+
+    orange -> Fruits -> PlantBasedFood -> Food -> null
+    egg -> Egg -> NonVegFood -> Food -> null
+-->

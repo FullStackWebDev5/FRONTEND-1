@@ -1,0 +1,76 @@
+body {
+  background-color: aliceblue;
+  font-family: monospace;
+}
+
+#task-manager {
+  width: max-content;
+  margin: 10px auto;
+  text-align: center;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+}
+
+#task-manager h1 {
+  font-size: 2.5em;
+}
+
+#new-task {
+  padding: 5px 10px;
+  font-size: 1.2em;
+}
+
+#add-task {
+  padding: 5px 10px;
+  font-size: 1.2em;
+  background-color: #198754;
+  color: white;
+  border: 2px solid #198754;
+  border-radius: 2px;
+  position: relative;
+  left: -10px;
+}
+
+#add-task:hover {
+  cursor: pointer;
+}
+
+#add-task:disabled {
+  background-color: #ccc;
+  border: 2px solid #ccc;
+  color: darkgray;
+}
+
+#add-task:disabled:hover {
+  cursor: default;
+}
+
+#shopping-list {
+  list-style: none;
+  padding: 0;
+}
+
+#shopping-list li {
+  padding: 5px 0;
+  border-bottom: 1px solid black;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-btn, .delete-btn, .mark-btn {
+  padding: 5px;
+  background-color: white;
+  border: none;
+  margin: 0 5px;
+}
+
+.edit-btn:hover, .delete-btn:hover, .mark-btn {
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+}

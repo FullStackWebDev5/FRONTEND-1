@@ -1,0 +1,32 @@
+/*
+  # CSS Color Formats
+  - RGB
+    - Syntax: rgb(R,G,B)
+    - R, G, B: 0-255
+  - HEX
+    - Syntax: #RRGGBB
+    - RR, GG, BB: 0-9,A-F
+    - Add 2 more characters to control Alpha
+  - RGBA
+    - Syntax: rgba(R,G,B,A)
+    - R, G, B: 0-255
+    - A: 0-1
+*/
+
+#div-1 {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(204, 30, 30, 0.333);
+}
+
+#div-2 {
+  background-color: rgba(7, 99, 228, 0.333);
+  width: 75vw;
+  height: 75vh;
+}
+
+#div-3 {
+  background-color: rgba(228, 7, 202, 0.333);
+  width: 50vw;
+  height: 50vh;
+}

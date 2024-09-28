@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Condition</title>
+</head>
+<body>
+  <script>
+    /*
+      # Condition: Expression which returns a boolean value (true/ false)
+        1. if/else: One condition
+          - if
+          - if else
+          Syntax:
+            if(condition) {
+              // Code to execute if condition is true
+            } else {
+              // Code to execute if condition is false
+            }
+          - else if: More than one condition
+          Syntax:
+            if(condition1) {
+              // Code to execute if condition 1 is true
+            } else if (condition2) {
+              // Code to execute if condition 2 is true
+            } else {
+              // Code to execute if both the conditions are false
+            }
+        2. Ternary Operators (? :)
+          Syntax:
+            condition ? //true : //false
+        3. Switch Case (When you have limited values to check)
+          Syntax:
+            switch(expression) {
+              case value1:
+                break;
+              case value2:
+                break;
+              ...
+              default:
+                break;
+            }
+    */
+
+    /* 
+      Example 1:
+      1. If Sarita has more marks than Somay: 'Sarita Won!'
+      2. If Somay has more marks than Sarita: 'Somay Won!'
+
+      Condition: saritaTotalMarks > somayTotalMarks
+    */
+
+    // let saritaTotalMarks = 495
+    // let somayTotalMarks = 492
+
+    // if(saritaTotalMarks > somayTotalMarks) {
+    //   console.log('Sarita Won!')
+    // } else {
+    //   console.log('Somay Won!')
+    // }
+
+    /*
+      Example 2:
+      1. Accept user's age
+      2. 
+        a. If user's age >= 18: You are eligibe to vote!
+        b. If user's age < 18: You are not eligibe to vote!
+      
+      Condition: userAge >= 18
+    */
+
+    // let userAge = 10
+
+    // if(userAge >= 18) {
+    //   console.log('You are eligibe to vote!')
+    // } else {
+    //   console.log('You are not eligibe to vote!')
+    // }
+
+    /*
+      Example 3:
+      1. Accept bill amount
+      2. 
+        a. If bill amount is greater than 2500, tell the user you have 10% discount
+        b. If bill amount is less than 2500, tell the user you have no discount
+    */
+
+    // let billAmount = 2985.98
+
+    // if(billAmount > 2500) {
+    //   let discount = 0.1 * billAmount
+    //   billAmount = billAmount - discount
+    //   console.log('Yayy, you have 10% discount. You new bill amount is: ', billAmount)
+    // } else {
+    //   console.log('No discount for you!')
+    // }
+
+    /*
+      Example 4:
+      1. Accept bill amount
+      2. 
+        a. If bill amount > 5000, tell the user you have 20% discount
+        b. If the bill amount <= 5000 and > 2500, tell the user you have 10% discount
+        c. If bill amount <= 2500, tell the user you have no discount
+    */
+
+    // let billAmount = 2000
+    // let billAmount = 3000
+    // let billAmount = 10000
+
+    // if(billAmount > 5000) {
+    //   console.log('You are eligible for 20% discount!')
+    //   console.log('Bill Amount:', billAmount * 0.8)
+    // } else if(billAmount <= 5000 && billAmount > 2500) {
+    //   console.log('You are eligible for 10% discount!')
+    //   console.log('Bill Amount:', billAmount * 0.9)
+    // } else {
+    //   console.log('You have no discount')
+    //   console.log('Bill Amount:', billAmount)
+    // }
+
+    // if(billAmount > 5000) {
+    //   console.log('You are eligible for 20% discount!')
+    //   console.log('Bill Amount:', billAmount * 0.8)
+    // } else if(billAmount > 2500) {
+    //   console.log('You are eligible for 10% discount!')
+    //   console.log('Bill Amount:', billAmount * 0.9)
+    // } else {
+    //   console.log('You have no discount')
+    //   console.log('Bill Amount:', billAmount)
+    // }
+
+    /*
+      Example 5:
+      1. Accept students's marks
+      2. Conditions:
+        >= 91: A+
+        81-90: A
+        71-80: B+
+        61-70: B
+        51-60: C
+        36-50: D
+        <= 35: F
+    */
+
+    // let marks = 32
+    // let marks = 100
+    // let marks = 81
+
+    
+    // if(marks > 90) {
+    //   console.log('Grade: A+')
+    // } else if (marks > 80) {
+    //   console.log('Grade: A')
+    // } else if (marks > 70) {
+    //   console.log('Grade: B+')
+    // } else if (marks > 60) {
+    //   console.log('Grade: B')
+    // } else if (marks > 50) {
+    //   console.log('Grade: C')
+    // } else if (marks > 35) {
+    //   console.log('Grade: D')
+    // } else {
+    //   console.log('Grade: F')
+    // }
+
+    /* --------------- */
+    // let age = 10
+
+    // if(age > 18) {
+    //   console.log('You are eligible to vote')
+    // } else {
+    //   console.log('You are not eligible to vote')
+    // }
+
+    // console.log(age > 18 ? 'You are eligible to vote' : 'You are not eligible to vote')
+
+    /* ----------------- */
+    // let discount = 0
+    // let billAmount = 2000
+
+    // if(billAmount > 2500) {
+    //   discount = 10
+    // }
+
+    // console.log(discount)
+
+    // let billAmount = 6000
+
+    // let discount = billAmount > 2500 ? 10 : 0
+
+    // console.log(billAmount - (discount/100) * billAmount)
+    
+    /* --------------- */
+    /*
+      Favourite IPL Team, show how many trophies they have won
+        - CSK: 5
+        - MI: 6
+        - RCB: 0
+    */
+
+    // let favouriteIPTeam = 'CSK'
+    // let favouriteIPTeam = 'RCB'
+    let favouriteIPTeam = 'MI'
+
+    // if(favouriteIPTeam == 'CSK') {
+    //   console.log(5)
+    // } else if(favouriteIPTeam == 'MI') {
+    //   console.log(6)
+    // } else if(favouriteIPTeam == 'RCB') {
+    //   console.log(0)
+    // } else {
+    //   console.log("We don't have record of that IPL Team")
+    // }
+
+    // switch(favouriteIPTeam) {
+    //   case 'CSK':
+    //     console.log(5)
+    //     break
+    //   case 'MI':
+    //     console.log(6)
+    //     break
+    //   case 'RCB':
+    //     console.log(0)
+    //     break
+    //   default:
+    //     console.log("We don't have record of that IPL Team")
+    // }
+
+    /*
+      # Nested If Condition, Nested Ternary Operator
+    */
+
+    /*
+      Example 6:
+      1. Accept user's age
+      2. 
+        a. If user's age >= 18: 
+          - User is an Indian citizen?: You are eligibe to vote!
+          - User not an Indian citizen?: You are not eligibe to vote!
+        b. If user's age < 18: 
+          - User is a Female: You are eligibe for savings scheme
+          - User is a Male: You are not eligibe for savings scheme
+    */
+
+    // let userAge = 20
+    // let isUserIndianCitizen = false
+    // let userGender = 'Male'
+
+    // if(userAge >= 18) {
+    //   if(isUserIndianCitizen) {
+    //     console.log('You are eligible to vote!')
+    //   } else {
+    //     console.log('You are not eligible to vote')
+    //   }
+    // } else {
+    //   if(userGender == 'Female') {
+    //     console.log('You are eligible for savings scheme')
+    //   } else {
+    //     console.log('You are not eligible for savings scheme')
+    //   }
+    // }
+
+    // if(userAge >= 18 && isUserIndianCitizen) {
+    //   console.log('You are eligible to vote!')
+    // } else if(userAge >= 18 && !isUserIndianCitizen) {
+    //   console.log('You are not eligible to vote')
+    // } else if(userAge < 18 && userGender == 'Female') {
+    //   console.log('You are eligible for savings scheme')
+    // } else if(userAge < 18 && userGender == 'Male') {
+    //   console.log('You are not eligible for savings scheme')
+    // }
+
+    // console.log(userAge >= 18 ? (isUserIndianCitizen ? 'You are eligibe to vote!' : 'You are not eligibe to vote!') : (userGender == 'Female' ? 'You are eligibe for savings scheme' : 'You are not eligibe for savings scheme'))
+    
+    /*
+      # Truthy/ Falsy
+    */
+
+    // if(20) {
+    //   console.log('Yes')
+    // } else {
+    //   console.log('No')
+    // }
+
+    // if(undefined) {
+    //   console.log('Yes')
+    // } else {
+    //   console.log('No')
+    // }
+  </script>
+</body>
+</html>
+
+<!--
+  # Future 
+    - confirm/ prompt (After Functions)
+    - Form Validation (After DOM)
+-->

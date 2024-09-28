@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Basics</title>
+  <!-- EXTERNAL STYLING -->
+  <link rel="stylesheet" href="style1.css">
+
+  <style>
+    /*
+      div {
+        background-color: aliceblue;
+      }
+
+      h1 {
+        color: black;
+        background-color: lightgray; 
+        font-size: 60px; 
+        border: 2px solid darkgray;
+      }
+
+      p {
+        font-size: 30px
+      }
+
+      img {
+        width: 200px; 
+        height: 200px;
+      }
+    */
+  </style>
+</head>
+<body>
+  <!-- INLINE STYLING -->
+  <!-- <div style="background-color: aliceblue;">
+    <h1 style="color: black; background-color: lightgray; font-size: 60px; border: 2px solid darkgray;">CSS Basics</h1>
+    <p style="font-size: 30px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, aliquid eveniet molestias quam commodi dolorum quas ullam rerum accusamus, consequatur esse laudantium optio culpa perferendis, blanditiis sequi maxime! Minima, cumque vero praesentium pariatur consectetur assumenda maiores asperiores eligendi eius id iste numquam dolor nemo repudiandae deleniti porro autem natus omnis.</p>
+  </div> -->
+
+  <!-- INTERNAL STYLING -->
+  <!-- <div>
+    <h1>CSS Basics</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, aliquid eveniet molestias quam commodi dolorum quas ullam rerum accusamus, consequatur esse laudantium optio culpa perferendis, blanditiis sequi maxime! Minima, cumque vero praesentium pariatur consectetur assumenda maiores asperiores eligendi eius id iste numquam dolor nemo repudiandae deleniti porro autem natus omnis.</p>
+  </div> -->
+
+  <div>
+    <div id="section-1">
+      <h1 class="box-look">CSS Basics</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, aliquid eveniet molestias quam commodi dolorum quas ullam rerum accusamus, consequatur esse laudantium optio culpa perferendis, blanditiis sequi maxime! Minima, cumque vero praesentium pariatur consectetur assumenda maiores asperiores eligendi eius id iste numquam dolor nemo repudiandae deleniti porro autem natus omnis.</p>
+      <img id="developer-img-1" src="http://127.0.0.1:5500/CSS/images/developer.jpg">
+    </div>
+
+    <hr>
+
+    <div id="section-2">
+      <h2 class="unique-style">Sub-heading</h2>
+      <p class="dark-green-color light-green-background">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta laudantium commodi dicta quam, laboriosam a iusto est perferendis illum iste sequi fugiat. Explicabo vitae amet mollitia! Architecto suscipit voluptatum cum.</p>
+      <p class="unique-style">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, sequi!</p>
+      <img id="developer-img-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp_6r-GrxhIZcIg0ZbQXvX0AdjRxYc-dzWpo0T2Yi8eQ&s">
+      <h3 class="box-look">Hobbies</h3>
+      <ul>
+        <li class="light-green-background">Swimming</li>
+        <li class="dark-green-color" id="unique-id">Dancing</li>
+        <li class="unique-style">Singing</li>
+        <li>Coding</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <div id="section-3">
+      <h2>Small topic</h2>
+      <p id="small-topic-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet inventore aspernatur qui, velit pariatur alias obcaecati eum aliquid officiis sit, temporibus architecto tenetur. Aspernatur natus facilis asperiores sit possimus quaerat ex qui veniam veritatis quas, libero fuga numquam aliquam nostrum, reiciendis laudantium quae in. Totam, iure quod, illo, quidem explicabo harum quos dolore odio possimus quaerat incidunt adipisci placeat voluptatum dolor molestiae ipsum facilis. Qui rerum perspiciatis cumque! Iste nam velit tenetur ut aut tempora nulla natus, eum iusto dolorem autem magni vel tempore, perspiciatis quo minus qui labore aspernatur ducimus hic laborum neque! Impedit sed deleniti minima nam minus!</p>
+      <a class="dark-green-color" href="https://www.amazon.in/">Amazon</a>
+    </div>
+  </div>
+</body>
+</html>
+
+<!--
+  CSS: Cascading Stylesheets
+
+  # Properties:
+  - color: Add color to element
+  - background-color: Add background color to element
+  - font-size: Increase the size of text elements
+  - font-weight: (100-900)
+  - font-family: Font for text
+  - border: [border-width border-style border-color]
+    - border-width
+    - border-style (solid, dashed, dotted)
+    - border-color
+  - border-radius: To make border corner rounded
+  - width, height (images, div)
+  - text-align: Aligns the text & inline elements (left, right, center)
+  - cursor: Change cursor type
+
+  # Three ways to style your HTML pages:
+  1. Inline Styling (Highest priority)
+    - style as an attribute
+    - Inside "" -> Specify CSS properties and values in the following format: 
+      - "color: red; background-color: black;" 
+  2. Internal Styling
+    - <style>, inside <head>
+  3. External Styling
+    - External stylesheet (.css)
+
+  ## CSS Simple Selectors 
+    - Element Selector (h1, p, div)
+    - Class Selector (.class)
+      - Multiple elements can have same class
+    - ID Selector (#ID)
+      - No 2 elements should have the same ID, ID should be unique
+    - Universal Selector (*)
+  # Combinator Selector
+    - Descendant selector
+    - Child selector (>)
+  # Pseudo Element Selector (:)
+  # Pseudo Class Selector (:)
+  # Attribute Selector ([~=])
+
+  # Comments
+      - /* */
+
+  # Notes:
+  - Measurement units: px, %, em, rem 
+-->

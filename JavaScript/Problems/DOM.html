@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <h1>Shopping List</h1>
+  <input type="text" placeholder="Enter item" id="new-item">
+  <button onclick="addItem()">Add</button>
+  <ul id='shopping-list'>
+    <li>Milk 1L</li>
+    <li>Bread 2Pkts</li>
+  </ul>
+
+  <script>
+    /*
+      Whenever a text is entered in the input field, and add button is clicked, we need to add that new item to the shopping list
+    */
+
+    function addItem() {
+      const newItem = document.getElementById('new-item').value
+
+      const shoppingList = document.getElementById('shopping-list')
+      const li = document.createElement('li')
+      li.innerText = newItem
+      shoppingList.append(li)
+
+
+      document.getElementById('new-item').value = ''
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      # Call Stack: Handles function calls by pushing and popping it's execution context onto the stack
+    */
+
+    // function func1() {
+    //   func2()
+    //   console.log('func1')
+    // }
+
+    // function func2() {
+    //   func3()
+    //   console.log('func2')
+    // }
+
+    // function func3() {
+    //   console.log('func3')
+    // }
+
+    // func1()
+
+    /*
+      # Lexical scope/ environment: Scope of an variable/function based on where it is declared in the source code
+        - local scope + parent's scope + ... + global scope
+      # Scope chaining: Local has access to parent, parent has acess to grandparent, ... , grandparent has acess to global scope
+    */
+
+    // let x = 5
+    // function func1() {
+    //   console.log(x)
+    // }
+    // func1()
+
+    // # Nested Functions: Eg1: Function declared inside another function
+    // function outer() {
+    //   console.log('OUTER')
+
+    //   function inner() {
+    //     console.log('INNER')
+    //   }
+    //   inner()
+    // }
+
+    // outer()
+
+    // let x = 5
+    // function outer() {
+    //   console.log(x)
+
+    //   function inner() {
+    //     console.log(x)
+    //   }
+    //   inner()
+    // }
+
+    // outer()
+
+    /*
+      # Closures: Function scope + lexical environment
+        - Inner function continues to have access to the outer scope variables even after the outer function has been returned
+    */
+
+    // # Nested Functions: Eg2: Function returning another function
+
+    // function outer() {
+    //   let inner = function () {
+    //     console.log('INNER')
+    //   }
+    //   return inner
+    // }
+
+    // const x = outer()
+    // x()
+
+    // function outer() {
+    //   let x = 5
+    //   let inner = function () {
+    //     console.log(x)
+    //   }
+    //   return inner
+    // }
+    // const abc = outer()
+    // abc()
+
+    function cart() {
+      let items = 0
+      let obj = {
+        addItem: function() {
+          items++
+        },
+        deleteItem: function() {
+          items--
+        },
+        getItems: function() {
+          return items
+        }
+      }
+      return obj
+    }
+
+    const closure = cart()
+    closure.addItem()
+    closure.addItem()
+    closure.addItem()
+    console.log(closure.getItems())
+  </script>
+</body>
+</html>

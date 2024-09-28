@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function Methods</title>
+  <script>
+   /*
+    # Function Methods
+      - call
+      - apply
+      - bind
+
+    # Purpose of function methods: Assign 'this' context
+   */
+
+    let rohiniDetails = {
+      firstName: 'Rohini',
+      lastName: 'Bhosale',
+    }
+
+    let sanchayDetails = {
+      firstName: 'Sanchay',
+      lastName: 'Agarwal',
+    }
+
+    let saritaDetails = {
+      firstName: 'Sarita',
+      lastName: 'K',
+    }
+
+    function displayFullName(city, country) {
+      console.log(this.firstName + ' ' + this.lastName + ' is from ' + city + ', ' + country + '!')
+    }
+
+    /*
+      # call()
+        - Syntax: 
+          functionName.call(objectToBeAssigned)
+
+        - Invoked immediately
+        - Arguments in the call method
+          - If the function has parameters (p1, p2, ...)
+            - Arguments need to be passed in the below format:
+              - functionName.call(objectToBeAssigned, a1, a2, ...)
+          - If there are x parameters for the function, we need to pass x+1 arguments to the call method
+    */
+
+    // displayFullName.call(rohiniDetails, 'Mumbai', 'India')
+    // displayFullName.call(sanchayDetails, 'California', 'United States')
+    // displayFullName.call(saritaDetails, 'London', 'United Kingdom')
+
+    /*
+      # apply()
+        - Syntax: 
+          functionName.apply(objectToBeAssigned)
+
+        - Invoked immediately
+        - Arguments in the call method
+          - If the function has parameters (p1, p2, ...)
+            - Arguments need to be passed in the below format:
+              - functionName.call(objectToBeAssigned, [a1, a2, ...])
+          - If there are x parameters for the function, we need to pass 2 arguments to the apply method
+    */
+
+    // displayFullName.apply(rohiniDetails, ['Mumbai', 'India'])
+    // displayFullName.apply(sanchayDetails, ['California', 'United States'])
+    // displayFullName.apply(saritaDetails, ['London', 'United Kingdom'])
+
+    /*
+      # bind()
+        - Syntax: 
+          const functionWithNewScope = functionName.bind(objectToBeAssigned)
+
+        - Does not get invoked immediately, rather returns a modified function
+          - The new function can be re-used
+        - Arguments can be passed to the new function in the same format as the original function
+    */
+
+    // const displayRohiniDetails = displayFullName.bind(rohiniDetails)
+    // displayRohiniDetails('Mumbai', 'India')
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tables</title>
+  <!-- CSS Topic -->
+  <style>
+    table, tr, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tables</h1>
+  <table>
+    <tr>
+      <th>Day</th>
+      <th>First Period</th>
+      <th>Second Period</th>
+      <th>Third Period</th>
+    </tr>
+    <tr>
+      <td>Mon</td>
+      <td>Maths</td>
+      <td>Science</td>
+      <td>Social</td>
+    </tr>
+    <tr>
+      <td>Tue</td>
+      <td>Science</td>
+      <td>Maths</td>
+      <td>Social</td>
+    </tr>
+    <tr>
+      <td>Wed</td>
+      <td>Hindi</td>
+      <td>Science</td>
+      <td>English</td>
+    </tr>
+    <tr>
+      <td>Thu</td>
+      <td>Maths</td>
+      <td>Hindi</td>
+      <td>Science</td>
+    </tr>
+    <tr>
+      <td>Fri</td>
+      <td>Hindi</td>
+      <td>Maths</td>
+      <td>Social</td>
+    </tr>
+    <tr>
+      <td>Sat</td>
+      <td>Science</td>
+      <td>Social</td>
+      <td>English</td>
+    </tr>
+  </table>
+  <br><br>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Place</th>
+      <th>Favourite Color</th>
+      <th>Favourite Fruit</th>
+    </tr>
+    <tr>
+      <td>Pankaj</td>
+      <td>Mumbai</td>
+      <td>Pink</td>
+      <td>Apple</td>
+    </tr>
+    <tr>
+      <td>Disha</td>
+      <td>Bengaluru</td>
+      <td colspan="2">Orange</td>
+    </tr>
+    <tr>
+      <td>Sanchay</td>
+      <td rowspan="2">Delhi</td>
+      <td>Black</td>
+      <td>Watermelon</td>
+    </tr>
+    <tr>
+      <td>Baibhav</td>
+      <td>White</td>
+      <td>Banana</td>
+    </tr>
+  </table>
+</body>
+</html>
+
+
+
+
+
+<!--
+  ## Tables: Structure to represent data
+  - <table></table>
+
+  Row: Left to right/ Horizontal
+  Column: Top to bottom/ Vertical
+
+  - Parts of table
+    - Table row: <tr></tr>
+    - Table heading: <th></th>
+    - Table data: <td></td>
+
+  Day  First   Second   Third 
+  Mon   Maths   Science  Social
+  Tue   Science  Maths   Social
+  Wed   Hindi    Science  English
+  Thu   Maths    Hindi   Science
+  Fri   Hindi    Maths   Social
+  Sat   Science  Social  English
+
+  # Colspan (Merge cells horizontally)
+  # Rowspan (Merge cells vertically)
+
+  # Future
+  <style>
+    table, tr, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 10px;
+    }
+  </style>
+-->

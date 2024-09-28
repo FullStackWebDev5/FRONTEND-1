@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Callback</title>
+</head>
+<body>
+  <script>
+    /*
+      # Callback: Function passed as argument to another function and executed later
+
+      Syntax:
+        - Syntax 1:
+          function func1() {
+            console.log('Hi')
+          }
+          func2(func1)
+        - Syntax 2: 
+          func2(function () {
+            console.log('Hi')
+          })
+    */
+
+    // Eg 1:
+      // Syntax 1
+      // const func1 = function (x) {
+      //   console.log('Function 1')
+      //   console.log(x)
+      // }
+      
+      // const func2 = function () {
+      //   console.log('Function 2')
+      // }
+
+      // // func1(func2)
+
+      // Syntax 2:
+      // const func1 = function (x) {
+      //   console.log('Function 1')
+      //   console.log(x)
+      // }
+      // func1(function () {
+      //   console.log('Function 2')
+      // })
+
+    // Eg 2:
+    // const func1 = function (callback) {
+    //   console.log('Function 1')
+    //   callback()
+    // }
+
+    // func1(function () {
+    //   console.log('Function 2')
+    // })
+
+    /*
+      Eg 3: 
+        1. Accept the order
+        2. Process the order
+    */
+    // const func1 = function (callback) {
+    //   console.log('ORDER ACCEPTED')
+    //   // In future, we can include asynchronus code here
+    //   callback()
+    // }
+
+    // func1(function () {
+    //   console.log('ORDER PROCESSED')
+    // })
+
+    /*
+      Eg 4: Arguments
+    */
+    // const func1 = function (name, callback) {
+    //   const message = 'Hi, ' + name + '!'
+    //   callback(message)
+    // }
+
+    // func1('Apurva', function (message) {
+    //   console.log(message)
+    // })
+  </script>
+</body>
+</html>
+
+<!--
+  # Explore:
+    - Template Strings ($)
+  # Future
+    - Asynchronous JavaScript
+      - Callbacks
+-->

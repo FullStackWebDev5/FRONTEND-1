@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays</title>
+</head>
+<body>
+  <script>
+    /* 
+      # Array: Collections of multiple elements
+        - Syntax:
+          let array = [element1, element2, element3]
+        - Elements can be of different data type
+        - Index: 0 -> array.length - 1
+          - Position: x, Index: x - 1
+        - Access element at a given index:
+          - array[index]
+    */
+
+    // let hobbies = ["Swimming", "Dancing", "Singing"]
+    // console.log(hobbies)
+
+    // let marks = [92, 88, 75, 96, 82]
+    // console.log(marks)
+
+    // let x = [92, true, "Gaurav", undefined, null]
+    // console.log(x)
+
+    // let marks = [92, 88, 75, 96, 82]
+    // console.log(marks[2])
+
+    // let marks = [92, 88, 75, 96, 82]
+    // console.log(marks.length)
+
+    // # Empty Array
+    // let x = []
+    // console.log(x)
+
+    // # Update element at a given index
+    // let marks = [92, 88, 75, 96, 82]
+    // marks[2] = 85
+    // console.log(marks)
+
+    // # Add element to the end of the array(array[array.length]) - Use .push() method instead
+    // let marks = []
+    // console.log(marks)
+    // console.log(marks.length)
+    // marks[marks.length] = 92
+    // console.log(marks)
+    // console.log(marks.length)
+
+    // let x = [5, 2, 1]
+    // x[x.length] = 4
+    // console.log(x)
+
+    // # Access non existent index
+    // let marks = []
+    // console.log(marks[0]) // undefined
+
+    // # Iterate an array (Start to End: 0 -> array.length-1)
+    // let marks = [92, 88, 75, 96, 82]
+    // for(let i = 0; i < marks.length; i++) {
+    //   console.log(marks[i])
+    // }
+
+    // # Iterate an array (End to Start: array.length-1 -> 0)
+    // let marks = [92, 88, 75, 96, 82]
+    // for(let i = marks.length-1; i >= 0; i--) {
+    //   console.log(marks[i]) // 92
+    // }    
+
+    /*
+      # Array Properties & Methods
+        - Properties:
+          - length: Length of the array
+        - Methods:
+          - push(element): Add an element to the end of the array
+            - Will update the original array
+            - Return the new length of the array
+          - pop(): Remove the last element of the array
+            - Will update the original array
+            - Returns the popped element
+          - unshift(element): Add an element to the start of the array
+            - Will update the original array
+            - Return the new length of the array
+          - shift(): Remove the first element of the array
+            - Will update the original array
+            - Returns the element removed from the starting
+          - concat(): Merge two arrays
+            - Will not update the original arrays
+            - Returns merged array
+          - slice(): Slice out array parts
+            - Similar to string slice method
+            - Will not update the original arrays
+            - Returns sliced portion of the array
+          - reverse(): Reverse the order of array elements
+            - Will update the original array
+            - Return the array with elements in reverse order
+          - split() [String -> Array]: Split a string to form an array
+            - No argument: Returns original string
+            - Empty string: Return an array with individual characters
+            - Character/String: Split based on that character/string usage
+          - join(): Join array elements to form a string
+            - No argument: Join elements separated by commas
+            - separator: Join array elements separated by the separator
+    */
+
+    // let namanHobbies = ['Swimming', 'Dancing', 'Singing']
+    // namanHobbies.push('Coding')
+    // console.log(namanHobbies)
+
+    // let namanHobbies = ['Swimming', 'Dancing', 'Singing']
+    // namanHobbies.pop()
+    // console.log(namanHobbies)
+
+    // let namanHobbies = ['Swimming', 'Dancing', 'Singing']
+    // namanHobbies.unshift('Coding')
+    // console.log(namanHobbies)
+    
+    // let namanHobbies = ['Swimming', 'Dancing', 'Singing']
+    // namanHobbies.shift()
+    // console.log(namanHobbies)
+
+    // let namanHobbies1 = ['Swimming', 'Dancing', 'Singing']
+    // let namanHobbies2 = ['Coding', 'Painting']
+    // console.log(namanHobbies1.concat(namanHobbies2))
+    // console.log(namanHobbies2.concat(namanHobbies1))
+
+    // let x = 'Coding Ninjas'
+    // console.log(x.split())
+    // console.log(x.split(''))
+
+    // let friends = 'Ross,Matt,Henry,Rachel'
+    // console.log(friends.split(','))
+
+    // const friends = ['Ross', 'Rachel', 'Matt', 'Neil']
+    // console.log(friends.join())
+    // console.log(friends.join(' '))
+    
+    // # Multi-dimensional array
+    // const numbers = [[4, 5], [2, 3], [4, 5], [5,10], [10, 9]]
+    // console.log(numbers[0][1])
+
+    /*
+      # Mutable
+        - Arrays are mutable
+        - Strins are immutable
+    */
+  </script>
+</body>
+</html>
+
+<!--
+  # Explore
+    - splice method
+  # Future
+    Array Methods (Callbacks):
+      - forEach
+      - filter
+      - map
+      - every
+      - some
+      - reduce
+      - sort
+-->

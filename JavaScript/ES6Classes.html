@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES6 Classes</title>
+</head>
+<body>
+  <script>
+    /*
+      # ES6 Classes: 
+        - Introduced in ES6
+        - Alternative of Constructors
+        - Blueprint/schema of the objects
+        - Encapsulation: Group particular data inside a particular module
+
+        - Syntax:
+          class ClassName {
+            constructor(property1, property2) {
+              this.property1 = property1;
+              this.property2 = property2;
+            }
+          }
+
+        - Naming convention for the class name: PascalCase
+        - Default method of the class: constructor
+          - Inside constructor method, you can assign properties and methods to the object being created using 'this' keyword
+          - Gets invoked automatically during object creation/ initialization
+        - 'new' keyword needs to be used while creating objects using classes
+    */
+    
+    /* ------------------------- */
+    // class Student {
+    //   constructor(firstName, lastName) {
+    //     this.firstName = firstName;
+    //     this.lastName = lastName;
+    //   }
+    // }
+
+    // const student1 = new Student('Rohini', 'Bhosale')
+    // const student2 = new Student('Pankaj', 'Kumar')
+    // const student3 = new Student('Debasmita', 'Mohanty')
+    // console.log(student1)
+    // console.log(student2)
+    // console.log(student3)
+
+    /* ------------------------- */
+    // class Student {
+    //   constructor(firstName, lastName) {
+    //     this.firstName = firstName;
+    //     this.lastName = lastName;
+    //     this.getFullName = function() {
+    //       return this.firstName + ' ' + this.lastName
+    //     }
+    //   }
+    // }
+
+    // const student1 = new Student('Rohini', 'Bhosale')
+    // const student2 = new Student('Pankaj', 'Kumar')
+    // const student3 = new Student('Debasmita', 'Mohanty')
+    // console.log(student1.getFullName())
+    // console.log(student2.getFullName())
+    // console.log(student3.getFullName())
+
+    /* ------------------------- */
+    // class Student {
+    //   constructor(firstName, lastName, hobbies) {
+    //     this.firstName = firstName
+    //     this.lastName = lastName
+    //     this.hobbies = hobbies
+    //   }
+
+    //   getFullName () {
+    //     return this.firstName + ' ' + this.lastName
+    //   }
+
+    //   getHobbies() {
+    //     return `Hobbies of ${this.firstName} are ${this.hobbies.join(', ')}.`
+    //   }
+    // }
+
+    // const student1 = new Student('Rohini', 'Bhosale', ['Singing', 'Dancing', 'Playing Cricket'])
+    // const student2 = new Student('Pankaj', 'Kumar', ['Coding', 'Drawing', 'Playing Chess'])
+    // const student3 = new Student('Debasmita', 'Mohanty', ['Designing', 'Singing', 'Coding'])
+    // console.log(student1.getHobbies())
+    // console.log(student2.getHobbies())
+    // console.log(student3.getHobbies())
+
+    /* ------------------------- */
+    /*
+      # Getter and Setter Methods
+        - Getter: 
+          - Special Method which returns one or more property values
+          - Never accepts a parameter
+          - Invoking: No () required while calling
+        - Setter: 
+          - Special Method which creates/updates one or more  property values (Accepts a single parameter only)
+          - Invoking: No () required while calling, Assign the argument value using =
+    */
+
+    // class Student {
+    //   constructor(firstName, lastName) {
+    //     this.firstName = firstName
+    //     this.lastName = lastName
+    //     this.latestMarks = 0
+    //     this.hobbies = []
+    //   }
+
+    //   // getFullName() {
+    //   //   return this.firstName + ' ' + this.lastName
+    //   // }
+
+    //   // updateLatestMarks(latestMarks) {
+    //   //   this.latestMarks = latestMarks
+    //   // }
+
+    //   // Getter Method
+    //   get fullName () {
+    //     return this.firstName + ' ' + this.lastName
+    //   }
+
+    //   // Setter Method
+    //   set updateLatestMarks(latestMarks) {
+    //     this.latestMarks = latestMarks
+    //   }
+
+    //   set addNewHobby(hobby) {
+    //     this.hobbies.push(hobby)
+    //   }
+    // }
+
+    // const debasmita = new Student('Debasmita', 'Mohanty')
+    // console.log(debasmita.fullName)
+
+    // const gaurav = new Student('Gaurav', 'Tiwari')
+    // console.log(gaurav.fullName)
+
+    // debasmita.updateLatestMarks = 95
+    // gaurav.updateLatestMarks2 = 100
+
+    // debasmita.addNewHobby = 'Playing Cricket'
+    // debasmita.addNewHobby = 'Playing Basketball'
+    // gaurav.addNewHobby = 'Swimming'
+
+    // console.log(debasmita)
+    // console.log(gaurav)
+
+    /* ------------------------- */
+    /*
+      # Private properties and methods
+        - Naming convention: Name starts with #
+        - Cannot be accessed outside the class directly
+          - Indirectly, it can be accessed using a public method
+    */
+    
+    // class MyClass {
+    //   // Private property
+    //   #privateProperty = 'Private property'
+
+    //   // Private method
+    //   #privateMethod() {
+    //     return 'Private method'
+    //   }
+
+    //   constructor() {
+    //   }
+
+    //   // Public method
+    //   publicMethod1() {
+    //     return this.#privateProperty
+    //   }
+
+    //   publicMethod2() {
+    //     return this.#privateMethod()
+    //   }
+    // }
+
+    // const object1 = new MyClass()
+
+    // // console.log(object1.#privateProperty) // Syntax Error
+    // // console.log(object1.#privateMethod()) // Syntax Error
+    // console.log(object1.publicMethod1())
+    // console.log(object1.publicMethod2())
+
+    // class Calculations {
+    //   constructor(arr) {
+    //     this.arr = arr
+    //   }
+
+    //   // Private method
+    //   #sum() {
+    //     return this.arr.reduce((total, e) => total + e)
+    //   }
+
+    //   // Public method
+    //   average() {
+    //     return this.#sum() / this.arr.length
+    //   }
+    // }
+
+    // const test1 = new Calculations([37493, 38749, 977, 9769])
+
+    // console.log(test1.average())
+
+    /* ------------------------- */
+    /*
+      # Static properties and methods
+        - Properties and methods which belong to the class instead of individual objects
+        - Declare: 'static' keyword
+        - Access: ClassName.propertyName or ClassName.methodName() (Applicable outside the class as well)
+    */
+
+    // class Student {
+    //   // Static property
+    //   static school = 'XYZ Public School'
+    //   static studentCount = 1
+
+    //   // Static method
+    //   static getSection() {
+    //     return Student.studentCount % 2
+    //   }
+
+    //   constructor(firstName, lastName) {
+    //     this.firstName = firstName
+    //     this.lastName = lastName
+    //     this.regNo = Student.studentCount
+    //     this.section = Student.getSection() ? 'A' : 'B'
+
+    //     Student.studentCount++
+    //   }
+
+    //   getFullName () {
+    //     return this.firstName + ' ' + this.lastName
+    //   }
+    // }
+
+    // const student1 = new Student('Sanchay', 'Agarwal')
+    // console.log(student1)
+
+    // const student2 = new Student('Poornima', 'Shukla')
+    // console.log(student2)
+
+    // const student3 = new Student('Suraj', 'Nishad')
+    // console.log(student3)
+
+    // console.log(Student.school)
+  </script>
+</body>
+</html>

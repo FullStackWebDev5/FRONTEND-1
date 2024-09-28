@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chart.js</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .container {
+      width: 500px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <canvas id="myChart"></canvas>
+    <button onclick="changeTerm('1mo')">1 month</button>
+    <button onclick="changeTerm('3mo')">3 months</button>
+    <button onclick="changeTerm('1y')">1 year</button>
+    <button onclick="changeTerm('5y')">5 years</button>
+  </div>
+  <script>
+    let term = '1mo'
+    let chartRef = null
+
+    async function getChartData() {
+      try {
+        const res = await fetch('https://stocksapi-uhe1.onrender.com/api/stocks/getstocksdata')
+        const data = await res.json()
+        buildChart(data.stocksData[0]['AAPL'][term])
+      } catch (error) {
+        console.log(error)
+      }
+    }
+
+    getChartData()
+
+    function buildChart(data) {
+      const ctx = document.getElementById('myChart');
+
+      const updatedLabels = data.timeStamp.map(t => new Date(t * 1000).toLocaleDateString())
+      chartRef = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: updatedLabels,
+          datasets: [{
+            label: 'AAPL',
+            data: data.value,
+            borderWidth: 1
+          }]
+        },
+        // options: {
+        //   scales: {
+        //     y: {
+        //       display: false,
+        //     },
+        //     x: {
+        //       display: false
+        //     },
+        //   }
+        // }
+      });
+    }
+
+    function changeTerm(newTerm) {
+      chartRef.destroy();
+      term = newTerm
+      getChartData()
+    }
+  </script>
+</body>
+</html>
+
+
+<!--
+  # Chart.js Documentation:
+    https://www.chartjs.org/docs/latest/getting-started/
+
+-->

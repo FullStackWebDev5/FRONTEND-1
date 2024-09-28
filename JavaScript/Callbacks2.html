@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Callbacks</title>
+</head>
+<body>
+  <!-- <button onclick="placeOrder()">Place Order</button> -->
+  <script>
+    /*
+      # Callbacks: Handle Async Code
+    */
+
+    /* ----------------------------------------- */
+    // const fetchUsers = (callback) => {
+    //   console.log('Fetching users data ...')
+    //   setTimeout(() => {
+    //     console.log('Users data fetched successfully ✅')
+    //     callback()
+    //   }, 5000)
+    // }
+
+    // const processUsersData = () => {
+    //   console.log('Processing users data ...')
+    //   setTimeout(() => {
+    //     console.log('Users data processed successfully ✅')
+    //   }, 3000)
+    // }
+
+    // Will not handle asyc data as per our requirement
+    // fetchUsers()
+    // processUsersData()
+
+    // fetchUsers(processUsersData)
+
+    /* ----------------------------------------- */
+    /*
+      # Example: Order tracking status for Pizza orders
+        - Order confirmed ✅
+        - After 2s -> Order is being prepared 🍲
+        - After 10s -> Order is prepared 🎉
+        - After 5s -> Order handed over to the delivery person 📦
+        - After 3s -> Order is on the way 🏍️
+        - After 12s -> Order has reached its destination 📍
+        - After 4s -> Order has been delivered 😋
+    */
+
+    // function placeOrder() {
+    //   console.log('Order confirmed ✅')
+
+    //   setTimeout(() => {
+    //     console.log('Order is being prepared 🍲')
+    //     setTimeout(() => {
+    //       console.log('Order is prepared 🎉')
+    //       setTimeout(() => {
+    //         console.log('Order handed over to the delivery person 📦')
+    //         setTimeout(() => {
+    //           console.log('Order is on the way 🏍️')
+    //           setTimeout(() => {
+    //             console.log('Order has reached its destination 📍')
+    //             setTimeout(() => {
+    //               console.log('Order has been delivered 😋')
+    //             }, 4000)
+    //           }, 12000)
+    //         }, 3000)
+    //       }, 5000)
+    //     }, 10000)
+    //   }, 2000)
+    // }
+
+    /* ----------------------------------------- */
+    // Callback Hell (Pyramid of doom): The structure formed when a callback is inside another callback which further is called inside another and so on ... 
+    
+    // Hence, the alternative approached can be to use Promises and Async Await
+  </script>
+</body>
+</html>

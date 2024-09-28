@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date</title>
+</head>
+<body>
+  <script>
+    /*
+      # Date Object
+        - Work with dates and times
+
+        - Methods
+          - getFullYear(): YYYY format
+          - getMonth(): 0-11 (0 -> Jan, 11 -> Dec)
+          - getDate(): 1-31
+          - getDay(): 0-6 (0 -> Sun, 6 -> Dec)
+          - getHours(): 0-23
+          - getMinutes(): 0-59
+          - getSeconds(): 0-59 
+          - toLocateDateString():
+            - Format date based on region and language
+            - Possible arguments: en-US (default), hi-IN
+    */
+
+    // Date constructor - Get the current date in ISO format
+    const now = new Date()
+    console.log(now) // ISO Format
+
+    console.log(now.getFullYear())
+    console.log(now.getMonth())
+    console.log(now.getDate())
+    console.log(now.getDay())
+    console.log(now.getHours())
+    console.log(now.getMinutes())
+    console.log(now.getSeconds())
+    console.log(now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }))
+    console.log(now.toLocaleDateString('en-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }))
+    console.log(now.toLocaleDateString('hi-IN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }))
+    console.log(now.toLocaleDateString('ja-JP', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }))
+
+    // For options, refer here: https://stackoverflow.com/a/34015511/16626303
+  </script>
+</body>
+</html>
+
+<!--
+  # Future:
+  In real world projects, Date() constructor is not used much, instead external packages like dayjs, momentjs are used.
+-->

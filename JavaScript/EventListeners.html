@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Listeners</title>
+</head>
+<body>
+  <!-- <input type="text" placeholder="Enter your name" onclick="handleClick()"> -->
+  <input type="text" placeholder="Enter your full name" id="fullname" autocomplete="off">
+
+  <!-- <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" height="100" width="100" id="image-1"> -->
+  <script>
+    /*
+      # Event Listeners:
+        - Attach event handlers to DOM nodes
+        - Using .addEventListener() method
+        - Syntax:
+          element.addEventListener(eventName, callbackFunction)
+          - Arguments:
+            - eventName: The name of the event
+            - callbackFunction: The function to be executed when the event occurs
+              - Parameter: Event object (Object which has details about that event)
+                - Event object properties
+                  - .type: Name of the event
+                  - .target.value: To get values from input fields
+          - Event Names
+            - click: Click event **
+            - dblclick: Double click event
+            - mouseover: Mouse over event *
+            - mouseout: Mouse out event *
+            - input: Input event *
+            - keydown: Key down event
+            - keyup: Key up event
+            - focus: Focus event *
+            - blur: Blur event *
+            - load: Load event
+    */
+
+    // const element = document.getElementById('fullname')
+    // element.addEventListener('click', handleClick)
+    // function handleClick() {
+    //   console.log('Input box was clicked');
+    // }
+
+    // const element = document.getElementById('fullname')
+    // element.addEventListener('click', () => {
+    //   console.log('Input box was clicked');
+    // })
+
+    // const element = document.getElementById('fullname')
+    // element.addEventListener('dblclick', () => {
+    //   console.log('Input box was clicked');
+    // })
+
+    // const element = document.getElementById('image-1')
+    // element.addEventListener('mouseover', () => {
+    //   element.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png'
+    // })
+
+    // element.addEventListener('mouseout', () => {
+    //   element.src = 'https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png'
+    // })
+
+    // Event object
+    // const element = document.getElementById('image-1')
+    // element.addEventListener('click', (event) => {
+    //   console.log(event)
+    // })
+
+    // const element = document.getElementById('fullname')
+    // element.addEventListener('input', (event) => {
+    //   console.log(event)
+    // })
+
+    // const element = document.getElementById('fullname')
+    // element.addEventListener('keydown', (event) => {
+    //   console.log(event.key)
+    // })
+
+    // Example: Game App using keydown event
+    // const element = document.getElementById('fullname')
+    // element.addEventListener('keydown', (event) => {
+    //   switch (event.key) {
+    //     case 'ArrowUp':
+    //       console.log('Accelerating ...');
+    //       break;
+    //     case 'ArrowDown':
+    //       console.log('Apply brakes!');
+    //       break;
+    //     case 'ArrowLeft':
+    //       console.log('<- Turning Left');
+    //       break;
+    //     case 'ArrowRight':
+    //       console.log('Turning Right ->');
+    //       break;
+    //     case 'Enter':
+    //       console.log('Exiting the game!');
+    //       break;
+    //   }
+    // })
+  </script>
+</body>
+</html>

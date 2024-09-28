@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grids</title>
+  <style>
+    #container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: 200px 200px 200px;
+      grid-row-gap: 10px;
+      grid-column-gap: 10px;
+    }
+
+    .items {
+      background: linear-gradient(#E9F1FA, #00ABE4);
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="items">1</div>
+    <div class="items">2</div>
+    <div class="items">3</div>
+    <div class="items">4</div>
+    <div class="items">5</div>
+    <div class="items">6</div>
+    <div class="items">7</div>
+    <div class="items">8</div>
+  </div>
+</body>
+</html>
+
+<!--
+  # CSS GRIDS:
+  - Parent
+    - display: grid;
+    - grid-template-columns: 
+      - Specify number of columns
+      - Units: px, auto, fr;
+      - n number of columns: repeat(n, width_of_column)
+    - grid-template-rows: 
+      - Specify number of rows
+      - Units: px, auto, fr;
+       n number of row: repeat(n, width_of_rows)
+    - grid-row-gap: Add gap between cells (rows)
+    - grid-column-gap: Add gap between cells (column)
+-->

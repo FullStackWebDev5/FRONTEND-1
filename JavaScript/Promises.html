@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promises</title>
+</head>
+<body>
+  <button onclick="placeOrder()">PLACE ORDER</button>
+  <script>
+    /*
+      # Promises: Objects that represent the eventual completion or failure of an asynchronous operation.
+        - States:
+          - Pending
+          - Resolved (Fulfilled)
+          - Rejected
+        - Result: Any value that can be passed along with resolving or rejecting a promise
+
+        - Create Promise: Promise Constructor can be used to created promise objects
+          - Syntax:
+            const promise1 = new Promise((resolve, reject) => {
+              // Logic to resolve or reject the promise
+            })
+            - Promise constructor takes a callback as a parameter
+            - Callback further has 2 parameters:
+              - resolve(): Method to resolve the promise
+              - reject(): Method to reject the promise
+            - Result can be passed as an argument to the resolve or reject methods
+
+        - Handle Promises: 
+          - Syntax:
+            promise1.then(() => {
+              // Logic for resolved promise
+            }).catch(() => {
+              // Logic for rejected promise
+            })
+            - then() method callback is used to handle the resolved promise
+            - catch() method callback is used to handle the rejected promise
+            - finally() method callback is executed regardless if the promise is resolved/rejected
+            - Result can be captured using the callback parameter
+
+        - Note:
+          - resolve() -> .then()
+          - reject() -> .catch()
+            
+    */
+
+    /* ------------------------------------- */
+    // # Basic Example (Synchronous)
+    // const promise1 = new Promise((resolve, reject) => {
+    //   // resolve()
+    //   reject()
+    // })
+
+    // promise1.then(() => {
+    //   console.log('Promise 1 resolved :)')
+    // }).catch(() => {
+    //   console.log('Promise 1 rejected :(')
+    // })
+
+    /* ------------------------------------- */
+    // # Example with resolved/rejected results (Synchronous)
+    // const promise1 = new Promise((resolve, reject) => {
+    //   // resolve('Hi')
+    //   reject('Bye')
+    // })
+
+    // promise1.then((resolveResult) => {
+    //   console.log('Promise 1 resolved :)', resolveResult)
+    // }).catch((rejectResult) => {
+    //   console.log('Promise 1 rejected :(', rejectResult)
+    // })
+
+    /* ------------------------------------- */
+    // # Basic Example (Asynchronous) **
+    // const promise1 = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve()
+    //   }, 5000)
+    // })
+
+    // promise1.then(() => {
+    //   console.log('RESOLVED')
+    // }).catch(() => {
+    //   console.log('REJECTED')
+    // })
+
+    /* ------------------------------------- */
+    // # Example with finally() method
+    /*
+      Eg. Bank transaction
+        - Transaction is successful
+        - Transaction is unsuccessful
+    */
+
+    // let transactionCounter = 0
+    // const promise1 = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     // resolve('Transaction successful!')
+    //     reject('Transaction unsuccessful!')
+    //   }, 5000)
+    // })
+
+    // promise1.then((result) => {
+    //   console.log(result)
+    // }).catch((result) => {
+    //   console.log(result)
+    // }).finally(() => {
+    //   transactionCounter++
+    //   console.log(transactionCounter)
+    // })
+
+    /* ------------------------------------- */
+    // # Promise function **: Function which returns a promise
+
+    // Syntax 1
+    // const getPromise = () => {
+    //   return new Promise((resolve, reject) => {
+    //     resolve()
+    //   })
+    // }
+
+    // Syntax 2 (Single line arrow function)
+    // const getPromise = () => new Promise((resolve, reject) => {
+    //   resolve()
+    // })
+
+    // getPromise().then(() => {
+    //   console.log('Promise 1 resolved :)')
+    // }).catch(() => {
+    //   console.log('Promise 1 rejected :(')
+    // })
+
+    /* ------------------------------------- */
+    /*
+      # Promise Chaining **: During promise handling, if .then() method returns a new promise, another .then() method needs to be chained to handle this new promise
+        - Syntax:
+          promise1.then().then() .... .catch()
+    */
+
+    // const getPromise = (timeDelay) => {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       resolve()
+    //     }, timeDelay)
+    //   })
+    // }
+
+    // getPromise(3000).then(() => {
+    //   console.log('PROMISE1: RESOLVED')
+    //   return getPromise(5000)
+    // }).then(() => {
+    //   console.log('PROMISE2: RESOLVED')
+    //   return getPromise(2000)
+    // }).then(() => {
+    //   console.log('PROMISE3: RESOLVED')
+    // }).catch(() => {
+    //   console.log('PROMISE1/PROMISE2/PROMISE3: REJECTED')
+    // })
+
+    // Example
+    // const fetchUsers = () => {
+    //   console.log('Fetching users data ...')
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       resolve()
+    //     }, 5000)
+    //   })
+    // }
+
+    // const processUsersData = () => {
+    //   console.log('Processing users data ...')
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       resolve()
+    //     }, 3000)
+    //   })
+    // }
+
+    // fetchUsers().then(() => {
+    //   console.log('Users data fetched successfully ✅')
+    //   return processUsersData()
+    // }).then(() => {
+    //   console.log('Users data processed successfully ✅')
+    // }).catch(() => {
+    //   console.log('Could not fetch users data!')
+    // })
+
+    /* ----------------------------------------- */
+    /*
+      # Example: Order tracking status for Pizza orders
+        - Order confirmed ✅
+        - After 2s -> Order is being prepared 🍲
+        - After 10s -> Order is prepared 🎉
+        - After 5s -> Order handed over to the delivery person 📦
+        - After 3s -> Order is on the way 🏍️
+        - After 12s -> Order has reached its destination 📍
+        - After 4s -> Order has been delivered 😋
+    */
+
+    // const orderBeingPrepared = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order is being prepared 🍲')
+    //       resolve()
+    //     }, 2000)
+    //   })
+    // }
+
+    // const orderPrepared = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order is prepared 🎉')
+    //       resolve()
+    //     }, 10000)
+    //   })
+    // }
+
+    // const orderHandedToDelivery = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order handed over to the delivery person 📦')
+    //       resolve()
+    //     }, 5000)
+    //   })
+    // }
+
+    // const orderOnTheWay = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order is on the way 🏍️')
+    //       resolve()
+    //     }, 3000)
+    //   })
+    // }
+
+    // const orderReachedDestination = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order has reached its destination 📍')
+    //       resolve()
+    //     }, 12000)
+    //   })
+    // }
+
+    // const orderDelivered = () => {
+    //   return new Promise((resolve, reject)=> {
+    //     setTimeout(() => {
+    //       console.log('Order has been delivered 😋')
+    //       resolve()
+    //     }, 4000)
+    //   })
+    // }
+
+    // const placeOrder = () => {
+    //   console.log('Order confirmed ✅')
+      
+    //   orderBeingPrepared()
+    //     .then(orderPrepared)
+    //     .then(orderHandedToDelivery)
+    //     .then(orderOnTheWay)
+    //     .then(orderReachedDestination)
+    //     .then(orderDelivered)
+    //     .then(() => console.log('ORDER TRACKING ENDED!'))
+    //     .catch(() => console.log('ORDER CANNOT BE TRACKED RIGHT NOW!') )
+    // }
+
+    // Alternate syntax
+    // orderBeingPrepared()
+    //   .then(() => orderPrepared())
+    //   .then(() => orderHandedToDelivery())
+    //   .then(() => orderOnTheWay())
+    //   .then(() => orderReachedDestination())
+    //   .then(() => orderDelivered())
+    //   .then(() => console.log('ORDER TRACKING ENDED!'))
+    //   .catch(() => console.log('ORDER CANNOT BE TRACKED RIGHT NOW!') )
+  </script>
+</body>
+</html>

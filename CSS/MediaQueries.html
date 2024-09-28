@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Queries</title>
+  <style>
+    /* #div-1 {
+      background-color: tomato;
+      width: 600px;
+      height: 100px;
+    } */
+
+    /* ---------------------- */
+    /* #h-1 {
+      font-size: 30px;
+    } */
+
+    /* @media screen and (min-width: 768px) {
+      #h-1 {
+        font-size: 60px;
+      }
+    } */
+    /* ---------------------- */
+
+    /* @media screen and (max-width: 1200px) {
+      #div-1 {
+        background-color: lightblue;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      #div-1 {
+        background-color: lightgreen;
+      }
+    } */
+
+    /* ---------------------- */
+    /* @media screen and (min-width: 768px) {
+      #div-1 {
+        background-color: lightblue;
+      }
+    }
+
+    @media screen and (min-width: 992px) {
+      #div-1 {
+        background-color: lightgreen;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      #div-1 {
+        background-color: lightyellow;
+      }
+    }
+
+    @media screen and (min-width: 1400px) {
+      #div-1 {
+        background-color: lightpink;
+      }
+    } */
+
+    .div1{
+      background-color: red;
+      width: 24%;
+      height: 100px;
+      display: inline-block;
+      color: white;
+      font-size: 20px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    @media screen and (max-width: 992px) {
+      .div1 {
+        width: 49%;
+        margin-bottom: 10px;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      .div1 {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div style="text-align: center;">
+    <div class="div1">SECTION 1</div>
+    <div class="div1">SECTION 2</div>
+    <div class="div1">SECTION 3</div>
+    <div class="div1">SECTION 4</div>
+  </div>
+</body>
+</html>
+
+
+<!--
+    
+  # Device breakpoints:
+    X-Small: <576px
+    Small:	≥576px
+    Medium:	≥768px
+    Large: ≥992px
+    Extra large: ≥1200px
+    Extra extra large: ≥1400px
+
+  # Media Queries
+  - Styles for specific devices
+  - Desktop-first webpages vs Mobile-first webpages
+
+  - Syntax: [@media MediaType MediaFeature]
+    - @media
+    - Media Type
+    - Media Feature
+      - min-width: Atleast
+      - max-width: Atmost
+-->
