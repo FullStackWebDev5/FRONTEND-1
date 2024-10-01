@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <h1 id="main-heading">jQuery</h1>
+  <div id="description"></div>
+  <input id="first-name" type="text" placeholder="Enter student name">
+  <!-- <br><br>
+  <button id="show-btn">Show</button>
+  <button id="hide-btn">Hide</button> -->
+  <ul id="student-list"></ul>
+  <button id="append-btn">Append</button>
+  <button id="remove-btn">Remove</button>
+  <script>
+    /*
+      # jQuery: JavaScript library
+        - Features:
+          - Event Handling*
+          - DOM Manipulation*
+            - Content, Attribute, Style Updates
+          - Animations
+        - Introduced because
+          - Syntax is relatively easier than JavaScript
+          - Cross-browser compatibility
+        - Syntax:
+          $(selector).action()
+            - $(): jQuery function
+            - selector: CSS selector
+            - action(): Function to perform on the selected elements
+
+        - DOM loaded syntax:
+          $(document).ready(function() {
+            // code
+          })
+
+        - Action:
+          - ready(): Runs when DOM is loaded
+          - html(): Access/Update the HTML content
+          - val(): Access/Update the value in form fields
+          - attr(): Access/Update the attribute value
+          - text(): Access/Update the text content
+          - css(): Update CSS properties
+          - click(): Handle click events
+          - focus(): Handle focus events
+          - blur(): Handle blur events
+          - on(): Handle any events/ multiple events
+          - hide()/show(): Hide/Show particular elements
+    */
+
+    /* ----------------------------------------------- */
+    // # DOM Manipulation (Part-1)
+    // # Update Content: html(), text()
+    // $(document).ready(function() {
+    //   $('#main-heading').text('jQuery: JavaScript library')
+    //   $('#description').html('<p>jQuery greatly simplifies JavaScript programming.</p><p>jQuery is a JavaScript library that simplifies HTML document manipulation, event handling and animation.</p>')
+    //   let firstName = $('#first-name').val()
+    //   console.log(firstName)
+    //   let type = $('#first-name').attr('type')
+    //   console.log(type)
+    // })
+
+    // # Update Styles: css()
+    // $(document).ready(function() {
+    //   // $('#main-heading').css('background-color', 'aliceblue')
+    //   // $('#main-heading').css('font-size', '4em')
+    //   // $('#main-heading').css('text-align', 'center')
+    //   // $('#main-heading').css('width', 'max-content')
+    //   // $('#main-heading').css('margin', '1em auto')
+    //   // $('#main-heading').css('padding', '0.2em 1em')
+    //   // $('#main-heading').css('border', '1px solid black')
+
+    //   $('#main-heading').css({
+    //     'background-color': 'aliceblue',
+    //     'font-size': '4em',
+    //     'text-align': 'center',
+    //     'width': 'max-content',
+    //     'margin': '1em auto',
+    //     'padding': '0.2em 1em',
+    //     'border': '1px solid black'
+    //   })
+    // })
+
+    /* ----------------------------------------------- */
+    // # Handling events:
+    // .click()
+    // .focus()
+    // .blur()
+    // .hover(): Combination of mouseenter() and mouseleave()
+
+    // $(document).ready(function() {
+    //   // $('#main-heading').click(function() {
+    //   //   console.log('Main heading clicked')
+    //   // })
+    //   // $('#first-name').focus(function() {
+    //   //   console.log('Input text got focus')
+    //   // })
+    //   // $('#first-name').blur(function() {
+    //   //   console.log('Input text focus removed')
+    //   // })
+    //   // $('#main-heading').mouseenter(function() {
+    //   //   console.log('Mouse is over the heading')
+    //   // })
+    //   // $('#main-heading').mouseleave(function() {
+    //   //   console.log('Mouse has left the heading')
+    //   // })
+    //   $('#main-heading').hover(function() {
+    //     console.log('Mouse is over the heading')
+    //   }, function() {
+    //     console.log('Mouse has left the heading')
+    //   })
+    // })
+
+    // $(document).ready(function() {
+    //   $('#main-heading').on({
+    //     click: function() {
+    //       console.log('Main heading clicked')
+    //     },
+    //     mouseenter: function() {
+    //       console.log('Mouse is over the heading')
+    //     },
+    //     mouseleave: function() {
+    //       console.log('Mouse has left the heading')
+    //     }
+    //   })
+    // })
+    
+    // $(document).ready(function() {
+    //   $('#main-heading').hover(function() {
+    //     $(this).css({
+    //       'background-color': 'aliceblue',
+    //       'font-size': '4em',
+    //       'text-align': 'center',
+    //       'padding': '0.2em 1em',
+    //       'border': '1px solid black'
+    //     })
+    //   }, function() {
+    //     $(this).css({
+    //       'background-color': 'white',
+    //       'font-size': '32px',
+    //       'text-align': 'left',
+    //       'padding': '0',
+    //       'border': 'none'
+    //     })
+    //   })
+    // })
+
+    // $(document).ready(function() {
+    //   $('#main-heading').on({
+    //     click: function() {
+    //       console.log('Main heading clicked')
+    //     },
+    //     mouseenter: function() {
+    //       console.log('Mouse is over the heading')
+    //     },
+    //     mouseleave: function() {
+    //       console.log('Mouse has left the heading')
+    //     }
+    //   })
+    // })
+
+    /* ----------------------------------------------- */
+    // # Animations
+    // .hide() | .show() | .toggle()
+
+    // $(document).ready(function() {
+    //   $('#show-btn').click(function() {
+    //     $('#main-heading').show()
+    //   })
+    //   $('#hide-btn').click(function() {
+    //     $('#main-heading').hide()
+    //   })
+    // })
+
+    /* ----------------------------------------------- */
+    // # DOM Manipulation (Part-2)
+    // .append()
+    // .remove()
+    // $(document).ready(function() {
+    //   $('#append-btn').click(function() {
+    //     let studentName = $('#first-name').val().trim()
+    //     $('#student-list').append(`<li>${studentName}</li>`)
+    //     $('#first-name').val('')
+    //   })
+    //   $('#remove-btn').click(function() {
+    //     $('li:last-of-type').remove()
+    //   })
+    // })
+  </script>
+</body>
+</html>
