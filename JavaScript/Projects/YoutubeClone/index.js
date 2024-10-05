@@ -31,7 +31,7 @@ function displayVideos(videos) {
     iframe.frameborder='0'
     iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
     iframe.referrerpolicy='strict-origin-when-cross-origin'
-    iframe.allowfullscreen=true
+    iframe.setAttribute('allowfullscreen', 'true');
   
     videoSection.append(iframe)
   })
