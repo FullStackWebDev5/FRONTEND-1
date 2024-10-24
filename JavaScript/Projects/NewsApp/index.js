@@ -1,6 +1,7 @@
-let news = []
+const API_KEY = ''
+const news = []
 
-fetch('https://newsapi.org/v2/top-headlines?category=technology&apiKey=f40203cc39184176a487521beaf0836b')
+fetch(`https://newsapi.org/v2/top-headlines?category=technology&apiKey=${API_KEY}`)
   .then(response => response.json())
   .then(response => {
     news = response.articles
